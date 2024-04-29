@@ -1,0 +1,2 @@
+CEFAR Basic, exkl elektroder. 
+SET CEFAR TENS SV-NO-DA-FI  - PLUG EU (NORDIC)
