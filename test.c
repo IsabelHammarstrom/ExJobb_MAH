@@ -54,6 +54,7 @@ HWND g_addHjalpw; // Global variable to store handle to addHjaplw window
 HWND g_addHjalpw1; // Global variable to store handle to addHjaplw window
 HWND g_code;
 int saveBUTTON = 0;
+int OptionBUTTON = 0;
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow) {
     HWND hwnd;
@@ -265,6 +266,12 @@ LRESULT CALLBACK NewWndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
         case WM_COMMAND:{
             int wmId = LOWORD(wParam);
             switch (wmId){
+                case ID_DROPDOWNLIST:{
+                    HWND hDropdown2 = GetDlgItem(g_addHjalpw, ID_DROPDOWNLIST);
+                    int selectedItemIndex = SendMessageW(hDropdown2, CB_GETCURSEL, 0, 0);
+                    int selectedValue = SendMessageW(hDropdown2, CB_GETITEMDATA, selectedItemIndex, 0);
+                    OptionBUTTON = selectedValue;
+                }break;
                 case ID_SAVE_BUTTON1:{
                 
                     HWND hEdit1 = GetDlgItem(g_addHjalpw, ID_EDIT_BOX);
@@ -272,13 +279,9 @@ LRESULT CALLBACK NewWndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
                     HWND hEdit3 = GetDlgItem(g_addHjalpw, ID_EDIT_BOX2);
                     HWND hEdit4 = GetDlgItem(g_addHjalpw, ID_EDIT_BOX3);
 
-                    HWND hDropdown2 = GetDlgItem(g_addHjalpw, ID_DROPDOWNLIST);
-                    int selectedItemIndex = SendMessageW(hDropdown2, CB_GETCURSEL, 0, 0);
-                    int selectedValue = SendMessageW(hDropdown2, CB_GETITEMDATA, selectedItemIndex, 0);
+                    SaveTextToFile(hEdit1, hEdit2, hEdit3, hEdit4, fileNames[OptionBUTTON]);
 
-                    SaveTextToFile(hEdit1, hEdit2, hEdit3, hEdit4, fileNames[selectedValue]);
-
-                }
+                }break;
             }
             
         } break;
@@ -299,6 +302,12 @@ LRESULT CALLBACK NewWndTillProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lPara
             int wmId = LOWORD(wParam);
             int wmEvent = HIWORD(wParam);
             switch (wmId){
+                case ID_DROPDOWNLIST:{
+                    HWND hDropdown2 = GetDlgItem(g_addHjalpw, ID_DROPDOWNLIST);
+                    int selectedItemIndex = SendMessageW(hDropdown2, CB_GETCURSEL, 0, 0);
+                    int selectedValue = SendMessageW(hDropdown2, CB_GETITEMDATA, selectedItemIndex, 0);
+                    OptionBUTTON = selectedValue;
+                }break;
                 case ID_SAVE_BUTTON2:{
                     HWND hEdit5 = GetDlgItem(g_addHjalpw1, ID_EDIT_BOX4);
                     HWND hEdit6 = GetDlgItem(g_addHjalpw1, ID_EDIT_BOX5);
