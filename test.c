@@ -25,6 +25,8 @@
 #define MAXSIZE 1000
 #define NAMESIZE 20
 
+//hejsan svejsan
+
 #define ID_DROPDOWNLIST 101 // 106
 #define ID_DROPDOWNLIST1 102 // 1006
 #define ID_DROPDOWNLIST2 103 // 1007
