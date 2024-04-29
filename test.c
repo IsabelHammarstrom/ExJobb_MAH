@@ -1,6 +1,12 @@
 #include <windows.h> 
 #include <stdio.h> // För filhantering 
 #include "test.h" 
+#include <string.h>
+#include <stdlib.h>
+
+#define CORRECT_CODE "1234"
+#define ID_TEXTBOX 111
+#define ID_BUTTON 112
 
 #define ID_LISTBOX1 1
 #define ID_LISTBOX2 2
@@ -39,10 +45,15 @@ void OnButtonClick(HWND hwnd, WPARAM buttonID);
 void SaveTextToFile(HWND hEdit1, HWND hEdit2, HWND hEdit3, HWND hEdit4, const char *filename);
 HWND CreateLabelAndEdit(HWND parentWnd, int controlId1, int controlId2, int controlId3, int controlId4);
 
+LRESULT CALLBACK WindowProcedure(HWND, UINT, WPARAM, LPARAM);
+void OnMenuClick(HWND hwnd, WPARAM buttonID);
+
 wchar_t SelectedText[MAX_STRING_LENGTH] = L""; // Global sträng för att spara det valda alternativet
 
 HWND g_addHjalpw; // Global variable to store handle to addHjaplw window
 HWND g_addHjalpw1; // Global variable to store handle to addHjaplw window
+HWND g_code;
+int saveBUTTON = 0;
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow) {
     HWND hwnd;
@@ -107,10 +118,12 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) 
                         HWND hPrevSubListBox = GetDlgItem(hwnd, ID_LISTBOX2);
                         if (hPrevSubListBox != NULL) {
                             DestroyWindow(hPrevSubListBox);
+                             
                         }
                         HWND hPrevSubSubListBox = GetDlgItem(hwnd, ID_LISTBOX3);
                         if (hPrevSubSubListBox != NULL) {
                             DestroyWindow(hPrevSubSubListBox);
+                             
                         }
                         
                         // Hämta det valda alternativet
@@ -134,6 +147,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) 
                         HWND hPrevSubSubListBox = GetDlgItem(hwnd, ID_LISTBOX3);
                         if (hPrevSubSubListBox != NULL) {
                             DestroyWindow(hPrevSubSubListBox);
+                             
                         }
 
                         // Hämta det valda underalternativet
@@ -200,13 +214,13 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) 
                 
                 case ID_BUTTON1:
                     {
-                        OnButtonClick(hwnd, 1);
+                        OnMenuClick(hwnd, 1);
                     }
                     break;
                 
                 case ID_BUTTON2:
                     {
-                        OnButtonClick(hwnd, 2);
+                        OnMenuClick(hwnd, 2);
                     }
                     break;
                 
@@ -271,6 +285,7 @@ LRESULT CALLBACK NewWndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
         case WM_CLOSE:
             // Stäng bara det nya fönstret när användaren klickar på krysset
             DestroyWindow(hwnd);
+             
             break;
         default:
             return DefWindowProc(hwnd, msg, wParam, lParam);
@@ -324,6 +339,7 @@ LRESULT CALLBACK NewWndTillProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lPara
         case WM_CLOSE:
             // Stäng bara det nya fönstret när användaren klickar på krysset
             DestroyWindow(hwnd);
+             
             break;
         default:
             return DefWindowProc(hwnd, msg, wParam, lParam);
@@ -357,6 +373,61 @@ int printFileToDropdown(HWND hwnd, const char *filename, int dropdownID) {
     }
 }
 
+LRESULT CALLBACK WindowProcedure(HWND hWnd, UINT msg, WPARAM wp, LPARAM lp) {
+    switch (msg) {
+        case WM_COMMAND:
+            switch (wp) {
+                case ID_BUTTON:
+                    {
+                        char text[5];
+                        GetDlgItemText(hWnd, ID_TEXTBOX, text, 5);
+                        if (strcmp(text, CORRECT_CODE) == 0) {
+                            HWND hEdit1 = GetDlgItem(g_code, ID_EDIT_BOX);
+                            switch(saveBUTTON){
+                                case 1: {
+                                    OnButtonClick(hWnd, 1);
+                                    DestroyWindow(hWnd);  // Close current window
+                                     
+                                }break;
+                                case 2: {
+                                    OnButtonClick(hWnd, 2);
+                                    DestroyWindow(hWnd);  // Close current window
+                                     
+                                }break;
+                            }
+                        
+                        } else {
+                            MessageBox(hWnd, "Fel kod!", "Fel", MB_ICONERROR | MB_OK);
+                        }
+                    }
+                    break;
+            }
+            break;
+        case WM_DESTROY:
+            DestroyWindow(hWnd);
+            break;
+        default:
+            return DefWindowProc(hWnd, msg, wp, lp);
+    }
+    return 0;
+}
+
+void OnMenuClick(HWND hwnd, WPARAM buttonID){
+    saveBUTTON = buttonID;
+    WNDCLASS wc = {0};
+    wc.lpfnWndProc = WindowProcedure;
+    wc.hInstance = GetModuleHandle(NULL);
+    wc.lpszClassName = "CodeWindow"; // Set a new name for the window class
+    RegisterClass(&wc);
+
+    g_code = CreateWindowA("CodeWindow", "Code Entry", WS_OVERLAPPEDWINDOW, 100, 100, 250, 200, NULL, NULL, GetModuleHandle(NULL), NULL); // Använd CreateWindowW för breda tecken
+    ShowWindow(g_code, SW_SHOW);
+    UpdateWindow(g_code);
+
+    CreateWindowW(L"static", L"Ange kod:", WS_VISIBLE | WS_CHILD, 50, 20, 100, 20, g_code, NULL, NULL, NULL);
+    CreateWindowW(L"edit", L"", WS_VISIBLE | WS_CHILD | WS_BORDER, 50, 50, 100, 20, g_code, (HMENU)ID_TEXTBOX, NULL, NULL);
+    CreateWindowW(L"button", L"Bekräfta", WS_VISIBLE | WS_CHILD, 50, 80, 75, 20, g_code, (HMENU)ID_BUTTON, NULL, NULL);
+}
 
 void OnButtonClick(HWND hwnd, WPARAM buttonID) {
     switch (buttonID) {
