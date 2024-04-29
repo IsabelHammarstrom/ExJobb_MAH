@@ -302,12 +302,6 @@ LRESULT CALLBACK NewWndTillProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lPara
             int wmId = LOWORD(wParam);
             int wmEvent = HIWORD(wParam);
             switch (wmId){
-                case ID_DROPDOWNLIST:{
-                    HWND hDropdown2 = GetDlgItem(g_addHjalpw, ID_DROPDOWNLIST);
-                    int selectedItemIndex = SendMessageW(hDropdown2, CB_GETCURSEL, 0, 0);
-                    int selectedValue = SendMessageW(hDropdown2, CB_GETITEMDATA, selectedItemIndex, 0);
-                    OptionBUTTON = selectedValue;
-                }break;
                 case ID_SAVE_BUTTON2:{
                     HWND hEdit5 = GetDlgItem(g_addHjalpw1, ID_EDIT_BOX4);
                     HWND hEdit6 = GetDlgItem(g_addHjalpw1, ID_EDIT_BOX5);
