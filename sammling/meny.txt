@@ -4,7 +4,7 @@ Ventilatorer
 Inhalatorer
 Syrgaskoncentratorer
 Pulsoximeter
-Hostapparater
+Kompressionspumpar
 Slemsugar
 Andningsballonger
 Andningsmuskeltränare
@@ -13,6 +13,5 @@ Infusionspumpar
 Mätare för blodets koagulationsförmåga
 Apnélarm för spädbarn
 TENS
-Inkontinensstimulator
 EP-larm
 Övrigt

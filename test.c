@@ -55,6 +55,7 @@ HWND g_addHjalpw1; // Global variable to store handle to addHjaplw window
 HWND g_code;
 int saveBUTTON = 0;
 int OptionBUTTON = 0;
+int OptionList = 0;
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow) {
     HWND hwnd;
@@ -178,14 +179,13 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) 
                         // Hämta det valda underalternativet från den första listboxen
                         HWND hFirstListBox = GetDlgItem(hwnd, ID_LISTBOX1);
                         int indexFirstListBox = SendMessage(hFirstListBox, LB_GETCURSEL, 0, 0);
-
                         // Hämta det valda underalternativet från den andra listboxen
                         HWND hSecondListBox = GetDlgItem(hwnd, ID_LISTBOX2);
                         int indexSecondListBox = SendMessage(hSecondListBox, LB_GETCURSEL, 0, 0);
-
                         // Hämta det valda underalternativet från den tredje listboxen
                         HWND hThirdListBox = GetDlgItem(hwnd, ID_LISTBOX3);
                         int indexThirdListBox = SendMessage(hThirdListBox, LB_GETCURSEL, 0, 0);
+
 
                         // Skapa en ny listbox baserat på det valda underalternativet
                         HWND hNewListbox = CreateWindow("LISTBOX", NULL, WS_CHILD | WS_VISIBLE | LBS_NOTIFY | WS_VSCROLL, 10, 10, 700, 200, hNewWindow, (HMENU)ID_LISTBOX4, NULL, NULL);
@@ -307,35 +307,38 @@ LRESULT CALLBACK NewWndTillProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lPara
                     HWND hEdit6 = GetDlgItem(g_addHjalpw1, ID_EDIT_BOX5);
                     HWND hEdit7 = GetDlgItem(g_addHjalpw1, ID_EDIT_BOX6);
                     HWND hEdit8 = GetDlgItem(g_addHjalpw1, ID_EDIT_BOX7);
-
-                    HWND hDropdown = GetDlgItem(g_addHjalpw1, ID_DROPDOWNLIST1);
-                    int selectedItemIndex1 = SendMessageW(hDropdown, CB_GETCURSEL, 0, 0);
-                    int selectedValue1 = SendMessageW(hDropdown, CB_GETITEMDATA, selectedItemIndex1, 0);
-
-                    HWND hDropdown3 = GetDlgItem(g_addHjalpw1, ID_DROPDOWNLIST2);
-                    int selectedItemIndex = SendMessageW(hDropdown3, CB_GETCURSEL, 0, 0);
-                    int selectedValue = SendMessageW(hDropdown3, CB_GETITEMDATA, selectedItemIndex, 0);
                     
                     const char** fileName1 = NULL;
 
-                    fileName1 = listTill[selectedValue1];
+                    fileName1 = listTill[OptionList];
 
-                    SaveTextToFile(hEdit5, hEdit6, hEdit7, hEdit8, fileName1[selectedValue]);
+                    SaveTextToFile(hEdit5, hEdit6, hEdit7, hEdit8, fileName1[OptionBUTTON]);
 
                 }break;
                 case ID_DROPDOWNLIST1:{
                     if (wmEvent == CBN_SELCHANGE){
                         // Få det valda indexet från dropdownlist1
                         int selectedIndex = SendMessage((HWND)lParam, CB_GETCURSEL, 0, 0);
-
                         // Rensa och uppdatera dropdownlist2 baserat på det valda indexet
                         SendMessage(GetDlgItem(g_addHjalpw1, ID_DROPDOWNLIST2), CB_RESETCONTENT, 0, 0);
-
                         // Hämta filnamnet för dropdownlist2 baserat på det valda indexet från dropdownlist1
                         // Läs in alternativ från filen till dropdownlist2
                         printFileToDropdown(g_addHjalpw1, fileNames[selectedIndex], ID_DROPDOWNLIST2);
+
+                        HWND hDropdown1 = GetDlgItem(g_addHjalpw1, ID_DROPDOWNLIST1);
+                        int selectedItemIndex = SendMessageW(hDropdown1, CB_GETCURSEL, 0, 0);
+                        int selectedValue = SendMessageW(hDropdown1, CB_GETITEMDATA, selectedItemIndex, 0);
+                        OptionList = selectedValue;
                     }
-                }
+                }break;
+                case ID_DROPDOWNLIST2:{
+                    if (wmEvent == CBN_SELCHANGE){
+                        HWND hDropdown3 = GetDlgItem(g_addHjalpw1, ID_DROPDOWNLIST2);
+                        int selectedItemIndex = SendMessageW(hDropdown3, CB_GETCURSEL, 0, 0);
+                        int selectedValue = SendMessageW(hDropdown3, CB_GETITEMDATA, selectedItemIndex, 0);
+                        OptionBUTTON = selectedValue;
+                    }
+                }break;
             }
             
         } break;
