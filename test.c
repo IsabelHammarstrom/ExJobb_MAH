@@ -44,9 +44,9 @@ int printFileToDropdown(HWND hwnd, const char *filename, int dropdownID);
 void OnButtonClick(HWND hwnd, WPARAM buttonID);
 void SaveTextToFile(HWND hEdit1, HWND hEdit2, HWND hEdit3, HWND hEdit4, const char *filename);
 HWND CreateLabelAndEdit(HWND parentWnd, int controlId1, int controlId2, int controlId3, int controlId4);
-
 LRESULT CALLBACK WindowProcedure(HWND, UINT, WPARAM, LPARAM);
 void OnMenuClick(HWND hwnd, WPARAM buttonID);
+int printTillbehor(HWND hwnd, const char *filename, int listBox);
 
 wchar_t SelectedText[MAX_STRING_LENGTH] = L""; // Global sträng för att spara det valda alternativet
 
@@ -205,7 +205,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) 
                                 file = fileName[indexSecondListBox];
                             }
                             
-                            printFile(hNewWindow, file, ID_LISTBOX4);
+                            printTillbehor(hNewWindow, file, ID_LISTBOX4);
                         }
                         // Visa det nya fönstret
                         ShowWindow(hNewWindow, SW_SHOW);
@@ -353,6 +353,32 @@ LRESULT CALLBACK NewWndTillProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lPara
     return 0;
 }
 
+int printTillbehor(HWND hwnd, const char *filename, int listBox){
+    FILE *listFile = fopen(filename, "r, ccs=UTF-8");
+
+    if (listFile != NULL) {
+        char line[MAXSIZE];
+
+        while (fgets(line, MAXSIZE, listFile) != NULL) {
+            // Använd strtok för att dela upp raden med ',' som skiljetecken
+            char *name = strtok(line, ",");
+            char *s2_number_str = strtok(NULL, ",");
+            char *supplier = strtok(NULL, ",");
+            char *supplier_number_str = strtok(NULL, ",");
+
+            // Konvertera s2_number och supplier_number till int
+            int s2_number = atoi(s2_number_str);
+            int supplier_number = atoi(supplier_number_str);
+
+            // Formatera strängen för att visa i listboxen
+            char listEntry[256];
+            sprintf(listEntry, "%s %d %s %d", name, s2_number, supplier, supplier_number);
+ 
+            SendMessage(GetDlgItem(hwnd, listBox), LB_ADDSTRING, 0, (LPARAM)listEntry);
+        }
+        fclose(listFile);
+    }
+}
 
 int printFile(HWND hwnd, const char *filename, int listBox){
     FILE* listFile = fopen(filename, "r, ccs=UTF-8");
@@ -533,12 +559,13 @@ void SaveTextToFile(HWND hEdit1, HWND hEdit2, HWND hEdit3, HWND hEdit4, const ch
 
     // Hämta texten från varje edit-box och lägg till den i wideTextBuffer med mellanslag
     GetWindowTextW(hEdit1, wideTextBuffer, GetWindowTextLength(hEdit1) + 1);
-    wcscat(wideTextBuffer, L" ");
+    wcscat(wideTextBuffer, L", ");
     GetWindowTextW(hEdit2, wideTextBuffer + wcslen(wideTextBuffer), GetWindowTextLength(hEdit2) + 1);
-    wcscat(wideTextBuffer, L" ");
+    wcscat(wideTextBuffer, L", ");
     GetWindowTextW(hEdit3, wideTextBuffer + wcslen(wideTextBuffer), GetWindowTextLength(hEdit3) + 1);
-    wcscat(wideTextBuffer, L" ");
+    wcscat(wideTextBuffer, L", ");
     GetWindowTextW(hEdit4, wideTextBuffer + wcslen(wideTextBuffer), GetWindowTextLength(hEdit4) + 1);
+    wcscat(wideTextBuffer, L", ");
 
     // Beräkna antalet byte som behövs för att lagra UTF-8-strängen
     int utf8Length = WideCharToMultiByte(CP_UTF8, 0, wideTextBuffer, -1, NULL, 0, NULL, NULL);
