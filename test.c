@@ -3,6 +3,7 @@
 #include "test.h" 
 #include <string.h>
 #include <stdlib.h>
+#include <wchar.h>  // Lägg till detta bibliotek för att hantera wide characters
 
 #define CORRECT_CODE "1234"
 #define ID_TEXTBOX 111
@@ -352,33 +353,40 @@ LRESULT CALLBACK NewWndTillProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lPara
     }
     return 0;
 }
+#define TOKEN_WIDTH 20  // Maximal bredd för varje kolumn
 
-int printTillbehor(HWND hwnd, const char *filename, int listBox){
-    FILE *listFile = fopen(filename, "r, ccs=UTF-8");
+int printTillbehor(HWND hwnd, const char *filename, int listBox) {
+    wchar_t wfilename[256];
+    mbstowcs(wfilename, filename, strlen(filename) + 1);  // Convert to wide char
 
-    if (listFile != NULL) {
-        char line[MAXSIZE];
-
-        while (fgets(line, MAXSIZE, listFile) != NULL) {
-            // Använd strtok för att dela upp raden med ',' som skiljetecken
-            char *name = strtok(line, ",");
-            char *s2_number_str = strtok(NULL, ",");
-            char *supplier = strtok(NULL, ",");
-            char *supplier_number_str = strtok(NULL, ",");
-
-            // Konvertera s2_number och supplier_number till int
-            int s2_number = atoi(s2_number_str);
-            int supplier_number = atoi(supplier_number_str);
-
-            // Formatera strängen för att visa i listboxen
-            char listEntry[256];
-            sprintf(listEntry, "%s %d %s %d", name, s2_number, supplier, supplier_number);
- 
-            SendMessage(GetDlgItem(hwnd, listBox), LB_ADDSTRING, 0, (LPARAM)listEntry);
-        }
-        fclose(listFile);
+    FILE* listFile = _wfopen(wfilename, L"r, ccs=UTF-8");
+    if (listFile == NULL) {
+        return -1;
     }
+
+    wchar_t line[MAXSIZE];
+    wchar_t combined[MAXSIZE];
+    wchar_t *token;
+    const wchar_t *delimiters = L",";
+
+    while (fgetws(line, MAXSIZE, listFile) != NULL) {
+        token = wcstok(line, delimiters);  // Get the first token
+        combined[0] = L'\0';  // Start with an empty string
+
+        while (token != NULL) {
+            wchar_t formatted_token[TOKEN_WIDTH + 1];  // +1 for null terminator
+            swprintf(formatted_token, L"%-*.*ls", TOKEN_WIDTH, TOKEN_WIDTH, token);  // Format token
+            wcsncat(combined, formatted_token, sizeof(combined)/sizeof(wchar_t) - wcslen(combined) - 1);  // Append formatted token to combined string
+            token = wcstok(NULL, delimiters);  // Get next token
+        }
+
+        SendMessageW(GetDlgItem(hwnd, listBox), LB_ADDSTRING, 0, (LPARAM)combined); // Send combined string to listbox
+    }
+
+    fclose(listFile);
+    return 0;
 }
+
 
 int printFile(HWND hwnd, const char *filename, int listBox){
     FILE* listFile = fopen(filename, "r, ccs=UTF-8");
