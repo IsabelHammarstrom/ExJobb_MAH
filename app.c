@@ -1,9 +1,10 @@
 #include <windows.h> 
 #include <stdio.h> // För filhantering 
-#include "test.h" 
 #include <string.h>
 #include <stdlib.h>
 #include <wchar.h>  // Lägg till detta bibliotek för att hantera wide characters
+#include <CommCtrl.h>
+#include "test.h" 
 
 #define CORRECT_CODE "1234"
 #define ID_TEXTBOX 111
@@ -12,52 +13,74 @@
 #define ID_LISTBOX1 1
 #define ID_LISTBOX2 2
 #define ID_LISTBOX3 3
-#define ID_LISTBOX4 11 // 10
+#define ID_LISTBOX4 10
 #define ID_BUTTON1 4
 #define ID_BUTTON2 5
 #define ID_BUTTON3 6
 #define ID_BUTTON4 7
 #define ID_BUTTON5 8
 #define ID_BUTTON6 9
-#define ID_EDIT_BOX 12 // 101
-#define ID_EDIT_BOX1 13 // 102
-#define ID_EDIT_BOX2 14 // 103
-#define ID_EDIT_BOX3 15 // 104
-#define ID_SAVE_BUTTON1 10 // 105
-#define ID_EDIT_BOX4 12 // 1001
-#define ID_EDIT_BOX5 13 // 1002
-#define ID_EDIT_BOX6 14 // 1003
-#define ID_EDIT_BOX7 15 // 1004
-#define ID_SAVE_BUTTON2 16 // 1005
+
+#define ID_EDIT_BOX 101
+#define ID_EDIT_BOX1 102
+#define ID_EDIT_BOX2 103
+#define ID_EDIT_BOX3 104
+#define ID_SAVE_BUTTON1 105
+#define ID_DROPDOWNLIST 106
+
+#define ID_EDIT_BOX4 1001
+#define ID_EDIT_BOX5 1002
+#define ID_EDIT_BOX6 1003
+#define ID_EDIT_BOX7 1004
+#define ID_SAVE_BUTTON2 1005
+#define ID_DROPDOWNLIST1 1006
+#define ID_DROPDOWNLIST2 1007
+
+#define ID_SAVE_BUTTON3 121
+#define ID_DROPDOWNLIST3 122
+#define ID_DROPDOWNLIST4 123
+#define ID_DROPDOWNLIST5 124
+
+#define ID_SAVE_BUTTON4 131
+#define ID_DROPDOWNLIST6 132
+#define ID_DROPDOWNLIST7 133
+
 #define MAXSIZE 1000
 #define NAMESIZE 20
-
-#define ID_DROPDOWNLIST 101 // 106
-#define ID_DROPDOWNLIST1 102 // 1006
-#define ID_DROPDOWNLIST2 103 // 1007
-
 #define MAX_STRING_LENGTH 256
+#define TOKEN_WIDTH 20
 
 LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
-LRESULT CALLBACK NewWndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam);
+LRESULT CALLBACK NewHelpWndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam);
+LRESULT CALLBACK WindowProcedure(HWND hWnd, UINT msg, WPARAM wp, LPARAM lp);
+LRESULT CALLBACK NewTillWndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam);
+LRESULT CALLBACK EditTillWinProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam);
+LRESULT CALLBACK PrintWndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam);
+
 int printFile(HWND hwnd, const char *filename, int listBox);
 int printFileToDropdown(HWND hwnd, const char *filename, int dropdownID);
 void OnButtonClick(HWND hwnd, WPARAM buttonID);
 void SaveTextToFile(HWND hEdit1, HWND hEdit2, HWND hEdit3, HWND hEdit4, const char *filename);
-HWND CreateLabelAndEdit(HWND parentWnd, int controlId1, int controlId2, int controlId3, int controlId4);
-LRESULT CALLBACK WindowProcedure(HWND, UINT, WPARAM, LPARAM);
 void OnMenuClick(HWND hwnd, WPARAM buttonID);
 int printTillbehor(HWND hwnd, const char *filename, int listBox);
 void SaveToFile(HWND hEdit1, const char *filename);
 
+void removeLine(const char *filename, int lineToRemove);
+
+
 wchar_t SelectedText[MAX_STRING_LENGTH] = L""; // Global sträng för att spara det valda alternativet
 
-HWND g_addHjalpw; // Global variable to store handle to addHjaplw window
-HWND g_addHjalpw1; // Global variable to store handle to addHjaplw window
+HWND g_addHjalpw;
+HWND g_addTillpw; 
 HWND g_code;
+HWND g_EditTill;
+HWND g_EditHelp;
 int saveBUTTON = 0;
 int OptionBUTTON = 0;
+int OptionBUTTON1 = 0;
+int OptionBUTTON2 = 0;
 int OptionList = 0;
+int NextOption = 0;
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow) {
     HWND hwnd;
@@ -86,6 +109,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
     return Msg.wParam;
 }
 
+// -------------------------------------------- Windows ----------------------------------------------------
+
 LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) {
     switch (uMsg) {
         case WM_CREATE: {
@@ -101,7 +126,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) 
             AppendMenu(hSubMenu11, MF_STRING, 4, "Huvudhjalpmedel");
             AppendMenu(hSubMenu11, MF_STRING, 5, "Tillbehor");
             AppendMenu(hSubMenu11, MF_STRING, 6, "Reservdel");
-            AppendMenu(hSubMenu1, MF_STRING | MF_POPUP, (UINT_PTR)hSubMenu12, "Andring av befintlig artikel");
+            AppendMenu(hSubMenu1, MF_STRING | MF_POPUP, (UINT_PTR)hSubMenu12, "Ta bort befintlig artikel");
             AppendMenu(hSubMenu12, MF_STRING, 7, "Huvudhjalpmedel");
             AppendMenu(hSubMenu12, MF_STRING, 8, "Tillbehor");
             AppendMenu(hSubMenu12, MF_STRING, 9, "Reservdel");
@@ -109,13 +134,10 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) 
             // Associera menyn med fönstret
             SetMenu(hwnd, hMenu);
 
-            break;
-        }
+        }break;
         case WM_COMMAND: {
             int wmId = LOWORD(wParam);
-            
             switch (wmId) {
-                MessageBox(hwnd, "WM_COMMAND aktivt", "Meddelande", MB_OK | MB_ICONINFORMATION);
                 case ID_LISTBOX1: // Klick på huvudlistboxen
                     if (HIWORD(wParam) == LBN_SELCHANGE) {
                         // Radera befintliga underlistor
@@ -129,7 +151,6 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) 
                             DestroyWindow(hPrevSubSubListBox);
                              
                         }
-                        
                         // Hämta det valda alternativet
                         HWND hListBox = (HWND)lParam;
                         int index = SendMessage(hListBox, LB_GETCURSEL, 0, 0);
@@ -153,7 +174,6 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) 
                             DestroyWindow(hPrevSubSubListBox);
                              
                         }
-
                         // Hämta det valda underalternativet
                         HWND hSubListBox = (HWND)lParam;
                         int index = SendMessage(hSubListBox, LB_GETCURSEL, 0, 0);
@@ -171,11 +191,10 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) 
                         // Skapa ett nytt fönster
                         HWND hNewWindow = CreateWindowEx(0, "NewWindowClass", "New Window", WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, 800, 400, NULL, NULL, GetModuleHandle(NULL), NULL);
                         
-                        // Använd det nya fönsterprocet för det nya fönstret
                         WNDCLASS wc = { 0 };
-                        wc.lpfnWndProc = NewWndProc;
+                        wc.lpfnWndProc = PrintWndProc;
                         wc.hInstance = GetModuleHandle(NULL);
-                        wc.lpszClassName = "NewWindowClass"; // Sätt ett nytt namn för fönsterklassen
+                        wc.lpszClassName = "NewWindowClass";
                         RegisterClass(&wc);
                         
                         // Hämta det valda underalternativet från den första listboxen
@@ -187,7 +206,6 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) 
                         // Hämta det valda underalternativet från den tredje listboxen
                         HWND hThirdListBox = GetDlgItem(hwnd, ID_LISTBOX3);
                         int indexThirdListBox = SendMessage(hThirdListBox, LB_GETCURSEL, 0, 0);
-
 
                         // Skapa en ny listbox baserat på det valda underalternativet
                         HWND hNewListbox = CreateWindow("LISTBOX", NULL, WS_CHILD | WS_VISIBLE | LBS_NOTIFY | WS_VSCROLL, 10, 10, 700, 200, hNewWindow, (HMENU)ID_LISTBOX4, NULL, NULL);
@@ -214,41 +232,23 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) 
                         UpdateWindow(hNewWindow);
                     }
                     break;
-                
                 case ID_BUTTON1:
-                    {
                         OnMenuClick(hwnd, 1);
-                    }
                     break;
-                
                 case ID_BUTTON2:
-                    {
                         OnMenuClick(hwnd, 2);
-                    }
                     break;
-                
                 case ID_BUTTON3:
-                    {
-                        OnButtonClick(hwnd, 3);
-                    }
+                        OnMenuClick(hwnd, 3);
                     break;
-
                 case ID_BUTTON4:
-                    {
-                        OnButtonClick(hwnd, 4);
-                    }
+                        OnMenuClick(hwnd, 4);
                     break;
-                
                 case ID_BUTTON5:
-                    {
-                        OnButtonClick(hwnd, 5);
-                    }
+                        OnMenuClick(hwnd, 5);
                     break;
-                
                 case ID_BUTTON6:
-                    {
-                        OnButtonClick(hwnd, 6);
-                    }
+                        OnMenuClick(hwnd, 6);
                     break;
             }
             break;
@@ -263,7 +263,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) 
     return 0;
 }
 
-LRESULT CALLBACK NewWndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
+LRESULT CALLBACK NewHelpWndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
     switch (msg) {
         case WM_COMMAND:{
             int wmId = LOWORD(wParam);
@@ -277,17 +277,15 @@ LRESULT CALLBACK NewWndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
                 case ID_SAVE_BUTTON1:{
                 
                     HWND hEdit1 = GetDlgItem(g_addHjalpw, ID_EDIT_BOX);
-                    
                     SaveToFile(hEdit1, fileNames[OptionBUTTON]);
+                    SendMessage(GetDlgItem(g_addTillpw, ID_DROPDOWNLIST), CB_RESETCONTENT, 0, 0);
+                    printFileToDropdown(g_EditTill, listFileName, ID_DROPDOWNLIST);
 
                 }break;
             }
-            
         } break;
         case WM_CLOSE:
-            // Stäng bara det nya fönstret när användaren klickar på krysset
             DestroyWindow(hwnd);
-             
             break;
         default:
             return DefWindowProc(hwnd, msg, wParam, lParam);
@@ -295,23 +293,25 @@ LRESULT CALLBACK NewWndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
     return 0;
 }
 
-LRESULT CALLBACK NewWndTillProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
+LRESULT CALLBACK NewTillWndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
     switch (msg) {
         case WM_COMMAND:{
             int wmId = LOWORD(wParam);
             int wmEvent = HIWORD(wParam);
             switch (wmId){
                 case ID_SAVE_BUTTON2:{
-                    HWND hEdit5 = GetDlgItem(g_addHjalpw1, ID_EDIT_BOX4);
-                    HWND hEdit6 = GetDlgItem(g_addHjalpw1, ID_EDIT_BOX5);
-                    HWND hEdit7 = GetDlgItem(g_addHjalpw1, ID_EDIT_BOX6);
-                    HWND hEdit8 = GetDlgItem(g_addHjalpw1, ID_EDIT_BOX7);
+                    HWND hEdit5 = GetDlgItem(g_addTillpw, ID_EDIT_BOX4);
+                    HWND hEdit6 = GetDlgItem(g_addTillpw, ID_EDIT_BOX5);
+                    HWND hEdit7 = GetDlgItem(g_addTillpw, ID_EDIT_BOX6);
+                    HWND hEdit8 = GetDlgItem(g_addTillpw, ID_EDIT_BOX7);
                     
                     const char** fileName1 = NULL;
-
                     fileName1 = listTill[OptionList];
-
                     SaveTextToFile(hEdit5, hEdit6, hEdit7, hEdit8, fileName1[OptionBUTTON]);
+
+                    SendMessage(GetDlgItem(g_addTillpw, ID_DROPDOWNLIST1), CB_RESETCONTENT, 0, 0);
+                    printFileToDropdown(g_EditTill, listFileName, ID_DROPDOWNLIST1);
+                    SendMessage(GetDlgItem(g_addTillpw, ID_DROPDOWNLIST2), CB_RESETCONTENT, 0, 0);
 
                 }break;
                 case ID_DROPDOWNLIST1:{
@@ -319,12 +319,12 @@ LRESULT CALLBACK NewWndTillProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lPara
                         // Få det valda indexet från dropdownlist1
                         int selectedIndex = SendMessage((HWND)lParam, CB_GETCURSEL, 0, 0);
                         // Rensa och uppdatera dropdownlist2 baserat på det valda indexet
-                        SendMessage(GetDlgItem(g_addHjalpw1, ID_DROPDOWNLIST2), CB_RESETCONTENT, 0, 0);
+                        SendMessage(GetDlgItem(g_addTillpw, ID_DROPDOWNLIST2), CB_RESETCONTENT, 0, 0);
                         // Hämta filnamnet för dropdownlist2 baserat på det valda indexet från dropdownlist1
                         // Läs in alternativ från filen till dropdownlist2
-                        printFileToDropdown(g_addHjalpw1, fileNames[selectedIndex], ID_DROPDOWNLIST2);
+                        printFileToDropdown(g_addTillpw, fileNames[selectedIndex], ID_DROPDOWNLIST2);
 
-                        HWND hDropdown1 = GetDlgItem(g_addHjalpw1, ID_DROPDOWNLIST1);
+                        HWND hDropdown1 = GetDlgItem(g_addTillpw, ID_DROPDOWNLIST1);
                         int selectedItemIndex = SendMessageW(hDropdown1, CB_GETCURSEL, 0, 0);
                         int selectedValue = SendMessageW(hDropdown1, CB_GETITEMDATA, selectedItemIndex, 0);
                         OptionList = selectedValue;
@@ -332,7 +332,7 @@ LRESULT CALLBACK NewWndTillProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lPara
                 }break;
                 case ID_DROPDOWNLIST2:{
                     if (wmEvent == CBN_SELCHANGE){
-                        HWND hDropdown3 = GetDlgItem(g_addHjalpw1, ID_DROPDOWNLIST2);
+                        HWND hDropdown3 = GetDlgItem(g_addTillpw, ID_DROPDOWNLIST2);
                         int selectedItemIndex = SendMessageW(hDropdown3, CB_GETCURSEL, 0, 0);
                         int selectedValue = SendMessageW(hDropdown3, CB_GETITEMDATA, selectedItemIndex, 0);
                         OptionBUTTON = selectedValue;
@@ -351,7 +351,207 @@ LRESULT CALLBACK NewWndTillProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lPara
     }
     return 0;
 }
-#define TOKEN_WIDTH 20  // Maximal bredd för varje kolumn
+
+LRESULT CALLBACK WindowProcedure(HWND hWnd, UINT msg, WPARAM wp, LPARAM lp) {
+    switch (msg) {
+        case WM_COMMAND:
+            switch (wp) {
+                case ID_BUTTON:
+                    {
+                        char text[5];
+                        GetDlgItemText(hWnd, ID_TEXTBOX, text, 5);
+                        if (strcmp(text, CORRECT_CODE) == 0) {
+                            HWND hEdit1 = GetDlgItem(g_code, ID_EDIT_BOX);
+                            switch(saveBUTTON){
+                                case 1: {
+                                    OnButtonClick(hWnd, 1);
+                                    DestroyWindow(hWnd);  // Close current window
+                                }break;
+                                case 2: {
+                                    OnButtonClick(hWnd, 2);
+                                    DestroyWindow(hWnd);  // Close current window  
+                                }break;
+                                case 3:{
+                                    OnButtonClick(hWnd, 3);
+                                    DestroyWindow(hWnd);  // Close current window
+                                }break;
+                                case 4:{
+                                    OnButtonClick(hWnd, 4);
+                                    DestroyWindow(hWnd);  // Close current window
+                                }break;
+                                case 5:{
+                                    OnButtonClick(hWnd, 5);
+                                    DestroyWindow(hWnd);  // Close current window
+                                }break;
+                                case 6:{
+                                    OnButtonClick(hWnd, 6);
+                                    DestroyWindow(hWnd);  // Close current window
+                                }break;
+                            }
+                        
+                        } else {
+                            MessageBox(hWnd, "Fel kod!", "Fel", MB_ICONERROR | MB_OK);
+                        }
+                    }
+                    break;
+            }
+            break;
+        case WM_DESTROY:
+            DestroyWindow(hWnd);
+            break;
+        default:
+            return DefWindowProc(hWnd, msg, wp, lp);
+    }
+    return 0;
+}
+
+LRESULT CALLBACK PrintWndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam){
+    switch (msg) {
+        case WM_COMMAND:
+            switch (wParam) {
+                
+            }
+            break;
+        case WM_DESTROY:
+            DestroyWindow(hwnd);
+            break;
+        default:
+            return DefWindowProc(hwnd, msg, wParam, lParam);
+    }
+    return 0;
+}
+
+LRESULT CALLBACK EditTillWinProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam){
+    switch (msg) {
+        case WM_COMMAND:{
+            int wmId = LOWORD(wParam);
+            int wmEvent = HIWORD(wParam);
+            switch (wmId){
+                case ID_SAVE_BUTTON3:{
+                    const char** fileName = NULL;
+                    const char* file = NULL;
+
+                    fileName = listTill[OptionList];
+                    file = fileName[OptionBUTTON1];
+
+                    removeLine(file, OptionBUTTON2);
+                    SendMessage(GetDlgItem(g_EditTill, ID_DROPDOWNLIST3), CB_RESETCONTENT, 0, 0);
+                    printFileToDropdown(g_EditTill, listFileName, ID_DROPDOWNLIST3);
+                    SendMessage(GetDlgItem(g_EditTill, ID_DROPDOWNLIST4), CB_RESETCONTENT, 0, 0);
+                    SendMessage(GetDlgItem(g_EditTill, ID_DROPDOWNLIST5), CB_RESETCONTENT, 0, 0);
+
+                }break;
+                case ID_DROPDOWNLIST3:{
+                    if (wmEvent == CBN_SELCHANGE){
+                        // Få det valda indexet från dropdownlist1
+                        int selectedIndex = SendMessage((HWND)lParam, CB_GETCURSEL, 0, 0);
+                        // Rensa och uppdatera dropdownlist2 baserat på det valda indexet
+                        SendMessage(GetDlgItem(g_EditTill, ID_DROPDOWNLIST4), CB_RESETCONTENT, 0, 0);
+                        SendMessage(GetDlgItem(g_EditTill, ID_DROPDOWNLIST5), CB_RESETCONTENT, 0, 0);
+                        // Hämta filnamnet för dropdownlist2 baserat på det valda indexet från dropdownlist1
+                        // Läs in alternativ från filen till dropdownlist2
+                        printFileToDropdown(g_EditTill, fileNames[selectedIndex], ID_DROPDOWNLIST4);
+
+                        HWND hDropdown3 = GetDlgItem(g_EditTill, ID_DROPDOWNLIST3);
+                        int selectedItemIndex = SendMessageW(hDropdown3, CB_GETCURSEL, 0, 0);
+                        int selectedValue = SendMessageW(hDropdown3, CB_GETITEMDATA, selectedItemIndex, 0);
+                        OptionList = selectedValue;
+                        NextOption = selectedIndex;
+                    }
+                }break;
+                case ID_DROPDOWNLIST4:{
+                    if (wmEvent == CBN_SELCHANGE){
+                        const char** fileName = NULL;
+                        const char* file = NULL;
+
+                        int selectedIndex = SendMessage((HWND)lParam, CB_GETCURSEL, 0, 0);
+                        SendMessage(GetDlgItem(g_EditTill, ID_DROPDOWNLIST5), CB_RESETCONTENT, 0, 0);
+                        
+                        fileName = listTill[NextOption];
+                        file = fileName[selectedIndex];
+                        
+                        printFileToDropdown(g_EditTill, file, ID_DROPDOWNLIST5);
+                        
+                        HWND hDropdown4 = GetDlgItem(g_EditTill, ID_DROPDOWNLIST4);
+                        int selectedItemIndex = SendMessageW(hDropdown4, CB_GETCURSEL, 0, 0);
+                        int selectedValue = SendMessageW(hDropdown4, CB_GETITEMDATA, selectedItemIndex, 0);
+                        OptionBUTTON1 = selectedValue;
+                    }
+                }break;
+                case ID_DROPDOWNLIST5:{
+                    if (wmEvent == CBN_SELCHANGE){
+                        HWND hDropdown5 = GetDlgItem(g_EditTill, ID_DROPDOWNLIST5);
+                        int selectedItemIndex = SendMessageW(hDropdown5, CB_GETCURSEL, 0, 0);
+                        int selectedValue = SendMessageW(hDropdown5, CB_GETITEMDATA, selectedItemIndex, 0);
+                        OptionBUTTON2 = selectedValue;
+                    }
+                }
+            }
+            
+        } break;
+        case WM_CLOSE:
+            // Stäng bara det nya fönstret när användaren klickar på krysset
+            DestroyWindow(hwnd);
+             
+            break;
+        default:
+            return DefWindowProc(hwnd, msg, wParam, lParam);
+    }
+    return 0;
+}
+
+LRESULT CALLBACK EditHelpWinProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam){
+    switch (msg) {
+        case WM_COMMAND:{
+            int wmId = LOWORD(wParam);
+            int wmEvent = HIWORD(wParam);
+            switch (wmId){
+                case ID_SAVE_BUTTON4:{
+                    
+                    removeLine(fileNames[OptionList], OptionBUTTON2);
+                    SendMessage(GetDlgItem(g_EditHelp, ID_DROPDOWNLIST6), CB_RESETCONTENT, 0, 0);
+                    printFileToDropdown(g_EditHelp, listFileName, ID_DROPDOWNLIST6);
+                    SendMessage(GetDlgItem(g_EditHelp, ID_DROPDOWNLIST7), CB_RESETCONTENT, 0, 0);
+
+                }break;
+                case ID_DROPDOWNLIST6:{
+                    if (wmEvent == CBN_SELCHANGE){
+                        // Få det valda indexet från dropdownlist1
+                        int selectedIndex = SendMessage((HWND)lParam, CB_GETCURSEL, 0, 0);
+                        // Rensa och uppdatera dropdownlist2 baserat på det valda indexet
+                        SendMessage(GetDlgItem(g_EditHelp, ID_DROPDOWNLIST7), CB_RESETCONTENT, 0, 0);
+                        // Hämta filnamnet för dropdownlist2 baserat på det valda indexet från dropdownlist1
+                        // Läs in alternativ från filen till dropdownlist2
+                        printFileToDropdown(g_EditHelp, fileNames[selectedIndex], ID_DROPDOWNLIST7);
+
+                        HWND hDropdown6 = GetDlgItem(g_EditHelp, ID_DROPDOWNLIST6);
+                        int selectedItemIndex = SendMessageW(hDropdown6, CB_GETCURSEL, 0, 0);
+                        int selectedValue = SendMessageW(hDropdown6, CB_GETITEMDATA, selectedItemIndex, 0);
+                        OptionList = selectedValue;
+                    }
+                }break;
+                case ID_DROPDOWNLIST7:{
+                    if (wmEvent == CBN_SELCHANGE){
+                        HWND hDropdown7 = GetDlgItem(g_EditHelp, ID_DROPDOWNLIST7);
+                        int selectedItemIndex = SendMessageW(hDropdown7, CB_GETCURSEL, 0, 0);
+                        int selectedValue = SendMessageW(hDropdown7, CB_GETITEMDATA, selectedItemIndex, 0);
+                        OptionBUTTON2 = selectedValue;
+                    }
+                }
+            }
+            
+        } break;
+        case WM_CLOSE:
+            // Stäng bara det nya fönstret när användaren klickar på krysset
+            DestroyWindow(hwnd);
+             
+            break;
+        default:
+            return DefWindowProc(hwnd, msg, wParam, lParam);
+    }
+    return 0;
+}
+// -------------------------------------------------------------- Funktioner ---------------------------------------------------------------------------
 
 int printTillbehor(HWND hwnd, const char *filename, int listBox) {
     wchar_t wfilename[256];
@@ -385,7 +585,6 @@ int printTillbehor(HWND hwnd, const char *filename, int listBox) {
     return 0;
 }
 
-
 int printFile(HWND hwnd, const char *filename, int listBox){
     FILE* listFile = fopen(filename, "r, ccs=UTF-8");
     if (listFile != NULL) {
@@ -409,45 +608,6 @@ int printFileToDropdown(HWND hwnd, const char *filename, int dropdownID) {
         }
         fclose(listFile);
     }
-}
-
-LRESULT CALLBACK WindowProcedure(HWND hWnd, UINT msg, WPARAM wp, LPARAM lp) {
-    switch (msg) {
-        case WM_COMMAND:
-            switch (wp) {
-                case ID_BUTTON:
-                    {
-                        char text[5];
-                        GetDlgItemText(hWnd, ID_TEXTBOX, text, 5);
-                        if (strcmp(text, CORRECT_CODE) == 0) {
-                            HWND hEdit1 = GetDlgItem(g_code, ID_EDIT_BOX);
-                            switch(saveBUTTON){
-                                case 1: {
-                                    OnButtonClick(hWnd, 1);
-                                    DestroyWindow(hWnd);  // Close current window
-                                     
-                                }break;
-                                case 2: {
-                                    OnButtonClick(hWnd, 2);
-                                    DestroyWindow(hWnd);  // Close current window
-                                     
-                                }break;
-                            }
-                        
-                        } else {
-                            MessageBox(hWnd, "Fel kod!", "Fel", MB_ICONERROR | MB_OK);
-                        }
-                    }
-                    break;
-            }
-            break;
-        case WM_DESTROY:
-            DestroyWindow(hWnd);
-            break;
-        default:
-            return DefWindowProc(hWnd, msg, wp, lp);
-    }
-    return 0;
 }
 
 void OnMenuClick(HWND hwnd, WPARAM buttonID){
@@ -474,7 +634,7 @@ void OnButtonClick(HWND hwnd, WPARAM buttonID) {
             {
                 // Register window class for the new window
                 WNDCLASS wc = { 0 };
-                wc.lpfnWndProc = NewWndProc;
+                wc.lpfnWndProc = NewHelpWndProc;
                 wc.hInstance = GetModuleHandle(NULL);
                 wc.lpszClassName = "AddHjalpWindow"; // Set a new name for the window class
                 RegisterClass(&wc);
@@ -503,65 +663,103 @@ void OnButtonClick(HWND hwnd, WPARAM buttonID) {
             {
                 // Register window class for the new window
                 WNDCLASS wc = { 0 };
-                wc.lpfnWndProc = NewWndTillProc;
+                wc.lpfnWndProc = NewTillWndProc;
                 wc.hInstance = GetModuleHandle(NULL);
                 wc.lpszClassName = "AddTillWindow"; // Set a new name for the window class
                 RegisterClass(&wc);
 
-                g_addHjalpw1 = CreateWindowA("AddTillWindow", "Nytt tillbehor", WS_OVERLAPPEDWINDOW, 100, 100, 640, 400, NULL, NULL, GetModuleHandle(NULL), NULL); // Använd CreateWindowW för breda tecken
-                ShowWindow(g_addHjalpw1, SW_SHOW);
-                UpdateWindow(g_addHjalpw1);
+                g_addTillpw = CreateWindowA("AddTillWindow", "Nytt tillbehor", WS_OVERLAPPEDWINDOW, 100, 100, 640, 400, NULL, NULL, GetModuleHandle(NULL), NULL); // Använd CreateWindowW för breda tecken
+                ShowWindow(g_addTillpw, SW_SHOW);
+                UpdateWindow(g_addTillpw);
                 
-                HWND hStatic4 = CreateWindowW(L"STATIC", L"Till Vilken Produktgrupp:", WS_CHILD | WS_VISIBLE, 10, 110, 200, 20, g_addHjalpw1, NULL, GetModuleHandle(NULL), NULL);
-                HWND hStatic6 = CreateWindowW(L"STATIC", L"Till Vilket Huvudhjalpmedel:", WS_CHILD | WS_VISIBLE, 220, 110, 390, 20, g_addHjalpw1, NULL, GetModuleHandle(NULL), NULL);
+                HWND hStatic4 = CreateWindowW(L"STATIC", L"Till Vilken Produktgrupp:", WS_CHILD | WS_VISIBLE, 10, 110, 200, 20, g_addTillpw, NULL, GetModuleHandle(NULL), NULL);
+                HWND hStatic6 = CreateWindowW(L"STATIC", L"Till Vilket Huvudhjalpmedel:", WS_CHILD | WS_VISIBLE, 220, 110, 390, 20, g_addTillpw, NULL, GetModuleHandle(NULL), NULL);
                 
-                // CreateLabelAndEdit(g_addHjalpw1, ID_EDIT_BOX4, ID_EDIT_BOX5, ID_EDIT_BOX6, ID_EDIT_BOX7);
-                HWND hStatic = CreateWindowEx(0, "STATIC", "Namn:", WS_CHILD | WS_VISIBLE, 10, 60, 120, 20, g_addHjalpw1, NULL, GetModuleHandle(NULL), NULL);
-                HWND hEdit = CreateWindowEx(0, "EDIT", "", WS_CHILD | WS_VISIBLE | WS_BORDER | ES_LEFT | ES_AUTOHSCROLL, 10, 80, 150, 20, g_addHjalpw1, (HMENU)ID_EDIT_BOX4, GetModuleHandle(NULL), NULL);
-                HWND hStatic1 = CreateWindowEx(0, "STATIC", "S2-nr:", WS_CHILD | WS_VISIBLE, 160, 60, 120, 20, g_addHjalpw1, NULL, GetModuleHandle(NULL), NULL);
-                HWND hEdit1 = CreateWindowEx(0, "EDIT", "", WS_CHILD | WS_VISIBLE | WS_BORDER | ES_LEFT | ES_AUTOHSCROLL, 160, 80, 150, 20, g_addHjalpw1, (HMENU)ID_EDIT_BOX5, GetModuleHandle(NULL), NULL);
-                HWND hStatic2 = CreateWindowEx(0, "STATIC", "Leverantor:", WS_CHILD | WS_VISIBLE, 310, 60, 120, 20, g_addHjalpw1, NULL, GetModuleHandle(NULL), NULL);
-                HWND hEdit2 = CreateWindowEx(0, "EDIT", "", WS_CHILD | WS_VISIBLE | WS_BORDER | ES_LEFT | ES_AUTOHSCROLL, 310, 80, 150, 20, g_addHjalpw1, (HMENU)ID_EDIT_BOX6, GetModuleHandle(NULL), NULL);
-                HWND hStatic3 = CreateWindowEx(0, "STATIC", "Lev-nr:", WS_CHILD | WS_VISIBLE, 460, 60, 120, 20, g_addHjalpw1, NULL, GetModuleHandle(NULL), NULL);
-                HWND hEdit3 = CreateWindowEx(0, "EDIT", "", WS_CHILD | WS_VISIBLE | WS_BORDER | ES_LEFT | ES_AUTOHSCROLL, 460, 80, 150, 20, g_addHjalpw1, (HMENU)ID_EDIT_BOX7, GetModuleHandle(NULL), NULL);
+                // CreateLabelAndEdit(g_addTillpw, ID_EDIT_BOX4, ID_EDIT_BOX5, ID_EDIT_BOX6, ID_EDIT_BOX7);
+                HWND hStatic = CreateWindowEx(0, "STATIC", "Namn:", WS_CHILD | WS_VISIBLE, 10, 60, 120, 20, g_addTillpw, NULL, GetModuleHandle(NULL), NULL);
+                HWND hEdit = CreateWindowEx(0, "EDIT", "", WS_CHILD | WS_VISIBLE | WS_BORDER | ES_LEFT | ES_AUTOHSCROLL, 10, 80, 150, 20, g_addTillpw, (HMENU)ID_EDIT_BOX4, GetModuleHandle(NULL), NULL);
+                HWND hStatic1 = CreateWindowEx(0, "STATIC", "S2-nr:", WS_CHILD | WS_VISIBLE, 160, 60, 120, 20, g_addTillpw, NULL, GetModuleHandle(NULL), NULL);
+                HWND hEdit1 = CreateWindowEx(0, "EDIT", "", WS_CHILD | WS_VISIBLE | WS_BORDER | ES_LEFT | ES_AUTOHSCROLL, 160, 80, 150, 20, g_addTillpw, (HMENU)ID_EDIT_BOX5, GetModuleHandle(NULL), NULL);
+                HWND hStatic2 = CreateWindowEx(0, "STATIC", "Leverantor:", WS_CHILD | WS_VISIBLE, 310, 60, 120, 20, g_addTillpw, NULL, GetModuleHandle(NULL), NULL);
+                HWND hEdit2 = CreateWindowEx(0, "EDIT", "", WS_CHILD | WS_VISIBLE | WS_BORDER | ES_LEFT | ES_AUTOHSCROLL, 310, 80, 150, 20, g_addTillpw, (HMENU)ID_EDIT_BOX6, GetModuleHandle(NULL), NULL);
+                HWND hStatic3 = CreateWindowEx(0, "STATIC", "Lev-nr:", WS_CHILD | WS_VISIBLE, 460, 60, 120, 20, g_addTillpw, NULL, GetModuleHandle(NULL), NULL);
+                HWND hEdit3 = CreateWindowEx(0, "EDIT", "", WS_CHILD | WS_VISIBLE | WS_BORDER | ES_LEFT | ES_AUTOHSCROLL, 460, 80, 150, 20, g_addTillpw, (HMENU)ID_EDIT_BOX7, GetModuleHandle(NULL), NULL);
         
                 // Skapa en "Spara" -knapp
-                HWND hButton = CreateWindowW(L"BUTTON", L"Spara", WS_TABSTOP | WS_VISIBLE | WS_CHILD | BS_DEFPUSHBUTTON, 10, 10, 600, 25, g_addHjalpw1, (HMENU)ID_SAVE_BUTTON2, GetModuleHandle(NULL), NULL);
+                HWND hButton = CreateWindowW(L"BUTTON", L"Spara", WS_TABSTOP | WS_VISIBLE | WS_CHILD | BS_DEFPUSHBUTTON, 10, 10, 600, 25, g_addTillpw, (HMENU)ID_SAVE_BUTTON2, GetModuleHandle(NULL), NULL);
                 
                 // Skapa dropdown-menyn
-                HWND hDropdown = CreateWindowW(L"COMBOBOX", NULL, CBS_DROPDOWNLIST | CBS_HASSTRINGS | WS_CHILD | WS_OVERLAPPED | WS_VISIBLE | WS_VSCROLL  , 10, 130, 200, 200, g_addHjalpw1,(HMENU)ID_DROPDOWNLIST1, NULL, NULL); // Använd breda tecken här
-                HWND hDropdown3 = CreateWindowW(L"COMBOBOX", NULL, CBS_DROPDOWNLIST | CBS_HASSTRINGS | WS_CHILD | WS_OVERLAPPED | WS_VISIBLE | WS_VSCROLL  , 220, 130, 390, 200, g_addHjalpw1,(HMENU)ID_DROPDOWNLIST2, NULL, NULL);
+                HWND hDropdown = CreateWindowW(L"COMBOBOX", NULL, CBS_DROPDOWNLIST | CBS_HASSTRINGS | WS_CHILD | WS_OVERLAPPED | WS_VISIBLE | WS_VSCROLL  , 10, 130, 200, 200, g_addTillpw,(HMENU)ID_DROPDOWNLIST1, NULL, NULL); // Använd breda tecken här
+                HWND hDropdown3 = CreateWindowW(L"COMBOBOX", NULL, CBS_DROPDOWNLIST | CBS_HASSTRINGS | WS_CHILD | WS_OVERLAPPED | WS_VISIBLE | WS_VSCROLL  , 220, 130, 390, 200, g_addTillpw,(HMENU)ID_DROPDOWNLIST2, NULL, NULL);
 
-                printFileToDropdown(g_addHjalpw1, listFileName, ID_DROPDOWNLIST1);
+                printFileToDropdown(g_addTillpw, listFileName, ID_DROPDOWNLIST1);
 
             }
             break;
 
         case 3:
-            MessageBox(hwnd, "Du klickade på Alternativ ush!", "Meddelande", MB_OK | MB_ICONINFORMATION);
+            {
+                MessageBox(hwnd, "Du klickade på Alternativ 2.1!", "Meddelande", MB_OK | MB_ICONINFORMATION);
+            }
             break;
         case 4:
-            MessageBox(hwnd, "Du klickade på Alternativ 2.1!", "Meddelande", MB_OK | MB_ICONINFORMATION);
+            {
+                // Register window class for the new window
+                WNDCLASS wc = { 0 };
+                wc.lpfnWndProc = EditHelpWinProc;
+                wc.hInstance = GetModuleHandle(NULL);
+                wc.lpszClassName = "EditHelpWindow"; // Set a new name for the window class
+                RegisterClass(&wc);
+
+                g_EditHelp = CreateWindowA("EditHelpWindow", "Nytt tillbehor", WS_OVERLAPPEDWINDOW, 100, 100, 640, 400, NULL, NULL, GetModuleHandle(NULL), NULL); // Använd CreateWindowW för breda tecken
+                ShowWindow(g_EditHelp, SW_SHOW);
+                UpdateWindow(g_EditHelp);
+                
+                HWND hStatic4 = CreateWindowW(L"STATIC", L"Vilken Produktgrupp:", WS_CHILD | WS_VISIBLE, 10, 60, 200, 20, g_EditHelp, NULL, GetModuleHandle(NULL), NULL);
+                HWND hStatic6 = CreateWindowW(L"STATIC", L"Vilket Huvudhjalpmedel:", WS_CHILD | WS_VISIBLE, 220, 60, 390, 20, g_EditHelp, NULL, GetModuleHandle(NULL), NULL);
+                // Skapa en "Spara" -knapp
+                HWND hButton = CreateWindowW(L"BUTTON", L"Ta bort", WS_TABSTOP | WS_VISIBLE | WS_CHILD | BS_DEFPUSHBUTTON, 10, 10, 600, 25, g_EditHelp, (HMENU)ID_SAVE_BUTTON4, GetModuleHandle(NULL), NULL);
+                
+                // Skapa dropdown-menyn
+                HWND hDropdown3 = CreateWindowW(L"COMBOBOX", NULL, CBS_DROPDOWNLIST | CBS_HASSTRINGS | WS_CHILD | WS_OVERLAPPED | WS_VISIBLE | WS_VSCROLL  , 10, 80, 200, 200, g_EditHelp,(HMENU)ID_DROPDOWNLIST6, NULL, NULL); // Använd breda tecken här
+                HWND hDropdown4 = CreateWindowW(L"COMBOBOX", NULL, CBS_DROPDOWNLIST | CBS_HASSTRINGS | WS_CHILD | WS_OVERLAPPED | WS_VISIBLE | WS_VSCROLL  , 220, 80, 390, 200, g_EditHelp,(HMENU)ID_DROPDOWNLIST7, NULL, NULL);
+                
+                printFileToDropdown(g_EditHelp, listFileName, ID_DROPDOWNLIST6);
+            }
             break;
         case 5:
-            MessageBox(hwnd, "Du klickade på Alternativ 2.2!", "Meddelande", MB_OK | MB_ICONINFORMATION);
+            {
+                // Register window class for the new window
+                WNDCLASS wc = { 0 };
+                wc.lpfnWndProc = EditTillWinProc;
+                wc.hInstance = GetModuleHandle(NULL);
+                wc.lpszClassName = "EditTillWindow"; // Set a new name for the window class
+                RegisterClass(&wc);
+
+                g_EditTill = CreateWindowA("EditTillWindow", "Nytt tillbehor", WS_OVERLAPPEDWINDOW, 100, 100, 1040, 400, NULL, NULL, GetModuleHandle(NULL), NULL); // Använd CreateWindowW för breda tecken
+                ShowWindow(g_EditTill, SW_SHOW);
+                UpdateWindow(g_EditTill);
+                
+                HWND hStatic4 = CreateWindowW(L"STATIC", L"Vilken Produktgrupp:", WS_CHILD | WS_VISIBLE, 10, 60, 200, 20, g_EditTill, NULL, GetModuleHandle(NULL), NULL);
+                HWND hStatic6 = CreateWindowW(L"STATIC", L"Vilket Huvudhjalpmedel:", WS_CHILD | WS_VISIBLE, 220, 60, 390, 20, g_EditTill, NULL, GetModuleHandle(NULL), NULL);
+                HWND hStatic7 = CreateWindowW(L"STATIC", L"Vilket Tillbehor:", WS_CHILD | WS_VISIBLE, 620, 60, 390, 20, g_EditTill, NULL, GetModuleHandle(NULL), NULL);
+                
+                // Skapa en "Spara" -knapp
+                HWND hButton = CreateWindowW(L"BUTTON", L"Ta bort", WS_TABSTOP | WS_VISIBLE | WS_CHILD | BS_DEFPUSHBUTTON, 10, 10, 1000, 25, g_EditTill, (HMENU)ID_SAVE_BUTTON3, GetModuleHandle(NULL), NULL);
+                
+                // Skapa dropdown-menyn
+                HWND hDropdown3 = CreateWindowW(L"COMBOBOX", NULL, CBS_DROPDOWNLIST | CBS_HASSTRINGS | WS_CHILD | WS_OVERLAPPED | WS_VISIBLE | WS_VSCROLL  , 10, 80, 200, 200, g_EditTill,(HMENU)ID_DROPDOWNLIST3, NULL, NULL); // Använd breda tecken här
+                HWND hDropdown4 = CreateWindowW(L"COMBOBOX", NULL, CBS_DROPDOWNLIST | CBS_HASSTRINGS | WS_CHILD | WS_OVERLAPPED | WS_VISIBLE | WS_VSCROLL  , 220, 80, 390, 200, g_EditTill,(HMENU)ID_DROPDOWNLIST4, NULL, NULL);
+                HWND hDropdown5 = CreateWindowW(L"COMBOBOX", NULL, CBS_DROPDOWNLIST | CBS_HASSTRINGS | WS_CHILD | WS_OVERLAPPED | WS_VISIBLE | WS_VSCROLL  , 620, 80, 390, 200, g_EditTill,(HMENU)ID_DROPDOWNLIST5, NULL, NULL);
+
+                printFileToDropdown(g_EditTill, listFileName, ID_DROPDOWNLIST3);
+            }
             break;
         case 6:
             MessageBox(hwnd, "Du klickade på Alternativ 3.1!", "Meddelande", MB_OK | MB_ICONINFORMATION);
             break;
         
     }
-}
-
-HWND CreateLabelAndEdit(HWND parentWnd, int controlId1, int controlId2, int controlId3, int controlId4){
-    HWND hStatic = CreateWindowEx(0, "STATIC", "Namn:", WS_CHILD | WS_VISIBLE, 10, 60, 120, 20, parentWnd, NULL, GetModuleHandle(NULL), NULL);
-    HWND hEdit = CreateWindowEx(0, "EDIT", "", WS_CHILD | WS_VISIBLE | WS_BORDER | ES_LEFT | ES_AUTOHSCROLL, 10, 80, 150, 20, parentWnd, (HMENU)controlId1, GetModuleHandle(NULL), NULL);
-    HWND hStatic1 = CreateWindowEx(0, "STATIC", "S2-nr:", WS_CHILD | WS_VISIBLE, 160, 60, 120, 20, parentWnd, NULL, GetModuleHandle(NULL), NULL);
-    HWND hEdit1 = CreateWindowEx(0, "EDIT", "", WS_CHILD | WS_VISIBLE | WS_BORDER | ES_LEFT | ES_AUTOHSCROLL, 160, 80, 150, 20, parentWnd, (HMENU)controlId2, GetModuleHandle(NULL), NULL);
-    HWND hStatic2 = CreateWindowEx(0, "STATIC", "Leverantor:", WS_CHILD | WS_VISIBLE, 310, 60, 120, 20, parentWnd, NULL, GetModuleHandle(NULL), NULL);
-    HWND hEdit2 = CreateWindowEx(0, "EDIT", "", WS_CHILD | WS_VISIBLE | WS_BORDER | ES_LEFT | ES_AUTOHSCROLL, 310, 80, 150, 20, parentWnd, (HMENU)controlId3, GetModuleHandle(NULL), NULL);
-    HWND hStatic3 = CreateWindowEx(0, "STATIC", "Lev-nr:", WS_CHILD | WS_VISIBLE, 460, 60, 120, 20, parentWnd, NULL, GetModuleHandle(NULL), NULL);
-    HWND hEdit3 = CreateWindowEx(0, "EDIT", "", WS_CHILD | WS_VISIBLE | WS_BORDER | ES_LEFT | ES_AUTOHSCROLL, 460, 80, 150, 20, parentWnd, (HMENU)controlId4, GetModuleHandle(NULL), NULL);
 }
 
 void SaveTextToFile(HWND hEdit1, HWND hEdit2, HWND hEdit3, HWND hEdit4, const char *filename) {
@@ -659,3 +857,30 @@ void SaveToFile(HWND hEdit1, const char *filename) {
     SetWindowText(hEdit1, "");
 }
 
+void removeLine(const char *filename, int lineToRemove) {
+    FILE *file = fopen(filename, "r");
+    FILE *tempFile = fopen("temp.txt", "w");
+
+    if (file == NULL || tempFile == NULL) {
+        printf("Error opening file.\n");
+        return;
+    }
+
+    char buffer[1000];
+    int currentLine = 0;
+
+    while (fgets(buffer, 1000, file) != NULL) {
+        // Skriv endast rader som inte ska tas bort
+        if (currentLine != lineToRemove) {
+            fputs(buffer, tempFile);
+        }
+        currentLine++;
+    }
+
+    fclose(file);
+    fclose(tempFile);
+
+    // Ta bort ursprungliga filen och döp om den temporära filen
+    remove(filename);
+    rename("temp.txt", filename);
+}
