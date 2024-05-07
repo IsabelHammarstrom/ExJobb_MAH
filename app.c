@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <wchar.h>  // Lägg till detta bibliotek för att hantera wide characters
 #include <CommCtrl.h>
+#include <stdbool.h>
 #include "test.h" 
 
 #define CORRECT_CODE "1234"
@@ -64,8 +65,11 @@ void SaveTextToFile(HWND hEdit1, HWND hEdit2, HWND hEdit3, HWND hEdit4, const ch
 void OnMenuClick(HWND hwnd, WPARAM buttonID);
 int printTillbehor(HWND hwnd, const char *filename, int listBox);
 void SaveToFile(HWND hEdit1, const char *filename);
-
 void removeLine(const char *filename, int lineToRemove);
+
+void CopyFileContents(const char *sourceFilename, const char *destinationFilename);
+void ClearFile(const char *filename);
+bool isFileEmpty(const char *filename);
 
 
 wchar_t SelectedText[MAX_STRING_LENGTH] = L""; // Global sträng för att spara det valda alternativet
@@ -250,8 +254,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) 
                 case ID_BUTTON6:
                         OnMenuClick(hwnd, 6);
                     break;
-            }
-            break;
+            } break;
         }
         case WM_DESTROY: {
             PostQuitMessage(0);
@@ -278,8 +281,8 @@ LRESULT CALLBACK NewHelpWndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lPara
                 
                     HWND hEdit1 = GetDlgItem(g_addHjalpw, ID_EDIT_BOX);
                     SaveToFile(hEdit1, fileNames[OptionBUTTON]);
-                    SendMessage(GetDlgItem(g_addTillpw, ID_DROPDOWNLIST), CB_RESETCONTENT, 0, 0);
-                    printFileToDropdown(g_EditTill, listFileName, ID_DROPDOWNLIST);
+                    SendMessage(GetDlgItem(g_addHjalpw, ID_DROPDOWNLIST), CB_RESETCONTENT, 0, 0);
+                    printFileToDropdown(g_addHjalpw, listFileName, ID_DROPDOWNLIST);
 
                 }break;
             }
@@ -310,7 +313,7 @@ LRESULT CALLBACK NewTillWndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lPara
                     SaveTextToFile(hEdit5, hEdit6, hEdit7, hEdit8, fileName1[OptionBUTTON]);
 
                     SendMessage(GetDlgItem(g_addTillpw, ID_DROPDOWNLIST1), CB_RESETCONTENT, 0, 0);
-                    printFileToDropdown(g_EditTill, listFileName, ID_DROPDOWNLIST1);
+                    printFileToDropdown(g_addTillpw, listFileName, ID_DROPDOWNLIST1);
                     SendMessage(GetDlgItem(g_addTillpw, ID_DROPDOWNLIST2), CB_RESETCONTENT, 0, 0);
 
                 }break;
@@ -408,9 +411,6 @@ LRESULT CALLBACK WindowProcedure(HWND hWnd, UINT msg, WPARAM wp, LPARAM lp) {
 LRESULT CALLBACK PrintWndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam){
     switch (msg) {
         case WM_COMMAND:
-            switch (wParam) {
-                
-            }
             break;
         case WM_DESTROY:
             DestroyWindow(hwnd);
@@ -507,8 +507,25 @@ LRESULT CALLBACK EditHelpWinProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lPar
             int wmEvent = HIWORD(wParam);
             switch (wmId){
                 case ID_SAVE_BUTTON4:{
+                    const char** fileName = NULL;
+                    const char* fileToClear = NULL;
+                    const char* fileToCopy = NULL;
+
+                    fileName = listTill[OptionList];
+                    fileToClear = fileName[OptionBUTTON1];
                     
-                    removeLine(fileNames[OptionList], OptionBUTTON2);
+                    removeLine(fileNames[OptionList], OptionBUTTON1);
+                    
+                    OptionBUTTON2 = OptionBUTTON1 + 1;
+                    fileToCopy = fileName[OptionBUTTON2];
+                    
+                    while(!isFileEmpty(fileToCopy)){
+                        ClearFile(fileName[OptionBUTTON1]);
+                        CopyFileContents(fileName[OptionBUTTON2], fileName[OptionBUTTON1]);
+                        OptionBUTTON2++;
+                        OptionBUTTON1++;
+                    }
+
                     SendMessage(GetDlgItem(g_EditHelp, ID_DROPDOWNLIST6), CB_RESETCONTENT, 0, 0);
                     printFileToDropdown(g_EditHelp, listFileName, ID_DROPDOWNLIST6);
                     SendMessage(GetDlgItem(g_EditHelp, ID_DROPDOWNLIST7), CB_RESETCONTENT, 0, 0);
@@ -535,7 +552,7 @@ LRESULT CALLBACK EditHelpWinProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lPar
                         HWND hDropdown7 = GetDlgItem(g_EditHelp, ID_DROPDOWNLIST7);
                         int selectedItemIndex = SendMessageW(hDropdown7, CB_GETCURSEL, 0, 0);
                         int selectedValue = SendMessageW(hDropdown7, CB_GETITEMDATA, selectedItemIndex, 0);
-                        OptionBUTTON2 = selectedValue;
+                        OptionBUTTON1 = selectedValue;
                     }
                 }
             }
@@ -883,4 +900,43 @@ void removeLine(const char *filename, int lineToRemove) {
     // Ta bort ursprungliga filen och döp om den temporära filen
     remove(filename);
     rename("temp.txt", filename);
+}
+
+void CopyFileContents(const char *sourceFilename, const char *destinationFilename) {
+    FILE *sourceFile = fopen(sourceFilename, "r");
+    FILE *destinationFile = fopen(destinationFilename, "w");
+
+    if (sourceFile == NULL || destinationFile == NULL) {
+        printf("Error opening files.\n");
+        return;
+    }
+
+    char buffer[1000];
+    while (fgets(buffer, sizeof(buffer), sourceFile) != NULL) {
+        fputs(buffer, destinationFile);
+    }
+
+    fclose(sourceFile);
+    fclose(destinationFile);
+}
+
+void ClearFile(const char *filename) {
+    // Öppnar filen för skrivning med "w" vilket kommer att rensa filen
+    FILE* file = fopen(filename, "w");
+    if (file == NULL) {
+        printf("Kunde inte öppna filen för skrivning.\n");
+        return;
+    }
+    fclose(file); // Stänger filen vilket lämnar den tom
+}
+
+bool isFileEmpty(const char *filename) {
+    FILE *file = fopen(filename, "r");
+    if (file == NULL) {
+        printf("Kan inte öppna filen.\n");
+        return true;  // Anta att filen är "tom" eller otillgänglig
+    }
+    int ch = fgetc(file);  // Försök läsa en karaktär från filen
+    fclose(file);
+    return ch == EOF;  // Returnera true om filen är tom (inga tecken lästa)
 }
