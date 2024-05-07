@@ -15,6 +15,10 @@
 #define ID_LISTBOX2 2
 #define ID_LISTBOX3 3
 #define ID_LISTBOX4 10
+#define ID_LISTBOX5 11
+#define ID_LISTBOX6 12
+#define ID_LISTBOX7 13
+
 #define ID_BUTTON1 4
 #define ID_BUTTON2 5
 #define ID_BUTTON3 6
@@ -63,13 +67,13 @@ int printFileToDropdown(HWND hwnd, const char *filename, int dropdownID);
 void OnButtonClick(HWND hwnd, WPARAM buttonID);
 void SaveTextToFile(HWND hEdit1, HWND hEdit2, HWND hEdit3, HWND hEdit4, const char *filename);
 void OnMenuClick(HWND hwnd, WPARAM buttonID);
-int printTillbehor(HWND hwnd, const char *filename, int listBox);
 void SaveToFile(HWND hEdit1, const char *filename);
 void removeLine(const char *filename, int lineToRemove);
-
 void CopyFileContents(const char *sourceFilename, const char *destinationFilename);
 void ClearFile(const char *filename);
 bool isFileEmpty(const char *filename);
+int printTillbehor(HWND hName, HWND hS2Nr, HWND hLeverantor, HWND hLevNr, const wchar_t *filename);
+wchar_t* ConvertToWideChar(const char* str);
 
 
 wchar_t SelectedText[MAX_STRING_LENGTH] = L""; // Global sträng för att spara det valda alternativet
@@ -193,7 +197,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) 
                 case ID_LISTBOX3: // Öppna ett nytt fönster
                     if (HIWORD(wParam) == LBN_SELCHANGE) {
                         // Skapa ett nytt fönster
-                        HWND hNewWindow = CreateWindowEx(0, "NewWindowClass", "New Window", WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, 800, 400, NULL, NULL, GetModuleHandle(NULL), NULL);
+                        HWND hNewWindow = CreateWindowEx(0, "NewWindowClass", "New Window", WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, 805, 400, NULL, NULL, GetModuleHandle(NULL), NULL);
                         
                         WNDCLASS wc = { 0 };
                         wc.lpfnWndProc = PrintWndProc;
@@ -210,12 +214,18 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) 
                         // Hämta det valda underalternativet från den tredje listboxen
                         HWND hThirdListBox = GetDlgItem(hwnd, ID_LISTBOX3);
                         int indexThirdListBox = SendMessage(hThirdListBox, LB_GETCURSEL, 0, 0);
-
-                        // Skapa en ny listbox baserat på det valda underalternativet
-                        HWND hNewListbox = CreateWindow("LISTBOX", NULL, WS_CHILD | WS_VISIBLE | LBS_NOTIFY | WS_VSCROLL, 10, 10, 700, 200, hNewWindow, (HMENU)ID_LISTBOX4, NULL, NULL);
                         
-                        SendMessage(hNewListbox, LB_ADDSTRING, 0, (LPARAM)"Namn       S2-nr         Leverantor       lev-nr");
-                        SendMessage(hNewListbox, LB_ADDSTRING, 0, (LPARAM)"------------------------------------------------------------------------------");
+                        HWND hListName1 = CreateWindow("STATIC", "Namn", WS_CHILD | WS_VISIBLE | LBS_NOTIFY | WS_BORDER, 10, 10, 320, 20, hNewWindow, NULL, NULL, NULL);
+                        HWND hListS2Nr1 = CreateWindow("STATIC", "S2-nr", WS_CHILD | WS_VISIBLE | LBS_NOTIFY | WS_BORDER, 330, 10, 100, 20, hNewWindow, NULL, NULL, NULL);
+                        HWND hListLeverantor1 = CreateWindow("STATIC", "Leverantor", WS_CHILD | WS_VISIBLE | LBS_NOTIFY | WS_BORDER, 430, 10, 200, 20, hNewWindow, NULL, NULL, NULL);
+                        HWND hListLevNr1 = CreateWindow("STATIC", "Lev-nr", WS_CHILD | WS_VISIBLE | LBS_NOTIFY | WS_BORDER, 630, 10, 150, 20, hNewWindow, NULL, NULL, NULL);
+                        
+                        // Skapa en ny listbox baserat på det valda underalternativet
+                        HWND hListName = CreateWindow("LISTBOX", NULL, WS_CHILD | WS_VISIBLE | LBS_NOTIFY | WS_VSCROLL | WS_BORDER, 10, 30, 320, 200, hNewWindow, (HMENU)ID_LISTBOX4, NULL, NULL);
+                        HWND hListS2Nr = CreateWindow("LISTBOX", NULL, WS_CHILD | WS_VISIBLE | LBS_NOTIFY | WS_VSCROLL| WS_BORDER, 330, 30, 100, 200, hNewWindow, (HMENU)ID_LISTBOX5, NULL, NULL);
+                        HWND hListLeverantor = CreateWindow("LISTBOX", NULL, WS_CHILD | WS_VISIBLE | LBS_NOTIFY | WS_VSCROLL| WS_BORDER, 430, 30, 200, 200, hNewWindow, (HMENU)ID_LISTBOX6, NULL, NULL);
+                        HWND hListLevNr = CreateWindow("LISTBOX", NULL, WS_CHILD | WS_VISIBLE | LBS_NOTIFY | WS_VSCROLL| WS_BORDER, 630, 30, 150, 200, hNewWindow, (HMENU)ID_LISTBOX7, NULL, NULL);
+                        
                         // Lägg till alternativ i den nya listboxen
                         if (indexFirstListBox >= 0 && indexSecondListBox >= 0 && indexThirdListBox >= 0) {
                             const char** fileName = NULL;
@@ -229,7 +239,11 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) 
                                 file = fileName[indexSecondListBox];
                             }
                             
-                            printTillbehor(hNewWindow, file, ID_LISTBOX4);
+                            wchar_t* wFile = ConvertToWideChar(file);
+                            if (wFile != NULL) {
+                                printTillbehor(hListName, hListS2Nr, hListLeverantor, hListLevNr, wFile);
+                                free(wFile); // Frigör minnet för den konverterade strängen
+                            }
                         }
                         // Visa det nya fönstret
                         ShowWindow(hNewWindow, SW_SHOW);
@@ -570,36 +584,37 @@ LRESULT CALLBACK EditHelpWinProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lPar
 }
 // -------------------------------------------------------------- Funktioner ---------------------------------------------------------------------------
 
-int printTillbehor(HWND hwnd, const char *filename, int listBox) {
-    wchar_t wfilename[256];
-    mbstowcs(wfilename, filename, strlen(filename) + 1);  // Convert to wide char
-
-    FILE* listFile = _wfopen(wfilename, L"r, ccs=UTF-8");
+int printTillbehor(HWND hName, HWND hS2Nr, HWND hLeverantor, HWND hLevNr, const wchar_t *filename) {
+    FILE* listFile = _wfopen(filename, L"r, ccs=UTF-8");
     if (listFile == NULL) {
-        return -1;
+        return -1; // Filen kunde inte öppnas
     }
 
-    wchar_t line[MAXSIZE];
-    wchar_t combined[MAXSIZE];
-    wchar_t *token;
+    wchar_t line[MAXSIZE]; // Antag att detta är tillräckligt stort för en rad
+    wchar_t *tokens[4]; // Antag att det finns 4 kolumner
     const wchar_t *delimiters = L",";
 
-    while (fgetws(line, MAXSIZE, listFile) != NULL) {
-        token = wcstok(line, delimiters);  // Get the first token
-        combined[0] = L'\0';  // Start with an empty string
+    while (fgetws(line, 1024, listFile) != NULL) {
+        // Rensa '\n' från slutet av raden
+        line[wcslen(line)-1] = L'\0';
 
-        while (token != NULL) {
-            wchar_t formatted_token[TOKEN_WIDTH + 1];  // +1 for null terminator
-            swprintf(formatted_token, L"%-*.*ls", TOKEN_WIDTH, TOKEN_WIDTH, token);  // Format token
-            wcsncat(combined, formatted_token, sizeof(combined)/sizeof(wchar_t) - wcslen(combined) - 1);  // Append formatted token to combined string
-            token = wcstok(NULL, delimiters);  // Get next token
+        // Dela upp raden
+        wchar_t *token = wcstok(line, delimiters);
+        int colIndex = 0;
+        while (token != NULL && colIndex < 4) {
+            tokens[colIndex++] = token;
+            token = wcstok(NULL, delimiters);
         }
 
-        SendMessageW(GetDlgItem(hwnd, listBox), LB_ADDSTRING, 0, (LPARAM)combined); // Send combined string to listbox
+        // Lägg till tokens i motsvarande listboxar
+        SendMessageW(hName, LB_ADDSTRING, 0, (LPARAM)tokens[0]);
+        SendMessageW(hS2Nr, LB_ADDSTRING, 0, (LPARAM)tokens[1]);
+        SendMessageW(hLeverantor, LB_ADDSTRING, 0, (LPARAM)tokens[2]);
+        SendMessageW(hLevNr, LB_ADDSTRING, 0, (LPARAM)tokens[3]);
     }
 
     fclose(listFile);
-    return 0;
+    return 0; // Inga fel uppstod
 }
 
 int printFile(HWND hwnd, const char *filename, int listBox){
@@ -939,4 +954,16 @@ bool isFileEmpty(const char *filename) {
     int ch = fgetc(file);  // Försök läsa en karaktär från filen
     fclose(file);
     return ch == EOF;  // Returnera true om filen är tom (inga tecken lästa)
+}
+
+wchar_t* ConvertToWideChar(const char* str) {
+    if (str == NULL) return NULL;
+
+    // Beräkna längden av den nya wide char strängen
+    int len = MultiByteToWideChar(CP_UTF8, 0, str, -1, NULL, 0);
+    wchar_t* wstr = malloc(len * sizeof(wchar_t));
+    if (wstr == NULL) return NULL;
+
+    MultiByteToWideChar(CP_UTF8, 0, str, -1, wstr, len);
+    return wstr;
 }
