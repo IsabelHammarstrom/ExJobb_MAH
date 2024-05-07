@@ -72,7 +72,7 @@ void removeLine(const char *filename, int lineToRemove);
 void CopyFileContents(const char *sourceFilename, const char *destinationFilename);
 void ClearFile(const char *filename);
 bool isFileEmpty(const char *filename);
-int printTillbehor(HWND hName, HWND hS2Nr, HWND hLeverantor, HWND hLevNr, const wchar_t *filename);
+int printTillbehor(HWND hParent, const wchar_t *filename);
 wchar_t* ConvertToWideChar(const char* str);
 
 
@@ -83,6 +83,11 @@ HWND g_addTillpw;
 HWND g_code;
 HWND g_EditTill;
 HWND g_EditHelp;
+HWND hListName;
+HWND hListS2Nr;
+HWND hListLeverantor;
+HWND hListLevNr;
+
 int saveBUTTON = 0;
 int OptionBUTTON = 0;
 int OptionBUTTON1 = 0;
@@ -197,7 +202,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) 
                 case ID_LISTBOX3: // Öppna ett nytt fönster
                     if (HIWORD(wParam) == LBN_SELCHANGE) {
                         // Skapa ett nytt fönster
-                        HWND hNewWindow = CreateWindowEx(0, "NewWindowClass", "New Window", WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, 805, 400, NULL, NULL, GetModuleHandle(NULL), NULL);
+                        HWND hNewWindow = CreateWindowEx(0, "NewWindowClass", "New Window", WS_OVERLAPPEDWINDOW | WS_VSCROLL, CW_USEDEFAULT, CW_USEDEFAULT, 855, 530, NULL, NULL, GetModuleHandle(NULL), NULL);
                         
                         WNDCLASS wc = { 0 };
                         wc.lpfnWndProc = PrintWndProc;
@@ -214,18 +219,12 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) 
                         // Hämta det valda underalternativet från den tredje listboxen
                         HWND hThirdListBox = GetDlgItem(hwnd, ID_LISTBOX3);
                         int indexThirdListBox = SendMessage(hThirdListBox, LB_GETCURSEL, 0, 0);
-                        
-                        HWND hListName1 = CreateWindow("STATIC", "Namn", WS_CHILD | WS_VISIBLE | LBS_NOTIFY | WS_BORDER, 10, 10, 320, 20, hNewWindow, NULL, NULL, NULL);
-                        HWND hListS2Nr1 = CreateWindow("STATIC", "S2-nr", WS_CHILD | WS_VISIBLE | LBS_NOTIFY | WS_BORDER, 330, 10, 100, 20, hNewWindow, NULL, NULL, NULL);
-                        HWND hListLeverantor1 = CreateWindow("STATIC", "Leverantor", WS_CHILD | WS_VISIBLE | LBS_NOTIFY | WS_BORDER, 430, 10, 200, 20, hNewWindow, NULL, NULL, NULL);
-                        HWND hListLevNr1 = CreateWindow("STATIC", "Lev-nr", WS_CHILD | WS_VISIBLE | LBS_NOTIFY | WS_BORDER, 630, 10, 150, 20, hNewWindow, NULL, NULL, NULL);
-                        
-                        // Skapa en ny listbox baserat på det valda underalternativet
-                        HWND hListName = CreateWindow("LISTBOX", NULL, WS_CHILD | WS_VISIBLE | LBS_NOTIFY | WS_VSCROLL | WS_BORDER, 10, 30, 320, 200, hNewWindow, (HMENU)ID_LISTBOX4, NULL, NULL);
-                        HWND hListS2Nr = CreateWindow("LISTBOX", NULL, WS_CHILD | WS_VISIBLE | LBS_NOTIFY | WS_VSCROLL| WS_BORDER, 330, 30, 100, 200, hNewWindow, (HMENU)ID_LISTBOX5, NULL, NULL);
-                        HWND hListLeverantor = CreateWindow("LISTBOX", NULL, WS_CHILD | WS_VISIBLE | LBS_NOTIFY | WS_VSCROLL| WS_BORDER, 430, 30, 200, 200, hNewWindow, (HMENU)ID_LISTBOX6, NULL, NULL);
-                        HWND hListLevNr = CreateWindow("LISTBOX", NULL, WS_CHILD | WS_VISIBLE | LBS_NOTIFY | WS_VSCROLL| WS_BORDER, 630, 30, 150, 200, hNewWindow, (HMENU)ID_LISTBOX7, NULL, NULL);
-                        
+
+                        HWND hListName1 = CreateWindow("STATIC", "Namn", WS_CHILD | WS_VISIBLE | LBS_NOTIFY | WS_BORDER, 460, 10, 360, 20, hNewWindow, NULL, NULL, NULL);
+                        HWND hListS2Nr1 = CreateWindow("STATIC", "S2-nr", WS_CHILD | WS_VISIBLE | LBS_NOTIFY | WS_BORDER, 360, 10, 100, 20, hNewWindow, NULL, NULL, NULL);
+                        HWND hListLeverantor1 = CreateWindow("STATIC", "Leverantor", WS_CHILD | WS_VISIBLE | LBS_NOTIFY | WS_BORDER, 160, 10, 200, 20, hNewWindow, NULL, NULL, NULL);
+                        HWND hListLevNr1 = CreateWindow("STATIC", "Lev-nr", WS_CHILD | WS_VISIBLE | LBS_NOTIFY | WS_BORDER, 10, 10, 150, 20, hNewWindow, NULL, NULL, NULL);
+                   
                         // Lägg till alternativ i den nya listboxen
                         if (indexFirstListBox >= 0 && indexSecondListBox >= 0 && indexThirdListBox >= 0) {
                             const char** fileName = NULL;
@@ -241,7 +240,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) 
                             
                             wchar_t* wFile = ConvertToWideChar(file);
                             if (wFile != NULL) {
-                                printTillbehor(hListName, hListS2Nr, hListLeverantor, hListLevNr, wFile);
+                                printTillbehor(hNewWindow, wFile);
                                 free(wFile); // Frigör minnet för den konverterade strängen
                             }
                         }
@@ -317,10 +316,10 @@ LRESULT CALLBACK NewTillWndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lPara
             int wmEvent = HIWORD(wParam);
             switch (wmId){
                 case ID_SAVE_BUTTON2:{
-                    HWND hEdit5 = GetDlgItem(g_addTillpw, ID_EDIT_BOX4);
-                    HWND hEdit6 = GetDlgItem(g_addTillpw, ID_EDIT_BOX5);
-                    HWND hEdit7 = GetDlgItem(g_addTillpw, ID_EDIT_BOX6);
-                    HWND hEdit8 = GetDlgItem(g_addTillpw, ID_EDIT_BOX7);
+                    HWND hEdit5 = GetDlgItem(g_addTillpw, ID_EDIT_BOX7);
+                    HWND hEdit6 = GetDlgItem(g_addTillpw, ID_EDIT_BOX6);
+                    HWND hEdit7 = GetDlgItem(g_addTillpw, ID_EDIT_BOX5);
+                    HWND hEdit8 = GetDlgItem(g_addTillpw, ID_EDIT_BOX4);
                     
                     const char** fileName1 = NULL;
                     fileName1 = listTill[OptionList];
@@ -422,13 +421,33 @@ LRESULT CALLBACK WindowProcedure(HWND hWnd, UINT msg, WPARAM wp, LPARAM lp) {
     return 0;
 }
 
-LRESULT CALLBACK PrintWndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam){
+LRESULT CALLBACK PrintWndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
     switch (msg) {
-        case WM_COMMAND:
+        case WM_VSCROLL:
+            {
+            SCROLLINFO si = {0};
+            si.cbSize = sizeof(SCROLLINFO);
+            si.fMask = SIF_ALL;
+            GetScrollInfo(hwnd, SB_VERT, &si);
+            int yPos = si.nPos;
+            switch (LOWORD(wParam)) {
+                case SB_LINEUP: yPos -= 20; break;
+                case SB_LINEDOWN: yPos += 20; break;
+                case SB_PAGEUP: yPos -= si.nPage; break;
+                case SB_PAGEDOWN: yPos += si.nPage; break;
+                case SB_THUMBTRACK: yPos = si.nTrackPos; break;
+            }
+            yPos = max(0, min(yPos, si.nMax - (int)si.nPage));
+            if (yPos != si.nPos) {
+                SetScrollPos(hwnd, SB_VERT, yPos, TRUE);
+                ScrollWindow(hwnd, 0, si.nPos - yPos, NULL, NULL);
+            }
             break;
+        }
         case WM_DESTROY:
             DestroyWindow(hwnd);
             break;
+
         default:
             return DefWindowProc(hwnd, msg, wParam, lParam);
     }
@@ -584,37 +603,54 @@ LRESULT CALLBACK EditHelpWinProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lPar
 }
 // -------------------------------------------------------------- Funktioner ---------------------------------------------------------------------------
 
-int printTillbehor(HWND hName, HWND hS2Nr, HWND hLeverantor, HWND hLevNr, const wchar_t *filename) {
+int printTillbehor(HWND hParent, const wchar_t *filename) {
     FILE* listFile = _wfopen(filename, L"r, ccs=UTF-8");
     if (listFile == NULL) {
         return -1; // Filen kunde inte öppnas
     }
 
-    wchar_t line[MAXSIZE]; // Antag att detta är tillräckligt stort för en rad
-    wchar_t *tokens[4]; // Antag att det finns 4 kolumner
+    wchar_t line[MAXSIZE];
     const wchar_t *delimiters = L",";
+    int yPos = 30; // Startposition för den första kontrollen
 
-    while (fgetws(line, 1024, listFile) != NULL) {
-        // Rensa '\n' från slutet av raden
-        line[wcslen(line)-1] = L'\0';
+    while (fgetws(line, MAXSIZE, listFile) != NULL) {
+        line[wcslen(line)-1] = L'\0'; // Rensa '\n' från slutet av raden
 
-        // Dela upp raden
         wchar_t *token = wcstok(line, delimiters);
         int colIndex = 0;
-        while (token != NULL && colIndex < 4) {
-            tokens[colIndex++] = token;
-            token = wcstok(NULL, delimiters);
-        }
+        int xPos = 10; // Startposition för den första kolumnen
 
-        // Lägg till tokens i motsvarande listboxar
-        SendMessageW(hName, LB_ADDSTRING, 0, (LPARAM)tokens[0]);
-        SendMessageW(hS2Nr, LB_ADDSTRING, 0, (LPARAM)tokens[1]);
-        SendMessageW(hLeverantor, LB_ADDSTRING, 0, (LPARAM)tokens[2]);
-        SendMessageW(hLevNr, LB_ADDSTRING, 0, (LPARAM)tokens[3]);
+        const int widths[4] = {150, 200, 100, 360}; // Bredd för varje kolumn
+
+        while (token != NULL && colIndex < 4) {
+            // Justera x-positionen baserat på tidigare kolumner
+            if (colIndex > 0) {
+                xPos += widths[colIndex - 1];
+            }
+
+            HWND hControl;
+            if (colIndex == 3) { // Ändra till EDIT för den fjärde kolumnen
+                hControl = CreateWindowW(L"EDIT", token, WS_CHILD | WS_VISIBLE | WS_BORDER | ES_READONLY | WS_VSCROLL | ES_MULTILINE, xPos, yPos, widths[colIndex], 20, hParent, NULL, (HINSTANCE)GetWindowLongPtr(hParent, GWLP_HINSTANCE), NULL);
+            } else {
+                hControl = CreateWindowW(L"STATIC", token, WS_VISIBLE | WS_CHILD | SS_LEFT | WS_BORDER, xPos, yPos, widths[colIndex], 20, hParent, NULL, (HINSTANCE)GetWindowLongPtr(hParent, GWLP_HINSTANCE), NULL);
+            }
+            token = wcstok(NULL, delimiters);
+            colIndex++;
+        }
+        yPos += 20; // Öka y-positionen för nästa rad
     }
 
+    // Konfigurera scrollbaren
+    SCROLLINFO si = {0};
+    si.cbSize = sizeof(si);
+    si.fMask = SIF_RANGE | SIF_PAGE;
+    si.nMin = 0;
+    si.nMax = yPos;
+    si.nPage = 530; // Höjden på fönstret
+    SetScrollInfo(hParent, SB_VERT, &si, TRUE);
+
     fclose(listFile);
-    return 0; // Inga fel uppstod
+    return 0;
 }
 
 int printFile(HWND hwnd, const char *filename, int listBox){
