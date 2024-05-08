@@ -5,7 +5,7 @@
 #include <wchar.h>  
 #include <CommCtrl.h>
 #include <stdbool.h>
-#include "test.h" 
+#include "app.h" 
 
 #define CORRECT_CODE "1234"
 #define ID_TEXTBOX 111
