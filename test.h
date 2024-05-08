@@ -28,101 +28,391 @@ const char* ctill[] = {
     "sammling/cpap/c1.txt",
     "sammling/cpap/c2.txt",
     "sammling/cpap/c3.txt",
-    "sammling/cpap/c4.txt"
+    "sammling/cpap/c4.txt",
+    "sammling/cpap/c5.txt",
+    "sammling/cpap/c6.txt",
+    "sammling/cpap/c7.txt",
+    "sammling/cpap/c8.txt",
+    "sammling/cpap/c9.txt",
+    "sammling/cpap/c10.txt",
+    "sammling/cpap/c11.txt",
+    "sammling/cpap/c12.txt",
+    "sammling/cpap/c13.txt",
+    "sammling/cpap/c14.txt",
+    "sammling/cpap/c15.txt",
+    "sammling/cpap/c16.txt",
+    "sammling/cpap/c17.txt",
+    "sammling/cpap/c18.txt",
+    "sammling/cpap/c19.txt",
+    "sammling/cpap/c20.txt"
 };
 
 const char* bileveltill[] = {
     "sammling/bilevel/b1.txt",
     "sammling/bilevel/b2.txt",
     "sammling/bilevel/b3.txt",
-    "sammling/bilevel/b4.txt"
+    "sammling/bilevel/b4.txt",
+    "sammling/bilevel/b5.txt",
+    "sammling/bilevel/b6.txt",
+    "sammling/bilevel/b7.txt",
+    "sammling/bilevel/b8.txt",
+    "sammling/bilevel/b9.txt",
+    "sammling/bilevel/b10.txt",
+    "sammling/bilevel/b11.txt",
+    "sammling/bilevel/b12.txt",
+    "sammling/bilevel/b13.txt",
+    "sammling/bilevel/b14.txt",
+    "sammling/bilevel/b15.txt",
+    "sammling/bilevel/b16.txt",
+    "sammling/bilevel/b17.txt",
+    "sammling/bilevel/b18.txt",
+    "sammling/bilevel/b19.txt",
+    "sammling/bilevel/b20.txt"
 };
 
 const char* vtill[] = {
     "sammling/vent/v1.txt",
     "sammling/vent/v2.txt",
     "sammling/vent/v3.txt",
-    "sammling/vent/v4.txt"
+    "sammling/vent/v4.txt",
+    "sammling/vent/v5.txt",
+    "sammling/vent/v6.txt",
+    "sammling/vent/v7.txt",
+    "sammling/vent/v8.txt",
+    "sammling/vent/v9.txt",
+    "sammling/vent/v10.txt",
+    "sammling/vent/v11.txt",
+    "sammling/vent/v12.txt",
+    "sammling/vent/v13.txt",
+    "sammling/vent/v14.txt",
+    "sammling/vent/v15.txt",
+    "sammling/vent/v16.txt",
+    "sammling/vent/v17.txt",
+    "sammling/vent/v18.txt",
+    "sammling/vent/v19.txt",
+    "sammling/vent/v20.txt"
 };
 
 const char* inhatill[] = {
     "sammling/inha/inh1.txt",
     "sammling/inha/inh2.txt",
     "sammling/inha/inh3.txt",
-    "sammling/inha/inh4.txt"
+    "sammling/inha/inh4.txt",
+    "sammling/inha/inh5.txt",
+    "sammling/inha/inh6.txt",
+    "sammling/inha/inh7.txt",
+    "sammling/inha/inh8.txt",
+    "sammling/inha/inh9.txt",
+    "sammling/inha/inh10.txt",
+    "sammling/inha/inh11.txt",
+    "sammling/inha/inh12.txt",
+    "sammling/inha/inh13.txt",
+    "sammling/inha/inh14.txt",
+    "sammling/inha/inh15.txt",
+    "sammling/inha/inh16.txt",
+    "sammling/inha/inh17.txt",
+    "sammling/inha/inh18.txt",
+    "sammling/inha/inh19.txt",
+    "sammling/inha/inh20.txt"
 };
 
 const char* syrgastill[] = {
     "sammling/syrgas/syr1.txt",
     "sammling/syrgas/syr2.txt",
     "sammling/syrgas/syr3.txt",
-    "sammling/syrgas/syr4.txt"
+    "sammling/syrgas/syr4.txt",
+    "sammling/syrgas/syr5.txt",
+    "sammling/syrgas/syr6.txt",
+    "sammling/syrgas/syr7.txt",
+    "sammling/syrgas/syr8.txt",
+    "sammling/syrgas/syr9.txt",
+    "sammling/syrgas/syr10.txt",
+    "sammling/syrgas/syr11.txt",
+    "sammling/syrgas/syr12.txt",
+    "sammling/syrgas/syr13.txt",
+    "sammling/syrgas/syr14.txt",
+    "sammling/syrgas/syr15.txt",
+    "sammling/syrgas/syr16.txt",
+    "sammling/syrgas/syr17.txt",
+    "sammling/syrgas/syr18.txt",
+    "sammling/syrgas/syr19.txt",
+    "sammling/syrgas/syr20.txt"
 };
 
 const char* pulstill[] = {
     "sammling/puls/puls1.txt",
     "sammling/puls/puls2.txt",
     "sammling/puls/puls3.txt",
-    "sammling/puls/puls4.txt"
+    "sammling/puls/puls4.txt",
+    "sammling/puls/puls5.txt",
+    "sammling/puls/puls6.txt",
+    "sammling/puls/puls7.txt",
+    "sammling/puls/puls8.txt",
+    "sammling/puls/puls9.txt",
+    "sammling/puls/puls10.txt",
+    "sammling/puls/puls11.txt",
+    "sammling/puls/puls12.txt",
+    "sammling/puls/puls13.txt",
+    "sammling/puls/puls14.txt",
+    "sammling/puls/puls15.txt",
+    "sammling/puls/puls16.txt",
+    "sammling/puls/puls17.txt",
+    "sammling/puls/puls18.txt",
+    "sammling/puls/puls19.txt",
+    "sammling/puls/puls20.txt"
 };
 
 const char* komptill[] = {
     "sammling/komp/komp1.txt",
     "sammling/komp/komp2.txt",
     "sammling/komp/komp3.txt",
-    "sammling/komp/komp4.txt"
+    "sammling/komp/komp4.txt",
+    "sammling/komp/komp5.txt",
+    "sammling/komp/komp6.txt",
+    "sammling/komp/komp7.txt",
+    "sammling/komp/komp8.txt",
+    "sammling/komp/komp9.txt",
+    "sammling/komp/komp10.txt",
+    "sammling/komp/komp11.txt",
+    "sammling/komp/komp12.txt",
+    "sammling/komp/komp13.txt",
+    "sammling/komp/komp14.txt",
+    "sammling/komp/komp15.txt",
+    "sammling/komp/komp16.txt",
+    "sammling/komp/komp17.txt",
+    "sammling/komp/komp18.txt",
+    "sammling/komp/komp19.txt",
+    "sammling/komp/komp20.txt"
 };
 
 const char* slemtill[] = {
     "sammling/slem/slem1.txt",
     "sammling/slem/slem2.txt",
     "sammling/slem/slem3.txt",
-    "sammling/slem/slem4.txt"
+    "sammling/slem/slem4.txt",
+    "sammling/slem/slem5.txt",
+    "sammling/slem/slem6.txt",
+    "sammling/slem/slem7.txt",
+    "sammling/slem/slem8.txt",
+    "sammling/slem/slem9.txt",
+    "sammling/slem/slem10.txt",
+    "sammling/slem/slem11.txt",
+    "sammling/slem/slem12.txt",
+    "sammling/slem/slem13.txt",
+    "sammling/slem/slem14.txt",
+    "sammling/slem/slem15.txt",
+    "sammling/slem/slem16.txt",
+    "sammling/slem/slem17.txt",
+    "sammling/slem/slem18.txt",
+    "sammling/slem/slem19.txt",
+    "sammling/slem/slem20.txt"
 };
 
 const char* andtill[] = {
     "sammling/and/and1.txt",
     "sammling/and/and2.txt",
     "sammling/and/and3.txt",
-    "sammling/and/and4.txt"
+    "sammling/and/and4.txt",
+    "sammling/and/and5.txt",
+    "sammling/and/and6.txt",
+    "sammling/and/and7.txt",
+    "sammling/and/and8.txt",
+    "sammling/and/and9.txt",
+    "sammling/and/and10.txt",
+    "sammling/and/and11.txt",
+    "sammling/and/and12.txt",
+    "sammling/and/and13.txt",
+    "sammling/and/and14.txt",
+    "sammling/and/and15.txt",
+    "sammling/and/and16.txt",
+    "sammling/and/and17.txt",
+    "sammling/and/and18.txt",
+    "sammling/and/and19.txt",
+    "sammling/and/and20.txt"
 };
 
 const char* muskeltill[] = {
     "sammling/muskel/muskel1.txt",
     "sammling/muskel/muskel2.txt",
     "sammling/muskel/muskel3.txt",
-    "sammling/muskel/muskel4.txt"
+    "sammling/muskel/muskel4.txt",
+    "sammling/muskel/muskel5.txt",
+    "sammling/muskel/muskel6.txt",
+    "sammling/muskel/muskel7.txt",
+    "sammling/muskel/muskel8.txt",
+    "sammling/muskel/muskel9.txt",
+    "sammling/muskel/muskel10.txt",
+    "sammling/muskel/muskel11.txt",
+    "sammling/muskel/muskel12.txt",
+    "sammling/muskel/muskel13.txt",
+    "sammling/muskel/muskel14.txt",
+    "sammling/muskel/muskel15.txt",
+    "sammling/muskel/muskel16.txt",
+    "sammling/muskel/muskel17.txt",
+    "sammling/muskel/muskel18.txt",
+    "sammling/muskel/muskel19.txt",
+    "sammling/muskel/muskel20.txt"
 };
 
 const char* nuttill[] = {
     "sammling/nut/nut1.txt",
     "sammling/nut/nut2.txt",
     "sammling/nut/nut3.txt",
-    "sammling/nut/nut4.txt"
+    "sammling/nut/nut4.txt",
+    "sammling/nut/nut5.txt",
+    "sammling/nut/nut6.txt",
+    "sammling/nut/nut7.txt",
+    "sammling/nut/nut8.txt",
+    "sammling/nut/nut9.txt",
+    "sammling/nut/nut10.txt",
+    "sammling/nut/nut11.txt",
+    "sammling/nut/nut12.txt",
+    "sammling/nut/nut13.txt",
+    "sammling/nut/nut14.txt",
+    "sammling/nut/nut15.txt",
+    "sammling/nut/nut16.txt",
+    "sammling/nut/nut17.txt",
+    "sammling/nut/nut18.txt",
+    "sammling/nut/nut19.txt",
+    "sammling/nut/nut20.txt"
 };
 
 const char* infutill[] = {
-    
+    "sammling/infu/infu1.txt",
+    "sammling/infu/infu2.txt",
+    "sammling/infu/infu3.txt",
+    "sammling/infu/infu4.txt",
+    "sammling/infu/infu5.txt",
+    "sammling/infu/infu6.txt",
+    "sammling/infu/infu7.txt",
+    "sammling/infu/infu8.txt",
+    "sammling/infu/infu9.txt",
+    "sammling/infu/infu10.txt",
+    "sammling/infu/infu11.txt",
+    "sammling/infu/infu12.txt",
+    "sammling/infu/infu13.txt",
+    "sammling/infu/infu14.txt",
+    "sammling/infu/infu15.txt",
+    "sammling/infu/infu16.txt",
+    "sammling/infu/infu17.txt",
+    "sammling/infu/infu18.txt",
+    "sammling/infu/infu19.txt",
+    "sammling/infu/infu20.txt"
 };
 
 const char* koagtill[] = {
-    
+    "sammling/koag/koag1.txt",
+    "sammling/koag/koag2.txt",
+    "sammling/koag/koag3.txt",
+    "sammling/koag/koag4.txt",
+    "sammling/koag/koag5.txt",
+    "sammling/koag/koag6.txt",
+    "sammling/koag/koag7.txt",
+    "sammling/koag/koag8.txt",
+    "sammling/koag/koag9.txt",
+    "sammling/koag/koag10.txt",
+    "sammling/koag/koag11.txt",
+    "sammling/koag/koag12.txt",
+    "sammling/koag/koag13.txt",
+    "sammling/koag/koag14.txt",
+    "sammling/koag/koag15.txt",
+    "sammling/koag/koag16.txt",
+    "sammling/koag/koag17.txt",
+    "sammling/koag/koag18.txt",
+    "sammling/koag/koag19.txt",
+    "sammling/koag/koag20.txt"
 };
 
 const char* apnetill[] = {
-    
+    "sammling/apne/apne1.txt",
+    "sammling/apne/apne2.txt",
+    "sammling/apne/apne3.txt",
+    "sammling/apne/apne4.txt",
+    "sammling/apne/apne5.txt",
+    "sammling/apne/apne6.txt",
+    "sammling/apne/apne7.txt",
+    "sammling/apne/apne8.txt",
+    "sammling/apne/apne9.txt",
+    "sammling/apne/apne10.txt",
+    "sammling/apne/apne11.txt",
+    "sammling/apne/apne12.txt",
+    "sammling/apne/apne13.txt",
+    "sammling/apne/apne14.txt",
+    "sammling/apne/apne15.txt",
+    "sammling/apne/apne16.txt",
+    "sammling/apne/apne17.txt",
+    "sammling/apne/apne18.txt",
+    "sammling/apne/apne19.txt",
+    "sammling/apne/apne20.txt"
 };
 
 const char* tenstill[] = {
-    
+    "sammling/tens/tens1.txt",
+    "sammling/tens/tens2.txt",
+    "sammling/tens/tens3.txt",
+    "sammling/tens/tens4.txt",
+    "sammling/tens/tens5.txt",
+    "sammling/tens/tens6.txt",
+    "sammling/tens/tens7.txt",
+    "sammling/tens/tens8.txt",
+    "sammling/tens/tens9.txt",
+    "sammling/tens/tens10.txt",
+    "sammling/tens/tens11.txt",
+    "sammling/tens/tens12.txt",
+    "sammling/tens/tens13.txt",
+    "sammling/tens/tens14.txt",
+    "sammling/tens/tens15.txt",
+    "sammling/tens/tens16.txt",
+    "sammling/tens/tens17.txt",
+    "sammling/tens/tens18.txt",
+    "sammling/tens/tens19.txt",
+    "sammling/tens/tens20.txt"
 };
 
 const char* eptill[] = {
-    
+    "sammling/ep/ep1.txt",
+    "sammling/ep/ep2.txt",
+    "sammling/ep/ep3.txt",
+    "sammling/ep/ep4.txt",
+    "sammling/ep/ep5.txt",
+    "sammling/ep/ep6.txt",
+    "sammling/ep/ep7.txt",
+    "sammling/ep/ep8.txt",
+    "sammling/ep/ep9.txt",
+    "sammling/ep/ep10.txt",
+    "sammling/ep/ep11.txt",
+    "sammling/ep/ep12.txt",
+    "sammling/ep/ep13.txt",
+    "sammling/ep/ep14.txt",
+    "sammling/ep/ep15.txt",
+    "sammling/ep/ep16.txt",
+    "sammling/ep/ep17.txt",
+    "sammling/ep/ep18.txt",
+    "sammling/ep/ep19.txt",
+    "sammling/ep/ep20.txt"
 };
 
 const char* ovrigttill[] = {
-    
+    "sammling/ovrigt/o1.txt",
+    "sammling/ovrigt/o2.txt",
+    "sammling/ovrigt/o3.txt",
+    "sammling/ovrigt/o4.txt",
+    "sammling/ovrigt/o5.txt",
+    "sammling/ovrigt/o6.txt",
+    "sammling/ovrigt/o7.txt",
+    "sammling/ovrigt/o8.txt",
+    "sammling/ovrigt/o9.txt",
+    "sammling/ovrigt/o10.txt",
+    "sammling/ovrigt/o11.txt",
+    "sammling/ovrigt/o12.txt",
+    "sammling/ovrigt/o13.txt",
+    "sammling/ovrigt/o14.txt",
+    "sammling/ovrigt/o15.txt",
+    "sammling/ovrigt/o16.txt",
+    "sammling/ovrigt/o17.txt",
+    "sammling/ovrigt/o18.txt",
+    "sammling/ovrigt/o19.txt",
+    "sammling/ovrigt/o20.txt"
 };
 
 
@@ -133,73 +423,391 @@ const char* creserv[] = {
     "sammling/cpap/c11.txt",
     "sammling/cpap/c22.txt",
     "sammling/cpap/c33.txt",
-    "sammling/cpap/c44.txt"
+    "sammling/cpap/c44.txt",
+    "sammling/cpap/c55.txt",
+    "sammling/cpap/c66.txt",
+    "sammling/cpap/c77.txt",
+    "sammling/cpap/c88.txt",
+    "sammling/cpap/c99.txt",
+    "sammling/cpap/c100.txt",
+    "sammling/cpap/c111.txt",
+    "sammling/cpap/c122.txt",
+    "sammling/cpap/c133.txt",
+    "sammling/cpap/c144.txt",
+    "sammling/cpap/c155.txt",
+    "sammling/cpap/c166.txt",
+    "sammling/cpap/c177.txt",
+    "sammling/cpap/c188.txt",
+    "sammling/cpap/c199.txt",
+    "sammling/cpap/c200.txt"
 };
 
 const char* bilevelreserv[] = {
-
+    "sammling/bilevel/b11.txt",
+    "sammling/bilevel/b22.txt",
+    "sammling/bilevel/b33.txt",
+    "sammling/bilevel/b44.txt",
+    "sammling/bilevel/b55.txt",
+    "sammling/bilevel/b66.txt",
+    "sammling/bilevel/b77.txt",
+    "sammling/bilevel/b88.txt",
+    "sammling/bilevel/b99.txt",
+    "sammling/bilevel/b100.txt",
+    "sammling/bilevel/b111.txt",
+    "sammling/bilevel/b122.txt",
+    "sammling/bilevel/b133.txt",
+    "sammling/bilevel/b144.txt",
+    "sammling/bilevel/b155.txt",
+    "sammling/bilevel/b166.txt",
+    "sammling/bilevel/b177.txt",
+    "sammling/bilevel/b188.txt",
+    "sammling/bilevel/b199.txt",
+    "sammling/bilevel/b200.txt"
 };
 
 const char* vreserv[] = {
     "sammling/vent/v11.txt",
     "sammling/vent/v22.txt",
-    "sammling/vent/v33.txt"
+    "sammling/vent/v33.txt",
+    "sammling/vent/v44.txt",
+    "sammling/vent/v55.txt",
+    "sammling/vent/v66.txt",
+    "sammling/vent/v77.txt",
+    "sammling/vent/v88.txt",
+    "sammling/vent/v99.txt",
+    "sammling/vent/v100.txt",
+    "sammling/vent/v111.txt",
+    "sammling/vent/v122.txt",
+    "sammling/vent/v133.txt",
+    "sammling/vent/v144.txt",
+    "sammling/vent/v155.txt",
+    "sammling/vent/v166.txt",
+    "sammling/vent/v177.txt",
+    "sammling/vent/v188.txt",
+    "sammling/vent/v199.txt",
+    "sammling/vent/v200.txt"
 };
 
 const char* inhareserv[] = {
-
+    "sammling/inha/inh11.txt",
+    "sammling/inha/inh22.txt",
+    "sammling/inha/inh33.txt",
+    "sammling/inha/inh44.txt",
+    "sammling/inha/inh55.txt",
+    "sammling/inha/inh66.txt",
+    "sammling/inha/inh77.txt",
+    "sammling/inha/inh88.txt",
+    "sammling/inha/inh99.txt",
+    "sammling/inha/inh100.txt",
+    "sammling/inha/inh111.txt",
+    "sammling/inha/inh122.txt",
+    "sammling/inha/inh133.txt",
+    "sammling/inha/inh144.txt",
+    "sammling/inha/inh155.txt",
+    "sammling/inha/inh166.txt",
+    "sammling/inha/inh177.txt",
+    "sammling/inha/inh188.txt",
+    "sammling/inha/inh199.txt",
+    "sammling/inha/inh200.txt"
 };
 
 const char* syrgasreserv[] = {
-    
+    "sammling/syrgas/syr11.txt",
+    "sammling/syrgas/syr22.txt",
+    "sammling/syrgas/syr33.txt",
+    "sammling/syrgas/syr44.txt",
+    "sammling/syrgas/syr55.txt",
+    "sammling/syrgas/syr66.txt",
+    "sammling/syrgas/syr77.txt",
+    "sammling/syrgas/syr88.txt",
+    "sammling/syrgas/syr99.txt",
+    "sammling/syrgas/syr100.txt",
+    "sammling/syrgas/syr111.txt",
+    "sammling/syrgas/syr122.txt",
+    "sammling/syrgas/syr133.txt",
+    "sammling/syrgas/syr144.txt",
+    "sammling/syrgas/syr155.txt",
+    "sammling/syrgas/syr166.txt",
+    "sammling/syrgas/syr177.txt",
+    "sammling/syrgas/syr188.txt",
+    "sammling/syrgas/syr199.txt",
+    "sammling/syrgas/syr200.txt"
 };
 
 const char* pulsreserv[] = {
-    
+    "sammling/puls/puls11.txt",
+    "sammling/puls/puls22.txt",
+    "sammling/puls/puls33.txt",
+    "sammling/puls/puls44.txt",
+    "sammling/puls/puls55.txt",
+    "sammling/puls/puls66.txt",
+    "sammling/puls/puls77.txt",
+    "sammling/puls/puls88.txt",
+    "sammling/puls/puls99.txt",
+    "sammling/puls/puls100.txt",
+    "sammling/puls/puls111.txt",
+    "sammling/puls/puls122.txt",
+    "sammling/puls/puls133.txt",
+    "sammling/puls/puls144.txt",
+    "sammling/puls/puls155.txt",
+    "sammling/puls/puls166.txt",
+    "sammling/puls/puls177.txt",
+    "sammling/puls/puls188.txt",
+    "sammling/puls/puls199.txt",
+    "sammling/puls/puls200.txt"
 };
 
 const char* kompreserv[] = {
-    
+    "sammling/komp/komp11.txt",
+    "sammling/komp/komp22.txt",
+    "sammling/komp/komp33.txt",
+    "sammling/komp/komp44.txt",
+    "sammling/komp/komp55.txt",
+    "sammling/komp/komp66.txt",
+    "sammling/komp/komp77.txt",
+    "sammling/komp/komp88.txt",
+    "sammling/komp/komp99.txt",
+    "sammling/komp/komp100.txt",
+    "sammling/komp/komp111.txt",
+    "sammling/komp/komp122.txt",
+    "sammling/komp/komp133.txt",
+    "sammling/komp/komp144.txt",
+    "sammling/komp/komp155.txt",
+    "sammling/komp/komp166.txt",
+    "sammling/komp/komp177.txt",
+    "sammling/komp/komp188.txt",
+    "sammling/komp/komp199.txt",
+    "sammling/komp/komp200.txt"
 };
 
 const char* slemreserv[] = {
-    
+    "sammling/slem/slem11.txt",
+    "sammling/slem/slem22.txt",
+    "sammling/slem/slem33.txt",
+    "sammling/slem/slem44.txt",
+    "sammling/slem/slem55.txt",
+    "sammling/slem/slem66.txt",
+    "sammling/slem/slem77.txt",
+    "sammling/slem/slem88.txt",
+    "sammling/slem/slem99.txt",
+    "sammling/slem/slem100.txt",
+    "sammling/slem/slem111.txt",
+    "sammling/slem/slem122.txt",
+    "sammling/slem/slem133.txt",
+    "sammling/slem/slem144.txt",
+    "sammling/slem/slem155.txt",
+    "sammling/slem/slem166.txt",
+    "sammling/slem/slem177.txt",
+    "sammling/slem/slem188.txt",
+    "sammling/slem/slem199.txt",
+    "sammling/slem/slem200.txt"
 };
 
 const char* andreserv[] = {
-    
+    "sammling/and/and11.txt",
+    "sammling/and/and22.txt",
+    "sammling/and/and33.txt",
+    "sammling/and/and44.txt",
+    "sammling/and/and55.txt",
+    "sammling/and/and66.txt",
+    "sammling/and/and77.txt",
+    "sammling/and/and88.txt",
+    "sammling/and/and99.txt",
+    "sammling/and/and100.txt",
+    "sammling/and/and111.txt",
+    "sammling/and/and122.txt",
+    "sammling/and/and133.txt",
+    "sammling/and/and144.txt",
+    "sammling/and/and155.txt",
+    "sammling/and/and166.txt",
+    "sammling/and/and177.txt",
+    "sammling/and/and188.txt",
+    "sammling/and/and199.txt",
+    "sammling/and/and200.txt"
 };
 
 const char* muskelreserv[] = {
-    
+    "sammling/muskel/muskel11.txt",
+    "sammling/muskel/muskel22.txt",
+    "sammling/muskel/muskel33.txt",
+    "sammling/muskel/muskel44.txt",
+    "sammling/muskel/muskel55.txt",
+    "sammling/muskel/muskel66.txt",
+    "sammling/muskel/muskel77.txt",
+    "sammling/muskel/muskel88.txt",
+    "sammling/muskel/muskel99.txt",
+    "sammling/muskel/muskel100.txt",
+    "sammling/muskel/muskel111.txt",
+    "sammling/muskel/muskel122.txt",
+    "sammling/muskel/muskel133.txt",
+    "sammling/muskel/muskel144.txt",
+    "sammling/muskel/muskel155.txt",
+    "sammling/muskel/muskel166.txt",
+    "sammling/muskel/muskel177.txt",
+    "sammling/muskel/muskel188.txt",
+    "sammling/muskel/muskel199.txt",
+    "sammling/muskel/muskel200.txt"
 };
 
 const char* nutreserv[] = {
-    
+    "sammling/nut/nut11.txt",
+    "sammling/nut/nut22.txt",
+    "sammling/nut/nut33.txt",
+    "sammling/nut/nut44.txt",
+    "sammling/nut/nut55.txt",
+    "sammling/nut/nut66.txt",
+    "sammling/nut/nut77.txt",
+    "sammling/nut/nut88.txt",
+    "sammling/nut/nut99.txt",
+    "sammling/nut/nut100.txt",
+    "sammling/nut/nut111.txt",
+    "sammling/nut/nut122.txt",
+    "sammling/nut/nut133.txt",
+    "sammling/nut/nut144.txt",
+    "sammling/nut/nut155.txt",
+    "sammling/nut/nut166.txt",
+    "sammling/nut/nut177.txt",
+    "sammling/nut/nut188.txt",
+    "sammling/nut/nut199.txt",
+    "sammling/nut/nut200.txt"
 };
 
 const char* infureserv[] = {
-    
+    "sammling/infu/infu11.txt",
+    "sammling/infu/infu22.txt",
+    "sammling/infu/infu33.txt",
+    "sammling/infu/infu44.txt",
+    "sammling/infu/infu55.txt",
+    "sammling/infu/infu66.txt",
+    "sammling/infu/infu77.txt",
+    "sammling/infu/infu88.txt",
+    "sammling/infu/infu99.txt",
+    "sammling/infu/infu100.txt",
+    "sammling/infu/infu111.txt",
+    "sammling/infu/infu122.txt",
+    "sammling/infu/infu133.txt",
+    "sammling/infu/infu144.txt",
+    "sammling/infu/infu155.txt",
+    "sammling/infu/infu166.txt",
+    "sammling/infu/infu177.txt",
+    "sammling/infu/infu188.txt",
+    "sammling/infu/infu199.txt",
+    "sammling/infu/infu200.txt"
 };
 
 const char* koagreserv[] = {
-    
+    "sammling/koag/koag11.txt",
+    "sammling/koag/koag22.txt",
+    "sammling/koag/koag33.txt",
+    "sammling/koag/koag44.txt",
+    "sammling/koag/koag55.txt",
+    "sammling/koag/koag66.txt",
+    "sammling/koag/koag77.txt",
+    "sammling/koag/koag88.txt",
+    "sammling/koag/koag99.txt",
+    "sammling/koag/koag100.txt",
+    "sammling/koag/koag111.txt",
+    "sammling/koag/koag122.txt",
+    "sammling/koag/koag133.txt",
+    "sammling/koag/koag144.txt",
+    "sammling/koag/koag155.txt",
+    "sammling/koag/koag166.txt",
+    "sammling/koag/koag177.txt",
+    "sammling/koag/koag188.txt",
+    "sammling/koag/koag199.txt",
+    "sammling/koag/koag200.txt"
 };
 
 const char* apnereserv[] = {
-    
+    "sammling/apne/apne11.txt",
+    "sammling/apne/apne22.txt",
+    "sammling/apne/apne33.txt",
+    "sammling/apne/apne44.txt",
+    "sammling/apne/apne55.txt",
+    "sammling/apne/apne66.txt",
+    "sammling/apne/apne77.txt",
+    "sammling/apne/apne88.txt",
+    "sammling/apne/apne99.txt",
+    "sammling/apne/apne100.txt",
+    "sammling/apne/apne111.txt",
+    "sammling/apne/apne122.txt",
+    "sammling/apne/apne133.txt",
+    "sammling/apne/apne144.txt",
+    "sammling/apne/apne155.txt",
+    "sammling/apne/apne166.txt",
+    "sammling/apne/apne177.txt",
+    "sammling/apne/apne188.txt",
+    "sammling/apne/apne199.txt",
+    "sammling/apne/apne200.txt"
 };
 
 const char* tensreserv[] = {
-    
+    "sammling/tens/tens11.txt",
+    "sammling/tens/tens22.txt",
+    "sammling/tens/tens33.txt",
+    "sammling/tens/tens44.txt",
+    "sammling/tens/tens55.txt",
+    "sammling/tens/tens66.txt",
+    "sammling/tens/tens77.txt",
+    "sammling/tens/tens88.txt",
+    "sammling/tens/tens99.txt",
+    "sammling/tens/tens100.txt",
+    "sammling/tens/tens111.txt",
+    "sammling/tens/tens122.txt",
+    "sammling/tens/tens133.txt",
+    "sammling/tens/tens144.txt",
+    "sammling/tens/tens155.txt",
+    "sammling/tens/tens166.txt",
+    "sammling/tens/tens177.txt",
+    "sammling/tens/tens188.txt",
+    "sammling/tens/tens199.txt",
+    "sammling/tens/tens200.txt"
 };
 
 const char* epreserv[] = {
-    
+    "sammling/ep/ep11.txt",
+    "sammling/ep/ep22.txt",
+    "sammling/ep/ep33.txt",
+    "sammling/ep/ep44.txt",
+    "sammling/ep/ep55.txt",
+    "sammling/ep/ep66.txt",
+    "sammling/ep/ep77.txt",
+    "sammling/ep/ep88.txt",
+    "sammling/ep/ep99.txt",
+    "sammling/ep/ep100.txt",
+    "sammling/ep/ep111.txt",
+    "sammling/ep/ep122.txt",
+    "sammling/ep/ep133.txt",
+    "sammling/ep/ep144.txt",
+    "sammling/ep/ep155.txt",
+    "sammling/ep/ep166.txt",
+    "sammling/ep/ep177.txt",
+    "sammling/ep/ep188.txt",
+    "sammling/ep/ep199.txt",
+    "sammling/ep/ep200.txt"
 };
 
 const char* ovrigtreserv[] = {
-    
+    "sammling/ovrigt/o11.txt",
+    "sammling/ovrigt/o22.txt",
+    "sammling/ovrigt/o33.txt",
+    "sammling/ovrigt/o44.txt",
+    "sammling/ovrigt/o55.txt",
+    "sammling/ovrigt/o66.txt",
+    "sammling/ovrigt/o77.txt",
+    "sammling/ovrigt/o88.txt",
+    "sammling/ovrigt/o99.txt",
+    "sammling/ovrigt/o100.txt",
+    "sammling/ovrigt/o111.txt",
+    "sammling/ovrigt/o122.txt",
+    "sammling/ovrigt/o133.txt",
+    "sammling/ovrigt/o144.txt",
+    "sammling/ovrigt/o155.txt",
+    "sammling/ovrigt/o166.txt",
+    "sammling/ovrigt/o177.txt",
+    "sammling/ovrigt/o188.txt",
+    "sammling/ovrigt/o199.txt",
+    "sammling/ovrigt/o200.txt"
 };
 
 // ---- Listor till Tb och Rd ----

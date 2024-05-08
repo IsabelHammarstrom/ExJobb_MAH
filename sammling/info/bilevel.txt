@@ -1,4 +1,4 @@
-BiPAP A40 Pro, ND
+BiPAP A40 Pro
 AirCurve 10 VAuto
 Stellar 150
 Lumis 150 VPAP ST

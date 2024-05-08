@@ -1,2 +1,26 @@
-test2, 22, 22, 22, 
-på, 555555, 5, 7777777, 
+37335| ResMed Sweden AB| 60353| Air 10 Side Cover Gray|
+378871| ResMed Sweden AB| 85877| Bruksanvisning AirSense 10 for Her|
+19704| ResMed Sweden AB| 82875| Chassis assy - AirSense FH / AirCurve|
+36851| ResMed Sweden AB| HC29324| Filter till Air 10/S9 serien, standard 2pack|
+36856| ResMed Sweden AB| HC29326| Filter till Air 10/S9, hypoallergi 2pack|
+19735| ResMed Sweden AB| 70043| Frontpanel (White) -AirSense 10 AutoSet For Her|
+37471| ResMed Sweden AB| 88989| HumidAir II befuktningskammare- Air10 och Lumis|
+37471-CO| ResMed Sweden AB| 88990| HumidAir II Climate Control KIT|
+378523| ResMed Sweden AB| 82988| Klinisk bruksanvisning AirSense 10 for Her|
+378335| ResMed Sweden AB| 82984| Kortfattad bruksanvisning AirSense 10|
+19779| ResMed Sweden AB| 82892| Moderkort - AirSense 10 Autoset for Her|
+19740| ResMed Sweden AB| 82885| Namnplatta AirSense 10 AutoSet|
+37343| ResMed Sweden AB| 65945| RPS II - Air 10 DC Cable|
+39229| ResMed Sweden AB| 86499| SD-kort Air 11, Air 10,Lumis 10-pack|
+19766| ResMed Sweden AB| 73503| SD-kort lucka AirSense 10 FH/AirCurve (ljusgrå)|
+19726| ResMed Sweden AB| 82882| Sidopanel AirSense 10 FH/AirCurve (ljusgrå)|
+378652| ResMed Sweden AB| 82989| Snabbguide AirSense 10 for Her|
+37476| ResMed Sweden AB| 75302| Strömförsörjningsenhet 90W AirSense 10, AirCurve, Lumis S/ST/ST-A samt RPS II v2(Air 10 90W PSU)|
+19721| ResMed Sweden AB| 82880| Tryckknappar AirSense 10 svart|
+37296| ResMed Sweden AB| 52640| Uppvärmd luftslang (ClimateLine Air)|
+62748| ResMed Sweden AB| HC37980| Helmask Quattro Air for Her Medium|
+62747| ResMed Sweden AB| HC37981| Helmask Quattro Air for Her Small|
+62746| ResMed Sweden AB| HC37982| Helmask Quattro Air for Her X-Small|
+37305| ResMed Sweden AB| 82976| Air 10 Travel Bag For Her|
+61546| ResMed Sweden AB| HC35819| Näskuddemask Swift FX for Her|
+19768| ResMed Sweden AB| 68437| Filterlucka - Air10 grå (for Her/AirCurve)|

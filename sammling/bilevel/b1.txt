@@ -1,0 +1,12 @@
+3000DBM| Philips AB| 83204| A40 Pro Batterimodul| 
+ | Medidyne AB| 402683| A40 Pro Batterimodul| 
+1117842| Philips AB| 65209| A40 VI Panel| 
+1098513| Philips AB| 55824| Användarväska A40| 
+ | Medidyne AB| 402565| Användarväska A40| 
+ | Medidyne AB| 402566| Bärväska A40| 
+ | Medidyne AB| 402530| Batteri Trilogy/CA E70/A40 utbytbart| 
+1043570| Philips AB| HC29501| Batteri Trilogy/CA E70/A40 utbytbart| 
+NDX3T| Philips AB| 83656| A-Serien, Pro, befuktare inkl uppvärmd slang| 
+ | Medidyne AB| 402688| A-Serien, Pro, befuktare inkl uppvärmd slang| 
+1142982| Philips AB| 88950| A- 40 pro Series power supply - 100W| 
+ | Medidyne AB| 402673| A- 40 pro Series power supply - 100W| 
