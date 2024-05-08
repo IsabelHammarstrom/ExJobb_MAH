@@ -103,6 +103,7 @@ HWND hListLeverantor;
 HWND hListLevNr;
 HWND g_addRespw;
 HWND g_EditRes;
+HWND hControl;
 
 int saveBUTTON = 0;
 int OptionBUTTON = 0;
@@ -121,7 +122,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
     wc.lpszClassName = "MyWindowClass";
     RegisterClass(&wc);
 
-    hwnd = CreateWindow("MyWindowClass", "Listbox Example", WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, 1400, 600, NULL, NULL, hInstance, NULL);
+    hwnd = CreateWindow("MyWindowClass", "Start", WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, 1400, 600, NULL, NULL, hInstance, NULL);
 
     HWND hListBox = CreateWindow("LISTBOX", NULL, WS_CHILD | WS_VISIBLE | LBS_NOTIFY | WS_VSCROLL, 10, 10, 350, 500, hwnd, (HMENU)ID_LISTBOX1, hInstance, NULL);
 
@@ -218,7 +219,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) 
                 case ID_LISTBOX3: // Öppna ett nytt fönster
                     if (HIWORD(wParam) == LBN_SELCHANGE) {
                         // Skapa ett nytt fönster
-                        HWND hNewWindow = CreateWindowEx(0, "NewWindowClass", "New Window", WS_OVERLAPPEDWINDOW | WS_VSCROLL, CW_USEDEFAULT, CW_USEDEFAULT, 855, 530, NULL, NULL, GetModuleHandle(NULL), NULL);
+                        HWND hNewWindow = CreateWindowEx(0, "NewWindowClass", "Tillbehor/Reservdelar", WS_OVERLAPPEDWINDOW | WS_VSCROLL, CW_USEDEFAULT, CW_USEDEFAULT, 855, 530, NULL, NULL, GetModuleHandle(NULL), NULL);
                         
                         WNDCLASS wc = { 0 };
                         wc.lpfnWndProc = PrintWndProc;
@@ -236,10 +237,10 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) 
                         HWND hThirdListBox = GetDlgItem(hwnd, ID_LISTBOX3);
                         int indexThirdListBox = SendMessage(hThirdListBox, LB_GETCURSEL, 0, 0);
 
-                        HWND hListName1 = CreateWindow("STATIC", "Namn", WS_CHILD | WS_VISIBLE | LBS_NOTIFY | WS_BORDER, 460, 10, 360, 20, hNewWindow, NULL, NULL, NULL);
-                        HWND hListS2Nr1 = CreateWindow("STATIC", "S2-nr", WS_CHILD | WS_VISIBLE | LBS_NOTIFY | WS_BORDER, 360, 10, 100, 20, hNewWindow, NULL, NULL, NULL);
-                        HWND hListLeverantor1 = CreateWindow("STATIC", "Leverantor", WS_CHILD | WS_VISIBLE | LBS_NOTIFY | WS_BORDER, 160, 10, 200, 20, hNewWindow, NULL, NULL, NULL);
-                        HWND hListLevNr1 = CreateWindow("STATIC", "Lev-nr", WS_CHILD | WS_VISIBLE | LBS_NOTIFY | WS_BORDER, 10, 10, 150, 20, hNewWindow, NULL, NULL, NULL);
+                        HWND hListName1 = CreateWindow("STATIC", "Namn", WS_CHILD | WS_VISIBLE | LBS_NOTIFY | WS_BORDER, 460, 40, 360, 20, hNewWindow, NULL, NULL, NULL);
+                        HWND hListS2Nr1 = CreateWindow("STATIC", "S2-nr", WS_CHILD | WS_VISIBLE | LBS_NOTIFY | WS_BORDER, 360, 40, 100, 20, hNewWindow, NULL, NULL, NULL);
+                        HWND hListLeverantor1 = CreateWindow("STATIC", "Leverantor", WS_CHILD | WS_VISIBLE | LBS_NOTIFY | WS_BORDER, 160, 40, 200, 20, hNewWindow, NULL, NULL, NULL);
+                        HWND hListLevNr1 = CreateWindow("STATIC", "Lev-nr", WS_CHILD | WS_VISIBLE | LBS_NOTIFY | WS_BORDER, 10, 40, 150, 20, hNewWindow, NULL, NULL, NULL);
                    
                         // Lägg till alternativ i den nya listboxen
                         if (indexFirstListBox >= 0 && indexSecondListBox >= 0 && indexThirdListBox >= 0) {
@@ -249,9 +250,11 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) 
                             if (indexThirdListBox == 0) { // tillbehör
                                 fileName = listTill[indexFirstListBox];
                                 file = fileName[indexSecondListBox];
+                                HWND hTill = CreateWindow("STATIC", "Tillbehor", WS_CHILD | WS_VISIBLE | LBS_NOTIFY | WS_BORDER, 10, 10, 100, 20, hNewWindow, NULL, NULL, NULL);
                             } else { // reservdelar
                                 fileName = listReserv[indexFirstListBox];
                                 file = fileName[indexSecondListBox];
+                                HWND hRes = CreateWindow("STATIC", "Reservdelar", WS_CHILD | WS_VISIBLE | LBS_NOTIFY | WS_BORDER, 10, 10, 100, 20, hNewWindow, NULL, NULL, NULL);
                             }
                             
                             wchar_t* wFile = ConvertToWideChar(file);
@@ -775,7 +778,7 @@ int printArtikel(HWND hParent, const wchar_t *filename) {
 
     wchar_t line[MAXSIZE];
     const wchar_t *delimiters = L"|";
-    int yPos = 30; // Startposition för den första kontrollen
+    int yPos = 60; // Startposition för den första kontrollen
 
     while (fgetws(line, MAXSIZE, listFile) != NULL) {
         line[wcslen(line)-1] = L'\0'; // Rensa '\n' från slutet av raden
@@ -792,7 +795,6 @@ int printArtikel(HWND hParent, const wchar_t *filename) {
                 xPos += widths[colIndex - 1];
             }
 
-            HWND hControl;
             if (colIndex == 3) { // Ändra till EDIT för den fjärde kolumnen
                 hControl = CreateWindowW(L"EDIT", token, WS_CHILD | WS_VISIBLE | WS_BORDER | ES_READONLY | WS_VSCROLL | ES_MULTILINE, xPos, yPos, widths[colIndex], 20, hParent, NULL, (HINSTANCE)GetWindowLongPtr(hParent, GWLP_HINSTANCE), NULL);
             } else {
@@ -974,7 +976,7 @@ void OnButtonClick(HWND hwnd, WPARAM buttonID) {
                 wc.lpszClassName = "EditHelpWindow"; // Set a new name for the window class
                 RegisterClass(&wc);
 
-                g_EditHelp = CreateWindowA("EditHelpWindow", "Nytt tillbehor", WS_OVERLAPPEDWINDOW, 100, 100, 640, 400, NULL, NULL, GetModuleHandle(NULL), NULL); // Använd CreateWindowW för breda tecken
+                g_EditHelp = CreateWindowA("EditHelpWindow", "Ta bort Huvudhjaplmedel", WS_OVERLAPPEDWINDOW, 100, 100, 640, 400, NULL, NULL, GetModuleHandle(NULL), NULL); // Använd CreateWindowW för breda tecken
                 ShowWindow(g_EditHelp, SW_SHOW);
                 UpdateWindow(g_EditHelp);
                 
