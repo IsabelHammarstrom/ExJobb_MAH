@@ -1,0 +1,37 @@
+19606| ResMed Sweden AB| 63619| Överdel Astral| 
+19610| ResMed Sweden AB| 64085| Kylande fläkt Astral| 
+19614| ResMed Sweden AB| 64086| Membran till Expirationsadapter, blått Astral| 
+19623| ResMed Sweden AB| 64087| Pneumatiskt block Astral| 
+19651| ResMed Sweden AB| 64088| Skruvar (final montering) Astral| 
+27936| ResMed Sweden AB| 67189| Flödessensor för utandning (Expiratory flow sensor – Astral)| 
+19619| ResMed Sweden AB| 70319| Batteriskydd Astral| 
+19649| ResMed Sweden AB| 80367| Plastlock till Expirationsadapter Astral| 
+19644| ResMed Sweden AB| 80540| Dekal till topplock Astral 100| 
+19608| ResMed Sweden AB| 80846| Motor kondensator Astral| 
+19622| ResMed Sweden AB| 80956| Utloppsrör med tätning Astral| 
+19650| ResMed Sweden AB| 81145| Plastlock till O2 sensor Astral| 
+19772| ResMed Sweden AB| 81737| Chassis decals-Astral| 
+19787| ResMed Sweden AB| 81738| Air Inlet Decal - Astral| 
+19605| ResMed Sweden AB| 81847| Chassis Astral| 
+19611| ResMed Sweden AB| 82178| Nedre botten Astral| 
+19603| ResMed Sweden AB| 82847| Silikontub Astral| 
+19607| ResMed Sweden AB| 82848| Summer Astral| 
+19609| ResMed Sweden AB| 82849| Termistor Astral| 
+19615| ResMed Sweden AB| 82850| Lågtrycksadapter/connector Astral| 
+19616| ResMed Sweden AB| 82851| O2 sensor plugg + O-ring Astral| 
+19621| ResMed Sweden AB| 82853| Luftintag Astral| 
+19624| ResMed Sweden AB| 82854| Aluminiumkåpa Astral| 
+19626| ResMed Sweden AB| 82856| P-block silikonkit Astral| 
+19627| ResMed Sweden AB| 82857| Turbinvolut Astral| 
+19632| ResMed Sweden AB| 82858| Backventil NRV Astral| 
+19635| ResMed Sweden AB| 82859| Kabelstam 1 Astral| 
+19636| ResMed Sweden AB| 82860| Kabelstam 2 Astral| 
+19637| ResMed Sweden AB| 82861| P-Blk sensor PCB Astral| 
+19638| ResMed Sweden AB| 82862| Topplock metall Astral| 
+19639| ResMed Sweden AB| 82863| Nedre lock metall Astral| 
+19640| ResMed Sweden AB| 82864| Skruvar (P-Bik) Astral| 
+19641| ResMed Sweden AB| 82865| SERVICE KIT Astral 100 (basic)| 
+19652| ResMed Sweden AB| 82868| PEEP kit Astral| 
+21312| ResMed Sweden AB| 82957| Enkelkrets m exp.vent, slät insida 15mm* (Circuit Sgl s/bore 15mm Astral)| 
+29051| ResMed Sweden AB| 83342| Huvudkretskort Astral 100, R6| 
+29141| ResMed Sweden AB| 400878| Internbatteri – Astral| 

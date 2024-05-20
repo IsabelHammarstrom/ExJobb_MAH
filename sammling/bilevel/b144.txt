@@ -1,0 +1,13 @@
+19729| ResMed Sweden AB| 68436| Filterlucka - Air10 svart (Autoset/Elite/Lumis)| 
+19728| ResMed Sweden AB| 70040| SD-kort lucka AirSense 10/Lumis (mörkgrå)| 
+19730| ResMed Sweden AB| 70041| Överdel grå - Air Sense /Lumis ST| 
+19862| Philips AB| 70045| Front Lumis S/ST/ST-A| 
+19858| ResMed Sweden AB| 73678| Chassi Lumis| 
+19717| ResMed Sweden AB| 75087| Användargränssnitt - Air Sense 10/Lumis| 
+19725| ResMed Sweden AB| 82881| Sidopanel AirSense 10/Lumis (mörkgrå)| 
+19797| ResMed Sweden AB| 82893| Knappar till användargränssnitt ROW (silver) AirCurve och Lumis| 
+19861| ResMed Sweden AB| 82894| Huvudkretskort PCB, Lumis 150 VPAP ST| 
+19865| ResMed Sweden AB| 82895| Namnplatta Lumis 150 VPAP ST| 
+19868| ResMed Sweden AB| 82902| Kretskort 2G CAM PCB Lumis (ROW) (med venturi)| 
+27964| ResMed Sweden AB| 82913| Air 10 – Lumis Series Top Plate| 
+36851| ResMed Sweden AB| HC29324| Filter till Air 10/S9 serien, standard 2pack| 

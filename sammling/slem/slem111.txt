@@ -1,0 +1,14 @@
+077.1729| Medela Medical AB| 65496| Bakstycke till Vario| 
+077.1749| Medela Medical AB| 66234| Frontkåpa till Vario| 
+077.1702| Medela Medical AB| 82375| Ljuddämpare Vario| 
+077.1703| Medela Medical AB| 82376| Slät drivrem till Vario| 
+077.1704| Medela Medical AB| 82377| Remspännare till Vario| 
+077.1705| Medela Medical AB| 82378| Nätkabel Vario| 
+077.1710| Medela Medical AB| 82379| Kabelhållare till Vario| 
+077.1717| Medela Medical AB| 82380| Drivenhet till Vario| 
+077.1732| Medela Medical AB| 82381| Komplett motor till Vario AC/CD| 
+077.1733| Medela Medical AB| 82382| Komplett moderkort till Vario| 
+077.1744| Medela Medical AB| 82383| Manometer, 100 kPa till Vario| 
+077.1745| Medela Medical AB| 82384| Vakuumregulator till Vario| 
+077.1748| Medela Medical AB| 82385| Strömbrytare till Vario| 
+077.1728| Medela Medical AB| HC16865| Batteri NIMH Vario| 

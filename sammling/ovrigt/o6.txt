@@ -1,0 +1,8 @@
+3512000| Intersurgical AB| 66722| Superset med swivel 22F-22M/15F Flexslang|
+1147018| Philips AB| 86461| Bacterial / viral filter 10/pack|
+ | Medidyne AB| 402530| Batteri Trilogy/CA E70/A40 utbytbart|
+870220| Laerdal Medical AB| HC2844| Laerdal mask nr. 4-5 vuxen|
+860220| Laerdal Medical AB| HC2845| Laerdal mask nr.3-4 barn|
+851700| Laerdal Medical AB| HC2846| Laerdal mask nr.2 barn|
+1043570| Philips AB| HC29501| Batteri Trilogy/CA E70/A40 utbytbart|
+1032584| Philips AB| HC37497| Pollenfilter|

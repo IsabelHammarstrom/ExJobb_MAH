@@ -196,7 +196,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) 
                 
                 case ID_LISTBOX3:
                     if (HIWORD(wParam) == LBN_SELCHANGE) {
-                        HWND hNewWindow = CreateWindowEx(0, "NewWindowClass", "Tillbehor/Reservdelar", WS_OVERLAPPEDWINDOW | WS_VSCROLL, CW_USEDEFAULT, CW_USEDEFAULT, 855, 530, NULL, NULL, GetModuleHandle(NULL), NULL);
+                        HWND hNewWindow = CreateWindowEx(0, "NewWindowClass", "Tillbehor/Reservdelar", WS_OVERLAPPEDWINDOW | WS_VSCROLL, CW_USEDEFAULT, CW_USEDEFAULT, 955, 580, NULL, NULL, GetModuleHandle(NULL), NULL);
                         
                         WNDCLASS wc = { 0 };
                         wc.lpfnWndProc = PrintWndProc;
@@ -211,9 +211,9 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) 
                         HWND hThirdListBox = GetDlgItem(hwnd, ID_LISTBOX3);
                         int indexThirdListBox = SendMessage(hThirdListBox, LB_GETCURSEL, 0, 0);
 
-                        HWND hListName1 = CreateWindow("STATIC", "Namn", WS_CHILD | WS_VISIBLE | LBS_NOTIFY | WS_BORDER, 460, 40, 360, 20, hNewWindow, NULL, NULL, NULL);
-                        HWND hListS2Nr1 = CreateWindow("STATIC", "S2-nr", WS_CHILD | WS_VISIBLE | LBS_NOTIFY | WS_BORDER, 360, 40, 100, 20, hNewWindow, NULL, NULL, NULL);
-                        HWND hListLeverantor1 = CreateWindow("STATIC", "Leverantor", WS_CHILD | WS_VISIBLE | LBS_NOTIFY | WS_BORDER, 160, 40, 200, 20, hNewWindow, NULL, NULL, NULL);
+                        HWND hListName1 = CreateWindow("STATIC", "Namn", WS_CHILD | WS_VISIBLE | LBS_NOTIFY | WS_BORDER, 510, 40, 410, 20, hNewWindow, NULL, NULL, NULL);
+                        HWND hListS2Nr1 = CreateWindow("STATIC", "S2-nr", WS_CHILD | WS_VISIBLE | LBS_NOTIFY | WS_BORDER, 410, 40, 100, 20, hNewWindow, NULL, NULL, NULL);
+                        HWND hListLeverantor1 = CreateWindow("STATIC", "Leverantor", WS_CHILD | WS_VISIBLE | LBS_NOTIFY | WS_BORDER, 160, 40, 250, 20, hNewWindow, NULL, NULL, NULL);
                         HWND hListLevNr1 = CreateWindow("STATIC", "Lev-nr", WS_CHILD | WS_VISIBLE | LBS_NOTIFY | WS_BORDER, 10, 40, 150, 20, hNewWindow, NULL, NULL, NULL);
                    
                         if (indexFirstListBox >= 0 && indexSecondListBox >= 0 && indexThirdListBox >= 0) {
@@ -713,7 +713,7 @@ int printArtikel(HWND hParent, const wchar_t *filename) {
         wchar_t *token = wcstok(line, delimiters);
         int colIndex = 0;
         int xPos = 10;
-        const int widths[4] = {150, 200, 100, 360};
+        const int widths[4] = {150, 250, 100, 410};
 
         while (token != NULL && colIndex < 4) {
             if (colIndex > 0) {
@@ -760,7 +760,7 @@ int printOneArtikel(HWND hwnd, const char *filename, int lineNr){
         int currentLine = 0;
         while(fgetws(line, MAXSIZE, listFile) != NULL){
             if(currentLine == lineNr){
-                hTillName = CreateWindowW(L"STATIC", line, WS_CHILD | WS_VISIBLE | LBS_NOTIFY | WS_BORDER, 120, 10, 700, 20, hwnd, NULL, (HINSTANCE)GetWindowLongPtr(hwnd, GWLP_HINSTANCE), NULL);
+                hTillName = CreateWindowW(L"STATIC", line, WS_CHILD | WS_VISIBLE | LBS_NOTIFY | WS_BORDER, 120, 10, 800, 20, hwnd, NULL, (HINSTANCE)GetWindowLongPtr(hwnd, GWLP_HINSTANCE), NULL);
                 fclose(listFile);
                 return 0;
             }

@@ -1,0 +1,5 @@
+1099491| Philips AB| 73876| Bärhandtag Cough Assist E70|
+1099487B| Philips AB| 83940| Fläkt Cough Assist E70|
+ | Medidyne AB| 402567| Fläkt Cough Assist E70|
+ | Medidyne AB| 402568| Ventilenhet Cough Assist E70|
+ | Medidyne AB| 402569| Bärhandtag Cough Assist E70|

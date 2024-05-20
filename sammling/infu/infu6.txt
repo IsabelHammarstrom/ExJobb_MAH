@@ -1,0 +1,13 @@
+84004| Micrel Medical Devices Nordics AB| 401612| Slanglock till Rythmic pumpar|
+KM1.YY.565| Micrel Medical Devices Nordics AB| 63922| Ryggsäck liten blå för 2 pumpar|
+KS5.04.198| Micrel Medical Devices Nordics AB| 64408| Ryggsäck liten blå med hjul, för 2 pumpar|
+KM1.YY.564| Micrel Medical Devices Nordics AB| 63921| Ryggsäck liten rosa för 2 pumpar|
+KS5.04.197| Micrel Medical Devices Nordics AB| 64407| Ryggsäck liten rosa med hjul, för 2 pu|
+KM1.YY.578| Micrel Medical Devices Nordics AB| 63924| Ryggsäck liten svart för 2 pumpar|
+KS5.04.200.5| Micrel Medical Devices Nordics AB| 64411| Ryggsäck liten svart med hjul, för 2 pumpar|
+KS5.04.196| Micrel Medical Devices Nordics AB| 64406| Ryggsäck stor med hjul, svart för 1 pump|
+KS5.04.207| Micrel Medical Devices Nordics AB| 64410| Ryggsäck stor med hjul, svart för 2 pumpar|
+KS5.04.199| Micrel Medical Devices Nordics AB| 64409| Ryggsäck stor med hjul, svart för 3 pumpar|
+KM1.YY.577| Micrel Medical Devices Nordics AB| 63923| Ryggsäck stor svart för 1 pump|
+KM1.YY.481| Micrel Medical Devices Nordics AB| 63919| Ryggsäck stor, svart för 2 pumpar|
+KM1.YY.366| Micrel Medical Devices Nordics AB| 63918| Ryggsäck stor, svart för 3 pumpar|

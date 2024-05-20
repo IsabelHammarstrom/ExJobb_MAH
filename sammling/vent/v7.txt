@@ -1,0 +1,77 @@
+4559| Breas Medical AB| 55957| Click-on battery, Li-Ion, Vivo 50/60| 
+4895| Breas Medical AB| 55959| Cable for oxygen sensor (FiO2)| 
+4909| Breas Medical AB| 55960| Patient air inlet filter (grey, washable) 5pc/pkg| 
+5120| Breas Medical AB| 55966| T- koppling för syrgassensor,  Vivo 50/60| 
+5525| Breas Medical AB| 55968| Dubbelslanginsats, barn, engångs, Vivo 60| 
+4910| Breas Medical AB| 55979| Patient air inlet filter (white, disposable) 10pc/pkg| 
+5186| Breas Medical AB| 55997| Laddare till click-on batteri, Vivo 50/60| 
+4911| Breas Medical AB| 58088| Cooling air filter, Vivo 50/60| 
+4987| Breas Medical AB| 59722| Quick guide Vivo 50 / 60 EN| 
+5002| Breas Medical AB| 59723| Manual, Quick-guide Vivo50/60, ENG| 
+4916| Breas Medical AB| 59736| Top casing incl. buttons, Vivo 50/60| 
+5545| Breas Medical AB| 59742| Användarmanual, Vivo 60, SE| 
+4896| Breas Medical AB| 59752| Fjärrlarmskabel 10m, Vivo 50/60| 
+4897| Breas Medical AB| 59753| Fjärrlarmskabel 25 m, Vivo 50/60| 
+4898| Breas Medical AB| 59754| Fjärrlarmskabel 50 m, Vivo 50/60| 
+4899| Breas Medical AB| 59755| Cigarett lighter connector 24/24V| 
+4901| Breas Medical AB| 59756| 12-24 V converter| 
+4920| Breas Medical AB| 59758| Silikondelar-kit, intern, Vivo 50/60, Vivo 55/65| 
+5036| Breas Medical AB| 59761| Fjärrlarm inkl. Kabel 10m Vivo 50/60| 
+5060| Breas Medical AB| 59762| Slangset med läckage, engångs, Vivo 50/60| 
+5128| Breas Medical AB| 59764| Rullstativ - syrgasflaskhållare för rullstativ Vivo 50/60| 
+5336| Breas Medical AB| 59767| Nätkabel, EU, Vivo 50/60| 
+5519| Breas Medical AB| 59768| Dubbelslangseet, 15mm, engångs, Vivo 60| 
+5521| Breas Medical AB| 59770| Enslangsets-insats, Vivo 60/65| 
+5523| Breas Medical AB| 59771| Dubbelslanginsats, vuxen, engångs| 
+6093| Breas Medical AB| 60784| MPV (Mouth Piece Ventilation) slangar, engångs, 2st / fp, Vivo 50/60| 
+6095| Breas Medical AB| 69567| MPV (Mouth Piece Ventilation) flexarm Vivo 50/60| 
+7916| Breas Medical AB| 81038| Monteringsfäste till rullstativ. Vivo 50/60, Vivo 55/65| 
+5009| Breas Medical AB| 83710| Förpackningsmaterial (inrede) Vivo 50/60| 
+4426| Breas Medical AB| HC11141| Läckageventil, Vivo 50/60| 
+4614| Breas Medical AB| 59729| Oxygen low pressure - anslutning| 
+3619| Breas Medical AB| 59749| Minneskort| 
+4888| Breas Medical AB| 55958| Oxygen sensor (FiO2)| 
+8426| Breas Medical AB| 83884| Patient Circuit  22mm x 1.8m  (30 st x 004465 / fp)| 
+6085| Breas Medical AB| 83706| Display skruvar, M3x5 med Loctite| 
+5183064| Intersurgical AB| 66725| 22mm Smoothbore 1,6m med exhalationsventil| 
+24966| ResMed Sweden AB| 54514| Antibakteriellt filter, 50 st| 
+302418| Philips AB| 60534| Backventil för samtidig användning av O2-anslutning| 
+ | Medidyne AB| 402624| Engångsslang inkl bakteriefilter, 10-pack| 
+7857| Breas Medical AB| 83426| 15mm Single Smoothbore  w Valve| 
+7615| Breas Medical AB| 83417| 22mm Single w Leak and Bacterial Filter| 
+7616| Breas Medical AB| 83418| Disposable Dual Patient Circuit med  Exhalation-Valve| 
+21304| ResMed Sweden AB| 82955| Dubbel krets, slät insida, 15mm (Circuit Dbl s/bore 15mm)| 
+21303| ResMed Sweden AB| 82954| Dubbel krets, slät insida, 22 mm (Circuit Dbl s/bore 22mm)| 
+21305| ResMed Sweden AB| 82956| Dubbelkrets, slät insida,10mm| 
+7075018| ResMed Sweden AB| 73916| Eco Maxi HEPA filter, 50 st (4244-701 BRSA)| 
+9120000| Intersurgical AB| 66728| Flextub 22M/15F - 22F, 145 mm, flergångs| 
+1132340| Philips AB| 78315| Engångsslang inkl bakteriefilter (10st/pkt)| 
+14980| ResMed Sweden AB| 327207| Luftslang 3m autoklaverbar| 
+1930000| Intersurgical AB| 82711| Munstycke rakt 22M| 
+1938000| Intersurgical AB| 82712| Munstycke vinklat 22M| 
+2713000| Intersurgical AB| 78989| Rak koppling med port 15M-22M/15F| 
+1967000| Intersurgical AB| 78988| Rakt kopplingsstycke 22F-22F| 
+ | Medidyne AB| 402542| Slang 15mm 183cm flexibel m låg vikt| 
+WM 29988| Nowus Healthcare| 82824| Slang 180cm, 15mm.| 
+1132339| Philips AB| 83189| Disp, 15mm, Ped Non-Htd, Passive, 10 pk| 
+1127307| Philips AB| 83180| Disp, 15mm, Ped,  Dual Limb, 10 pack| 
+ | Medidyne AB| 402528| Slang 22mm, 183cm, extra flexibel| 
+1132344| Philips AB| 83191| Disp, 22mm, Adult Non-Htd, Active, 10 pk| 
+5904000| Intersurgical AB| 82713| Slanghållare Blomman 30/22/15 mm| 
+5905000| Intersurgical AB| 82714| Slanghållare Lilla Blomman 10/15 mm| 
+1127306| Philips AB| 83179| Disp, 22mm, Adult, Dual Limb, 10 pack| 
+ | Medidyne AB| 402570| Slangset MPV 10-pack| 
+ | Medidyne AB| 402617| Disp, 22mm, Adult, Dual Limb, 10-pack| 
+ | Medidyne AB| 402532| Slangstrumpa mjuk fleece| 
+33963| ResMed Sweden AB| HC16432| Slangvärmare| 
+36811| ResMed Sweden AB| HC29320| Slangvärmare till SlimLine slang| 
+5016000| Intersurgical AB| 57441| Smoothbore 1,6m x15mm avtagbart y-stycke| 
+ | Medidyne AB| 402618| Disp, 15mm, Ped,  Dual Limb, 10-pack| 
+ | Medidyne AB| 402625| Disp, 15mm, Ped, Non-Htd, Active, 10-pack| 
+ | Medidyne AB| 402626| Disp, 22mm, Adult Non-Htd, Active, 10-pack| 
+3504000| Intersurgical AB| 66719| Utdragbar Flexslang 22F--22M/15F, 70mm-150mm| 
+1937000| Intersurgical AB| 66716| Vinklad NIV munstycke 15M| 
+14994| ResMed Sweden AB| 82845| Luftslang 2m ej autoklaverbar| 
+1090689| Philips AB| 53425| Slang med snabbfäste| 
+ | Medidyne AB| 402546| Slang med snabbfäste| 
+MR810ANU| Fisher & Paykel Healthcare AB| 51304| Befuktare ffa för noninvasiv terapi| 

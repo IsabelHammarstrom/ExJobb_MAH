@@ -1,0 +1,30 @@
+3509| Breas Medical AB| 59724| Larm med kabel, Vivo 50/60, Vivo 55/65| 
+4554| Breas Medical AB| 59725| Internbatteri Vivo 50/60| 
+4558| Breas Medical AB| 59726| Complete blower assembly / komplett fläktpaket Vivo 50/60| 
+4584| Breas Medical AB| 59727| Display Vivo 50/60| 
+4623| Breas Medical AB| 59730| Filterhållare Vivo 50/60| 
+4702| Breas Medical AB| 59731| PSU-kort, Vivo 50/60, Vivo 55/65| 
+4716| Breas Medical AB| 59732| Kylfläktskit, Vivo 50/60, Vivo 55/65| 
+4718| Breas Medical AB| 59733| Tryckventil för utandningsventil Vivo 50/60| 
+4914| Breas Medical AB| 59734| Screw kit, Vivo 50/60| 
+4915| Breas Medical AB| 59735| Silicon parts kit, external, Vivo 50/60| 
+4915| Breas Medical AB| 59735| Silicon parts kit, external, Vivo 50/60| 
+4921| Breas Medical AB| 59738| Säkringar, 10st, Vivo 50/60| 
+4923| Breas Medical AB| 59739| AC/DC/switch kit Vivo 50/60| 
+4924| Breas Medical AB| 59740| Handtag - kit, Vivo 50/60| 
+5058| Breas Medical AB| 59741| Batterikit (internt bruk) Vivo 50/60| 
+5607| Breas Medical AB| 59743| Pneumatic block and PTU board, Vivo 60| 
+5608| Breas Medical AB| 59744| Överkåpa (inklusive knappar) Vivo 60| 
+5609| Breas Medical AB| 59745| Etikett-kit, Vivo 60| 
+5707| Breas Medical AB| 59746| CPU Vivo 60 SE| 
+5646| Breas Medical AB| 65817| Packning intern, Vivo 50/60, Vivo 55/65 (5st/fp)| 
+5645| Breas Medical AB| 83723| ZVU-kort Vivo 60 (Zeroing Valve Unit)| 
+6709| Breas Medical AB| 83366| Cable, external DC (EU/US)| 
+4829| Breas Medical AB| 59750| Test connector kit| 
+5757| Breas Medical AB| 83358| USB cable| 
+4613| Breas Medical AB| 59728| Tryckluftanslutning för utandningsventil| 
+6710| Breas Medical AB| 83367| Cable, External DC to Vivo Adapter| 
+5092| Breas Medical AB| 59763| ISB-kabelkit, isolerad, EU| 
+4886| Breas Medical AB| 59751| USB-kabel A-B| 
+2129| Breas Medical AB| 57481| Clock battery| 
+7989| Breas Medical AB| 83430| Breas Accessories bag| 

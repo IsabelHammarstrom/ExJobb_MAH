@@ -1,0 +1,11 @@
+SLL460450| Aspira Medical AB| 400272| Luftfilter till EO-70 (ska bytas var 12:e månad)|
+SLL460451| Aspira Medical AB| 400273| Filter (intern) & membran (FU, År 2)|
+SLL460452| Aspira Medical AB| 400274| Pump|
+SLL460453| Aspira Medical AB| 400275| Internbatteri|
+SLL460454| Aspira Medical AB| 400276| Turbin|
+SLL460455| Aspira Medical AB| 400277| Intern flödesmätare (FU År 4)|
+SLL460480| Aspira Medical AB| 400278| Bruksanvisning (Svensk), EO-70|
+SLL460481| Aspira Medical AB| 400279| Servicemanual (Engelsk), EO-70|
+460414| Aspira Medical AB| 401964| Transportväska till EO-70, hostmaskin|
+460413-1| Aspira Medical AB| 402336| Nätkabel till EO-70 och EO-150. Svart med vinklade kontakter. Längd 1,5m.|
+460414-1| Aspira Medical AB| 402337| Axel-/ nackrem för transportväska till EO-70/ EO-150.|

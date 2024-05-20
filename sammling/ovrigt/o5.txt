@@ -1,0 +1,17 @@
+6094| Breas Medical AB| 64015| Clearway Mouthpiece (box of 15)|
+8159| Breas Medical AB| 85470| Clearway Trachadapter (Catheter Mount) 10st/fp|
+8276| Breas Medical AB| 85471| Clearway 2 MI-E Circuit (10st/fp)|
+8279| Breas Medical AB| 85472| Clearway 2 Hand controller (Traffic White)|
+8284| Breas Medical AB| 85475| Clearway 2 Carry Bag|
+8336| Breas Medical AB| 85477| Clearlite mask (Size 0), Neonatal, BLÅ, 15M|
+8337| Breas Medical AB| 85478| Clearlite mask (Size 1), spädbarn (Infant), GRÅ, 15M|
+8338| Breas Medical AB| 85479| Clearlite mask (Size 2), Barn, VIT, 22F|
+8339| Breas Medical AB| 85480| Clearlite mask (Size 3) Small, GUL, 22F|
+8340| Breas Medical AB| 85481| Clearlite mask (Size 4), Medium, Vuxen, GRÖN, 22F|
+8341| Breas Medical AB| 85482| Clearlite mask (Size 5) Large, vuxen, ORANGE, 22F|
+8342| Breas Medical AB| 85483| Clearlite mask (Size 6) Extra large, vuxen, RÖD, 22F|
+8383| Breas Medical AB| 85484| Clearway 2 EU Power Cord|
+8169| Breas Medical AB| 85870| Clearway Lo Press Drop Bacterial Filter / Bakteriefilter (10st/fp)|
+9065| Breas Medical AB| 87508| Clearway 2, inlet filter, finfilter|
+9066| Breas Medical AB| 87509| Clearway 2 inlet filter, flergångs|
+8283| Breas Medical AB| 88869| Internbatteri Clearway 2|

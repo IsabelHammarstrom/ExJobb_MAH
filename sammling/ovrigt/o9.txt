@@ -1,0 +1,5 @@
+MR850ANU| Fisher & Paykel Healthcare AB| HC28747| MR850 Befuktare|
+RT265| Fisher & Paykel Healthcare AB| 64956| Slangset/kammare - barn - flöden > 4L/min - EVAQUA 2 - uppvärmd inspiratorisk slang 1,1 m,  uppvärmd expiratorisk slang 1,6 m, förlängninsslang till kuvös 30 cm, förbindelseslang 60 cm, adapterkit|
+900MR869| Fisher & Paykel Healthcare AB| 88830| Luftvägstemperatur och fllödesprobe (60)|
+900MR817| Fisher & Paykel Healthcare AB| HC28748| Dubbel temp.probe för slangar 1,5 m (900MR869), dubbeluppvärmt (900MR805), MR850|
+900MR805| Fisher & Paykel Healthcare AB| HC35953| Elektrisk adapter dubbel (för uppvärmnning av inspir & expir slang)|

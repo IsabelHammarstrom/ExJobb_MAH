@@ -1,0 +1,55 @@
+900PT401| Fisher & Paykel Healthcare AB| 58073| Vattenpåse till Airvo (x 2)|
+900PT602| Fisher & Paykel Healthcare AB| 58075| Rengöringssticka till Airvo (x 20)|
+900PT603| Fisher & Paykel Healthcare AB| 58076| Förvaringsskydd för Airvo (x20)|
+OPT016| Fisher & Paykel Healthcare AB| 58079| Inhalationsadapter, Optiflow junior adapter kit|
+OPT942| Fisher & Paykel Healthcare AB| 58080| Högflödesgrimma stl.S|
+900PT405| Fisher & Paykel Healthcare AB| 58244| Bricka för montering AIRVO/MyAirvo till droppställning|
+900PT411| Fisher & Paykel Healthcare AB| 58246| UPS monteringskit för AIRVO/MyAIRVO på 900PT421 droppställning|
+900PT421| Fisher & Paykel Healthcare AB| 58247| Droppställning|
+OPT944| Fisher & Paykel Healthcare AB| 58249| Högflödesgrimma stl.M|
+OPT946| Fisher & Paykel Healthcare AB| 58250| Högflödesgrimma stl.L|
+900PT422| Fisher & Paykel Healthcare AB| 60149| Förlängningsset för syrgastillförsel till Airvo(x1)|
+900PT600| Fisher & Paykel Healthcare AB| 60150| Desinfektionsslangset till Airvo|
+900PT912| Fisher & Paykel Healthcare AB| 62703| Filterhållare AIRVO 2|
+OPT970| Fisher & Paykel Healthcare AB| 68592| Optiflow + Trachanslutning|
+900PT560| Fisher & Paykel Healthcare AB| 73581| AirSpiral universal uppvärmd andningsslang (isolerad slang) för MyAirvo (x10)|
+OJR416HM| Fisher & Paykel Healthcare AB| 80950| Optiflow Junior 2 näsanslutning för myAIRVO - storlek L (x5)|
+OJR418HM| Fisher & Paykel Healthcare AB| 80951| Optiflow Junior 2 näsanslutning för myAIRVO - storlek XL (x5)|
+900PT409| Fisher & Paykel Healthcare AB| 81667| Extra kardborrefästen för bricka till Airvo (x8)|
+MYAIRVOKIT1| Fisher & Paykel Healthcare AB| 84224| Airspiral uppvärmt slangset (isolerad andningslang + MR290-kammare + adapter) för myAIRVO (x10)|
+MYAIRVOCHAMBER1| Fisher & Paykel Healthcare AB| 88826| Återanvändbar befuktningskammare till myAIRVO-seriens befuktare (x1)|
+900PT400| Fisher & Paykel Healthcare AB| HC36733| Ställning till vattenpåse till Airvo|
+OPT014| Fisher & Paykel Healthcare AB| HC37937| Syrgasslang till Optiflow junior|
+900PT913| Fisher & Paykel Healthcare AB| HC38315| Luftfilter till Airvo (x2)|
+400HC302| Fisher & Paykel Healthcare AB| 60297| Hätta set|
+400HC225| Fisher & Paykel Healthcare AB| 82439| Filterskydd|
+400HC228| Fisher & Paykel Healthcare AB| HC36984| Filterskydd samt 10 st filter|
+900MR618| Fisher & Paykel Healthcare AB| 78389| Fingerspärr|
+400HC200| Fisher & Paykel Healthcare AB| 60293| Glider Flexi-Fit 431|
+400HC301| Fisher & Paykel Healthcare AB| 82442| Hätta till 407|
+900PT401| Fisher & Paykel Healthcare AB| 58073| Vattenpåse till Airvo (x 2)|
+900PT600| Fisher & Paykel Healthcare AB| 60150| Desinfektionsslangset till Airvo|
+900PT422| Fisher & Paykel Healthcare AB| 60149| Förlängningsset för syrgastillförsel till Airvo(x1)|
+OPT014| Fisher & Paykel Healthcare AB| HC37937| Syrgasslang till Optiflow junior|
+RT319| Fisher & Paykel Healthcare AB| 68642| Slangset/kammare - vuxen -  Bi/CPAP terapi|
+OPT016| Fisher & Paykel Healthcare AB| 58079| Inhalationsadapter, Optiflow junior adapter kit|
+900PT603| Fisher & Paykel Healthcare AB| 58076| Förvaringsskydd för Airvo (x20)|
+OPT942| Fisher & Paykel Healthcare AB| 58080| Högflödesgrimma stl.S|
+OPT970| Fisher & Paykel Healthcare AB| 68592| Optiflow + Trachanslutning|
+OPT944| Fisher & Paykel Healthcare AB| 58249| Högflödesgrimma stl.M|
+900PT912| Fisher & Paykel Healthcare AB| 62703| Filterhållare AIRVO 2|
+OPT946| Fisher & Paykel Healthcare AB| 58250| Högflödesgrimma stl.L|
+900PT913| Fisher & Paykel Healthcare AB| HC38315| Luftfilter till Airvo (x2)|
+900PT409| Fisher & Paykel Healthcare AB| 81667| Extra kardborrefästen för bricka till Airvo (x8)|
+900PT400| Fisher & Paykel Healthcare AB| HC36733| Ställning till vattenpåse till Airvo|
+OJR414| Fisher & Paykel Healthcare AB| 85901| Optiflow Junior 2 näsanslutning - storlek M (x20)|
+400HC310| Fisher & Paykel Healthcare AB| 60298| Opus Huvudband plus reserv fästband för slang|
+RT266| Fisher & Paykel Healthcare AB| 53636| Slangset/kammare - barn - flöden < 4L/min - EVAQUA 2 - uppvärmd inspiratorisk slang 1, 1 m, uppvärmd expiratorisk slang 1,6 m, förlängningsslang till kuvös 30 cm, förbindelseslang 60 cm, adapterkit|
+900PT279A| Fisher & Paykel Healthcare AB| 84222| Tratt för påfyllning av vatten till befuktningskammare (x1)|
+WJR112| Fisher & Paykel Healthcare AB| 80952| Wigglepads, fixering för optiflow junior 2 näsanslutning – För M, L & XL (x20)|
+RT380| Fisher & Paykel Healthcare AB| 52588| Slangset/kammare - vuxen -  EVAQUA 2 - 22mm diam.1,5 m lång uppvärmd inspiratorisk slang 1,8 m lång expiratorisk slang. Y stycke swivel med MDI port inklud. befuktningskammare, 0,5 m anslutningsslang, bakterie/virus Filter och slanghållare RT028|
+400HC119| Fisher & Paykel Healthcare AB| 82437| Silikontätning till HC432U XL|
+400HC501| Fisher & Paykel Healthcare AB| 82446| Skum/Silikonset till HC407 (x1)|
+400HC220| Fisher & Paykel Healthcare AB| 60295| Swivel hane Opus|
+400HC213| Fisher & Paykel Healthcare AB| 60294| Tryckportsskydd (x2)|
+400HC202| Fisher & Paykel Healthcare AB| 82438| Ventilerat knä (x1)|

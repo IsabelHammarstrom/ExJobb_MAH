@@ -1,0 +1,12 @@
+B39-7115| Aspira Medical AB| 58026| Ratt SAT805| 
+B39-7103| Aspira Medical AB| 58027| Batteri SAT805| 
+B39-7105| Aspira Medical AB| 64613| Främre Hölje SAT805| 
+B39-7108 F| Aspira Medical AB| 64614| Bakre hölje SAT805 utan USB| 
+B39-7108 USB| Aspira Medical AB| 64615| Bakre hölje SAT805 med USB| 
+B39-7112| Aspira Medical AB| 65049| SAT805 Display Printed| 
+B39-7102.2| Aspira Medical AB| 68304| SAT805 Power PCB with USB| 
+B39-7113.CV| Aspira Medical AB| 81119| sat 805 Housing Side incl. SD slot cover| 
+B39-7111| Aspira Medical AB| 82206| SAT805 Rubber Feet (5st/frp)| 
+B39-7104| Aspira Medical AB| 83798| SAT805 Encoder incl. PCB| 
+B39-7116| Aspira Medical AB| 80603| Lock SAT805| 
+B39-7114| Aspira Medical AB| 81120| On/Off knapp SAT805| 

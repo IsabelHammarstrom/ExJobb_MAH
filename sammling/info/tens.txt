@@ -1,1 +1,2 @@
 CEFAR Basic
+SET CEFAR TENS 

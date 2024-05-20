@@ -1,0 +1,82 @@
+27918| ResMed Sweden AB| 51311| Astral Externbatteri| 
+27917| ResMed Sweden AB| 51422| Astral Mobilitetsväska| 
+21311| ResMed Sweden AB| 54513| Enkelkrets m exp.ventil, slät insida, 22mm* (Circuit Sgl s/bore 22mm Astral)| 
+27941| ResMed Sweden AB| 54516| Ventiladapter för enkelkrets - Astral| 
+27942| ResMed Sweden AB| 54517| Läckageadapter för enkelkrets- Astral| 
+27949| ResMed Sweden AB| 55664| Astral slim fit mobilitetsväska| 
+27939| ResMed Sweden AB| 58019| Inloppsfilter (4/förp) - Astral| 
+27925| ResMed Sweden AB| 58084| Astral DC Adapter| 
+27966| ResMed Sweden AB| 59662| Strömadapter Astral (Powersupply)| 
+27968| ResMed Sweden AB| 59990| Strömsladd vinklad till Astral| 
+1979000| Intersurgical AB| 60033| Straight connector 15F - 22F| 
+27945| ResMed Sweden AB| 60354| Astral carry bag| 
+27935| ResMed Sweden AB| 64089| Astral syrgassensor FiO2 (Astral Oxygen Sensor)| 
+27937| ResMed Sweden AB| 64090| Pressure sensor filter – Astral| 
+1897000| Intersurgical AB| 66714| Vridbart knä, 15M-22M/15F| 
+1898000| Intersurgical AB| 66715| Swivel med sug-och bronkoskopiport 15M/15F| 
+3512000| Intersurgical AB| 66722| Superset med swivel 22F-22M/15F Flexslang| 
+27955| ResMed Sweden AB| 67580| Stödarm till krets MPV, Stellar, Astral| 
+27905| ResMed Sweden AB| 67702| Kabel 5m till Remote Larm II till Stellar, Astral| 
+27980| ResMed Sweden AB| 80368| Dubbelkretsadapter Astral 150 Clear Cap| 
+AFMXXXXX| Timik AB| 81176| Vital Signs Limb-O 1 m /20 pcs| 
+27966-K| ResMed Sweden AB| 82965| Strömadapter Astral inklusive strömsladd (KIT Powersupply)| 
+27904| ResMed Sweden AB| 83687| Kabel 2m till Remote Larm II till Stellar, Astral| 
+278602| ResMed Sweden AB| 84641| User Guide Astral R6| 
+27956| ResMed Sweden AB| 86478| Övre platta (inkl 27961 platta och skruvar) (Astral Top Plate to Homecare Stand)| 
+27963| ResMed Sweden AB| 86479| Stativ för vård i hemmet utan övre platta (Homecare stand)| 
+256| Breas Medical AB| 307315| Syrgasadapter| 
+AFNXXXXX| Timik AB| 401314| LIMBO, 180cm, knä med gassamplingsport| 
+249| Breas Medical AB| HC11114| Connector - elastometric| 
+24971| ResMed Sweden AB| HC29314| Anslutningsadapter för lågtrycksoxygen| 
+27902| ResMed Sweden AB| HC37150| Fjärrlarm II (utan kabel)Stellar, Astral Remote alarm II ResMed| 
+27907| ResMed Sweden AB| HC37151| Kabel 20m till Remote Larm II, Stellar, Astral| 
+1969000| Intersurgical AB| HC6017| Rak koppling 22M-22M/15F| 
+21354| ResMed Sweden AB| 82960| MPV Munstycke vinklat 15F/22M (EasySpeak Mouthpiece Ang 15F/22M)| 
+21351| ResMed Sweden AB| 82958| MPV Munstycke vinklat 15M (EasySpeak Mouthpiece Ang 15M)| 
+21353| ResMed Sweden AB| 82959| MPV Munstycke, vinklat 17cm rör, 22F (EasySpeak Mouthpiece Ang 17cm tube 22F)| 
+24976| ResMed Sweden AB| 52596| ResMed läckageadapter| 
+24988| ResMed Sweden AB| 82961| ResMed Läckageventil| 
+70582| ResMed Sweden AB| 63025| Soft Sensor, Liten, 1 m kabel| 
+6085| Breas Medical AB| 83706| Display skruvar, M3x5 med Loctite| 
+5183064| Intersurgical AB| 66725| 22mm Smoothbore 1,6m med exhalationsventil| 
+24966| ResMed Sweden AB| 54514| Antibakteriellt filter, 50 st| 
+302418| Philips AB| 60534| Backventil för samtidig användning av O2-anslutning| 
+ | Medidyne AB| 402624| Engångsslang inkl bakteriefilter, 10-pack| 
+7857| Breas Medical AB| 83426| 15mm Single Smoothbore  w Valve| 
+7615| Breas Medical AB| 83417| 22mm Single w Leak and Bacterial Filter| 
+7616| Breas Medical AB| 83418| Disposable Dual Patient Circuit med  Exhalation-Valve| 
+21304| ResMed Sweden AB| 82955| Dubbel krets, slät insida, 15mm (Circuit Dbl s/bore 15mm)| 
+21303| ResMed Sweden AB| 82954| Dubbel krets, slät insida, 22 mm (Circuit Dbl s/bore 22mm)| 
+21305| ResMed Sweden AB| 82956| Dubbelkrets, slät insida,10mm| 
+7075018| ResMed Sweden AB| 73916| Eco Maxi HEPA filter, 50 st (4244-701 BRSA)| 
+9120000| Intersurgical AB| 66728| Flextub 22M/15F - 22F, 145 mm, flergångs| 
+1132340| Philips AB| 78315| Engångsslang inkl bakteriefilter (10st/pkt)| 
+14980| ResMed Sweden AB| 327207| Luftslang 3m autoklaverbar| 
+1930000| Intersurgical AB| 82711| Munstycke rakt 22M| 
+1938000| Intersurgical AB| 82712| Munstycke vinklat 22M| 
+2713000| Intersurgical AB| 78989| Rak koppling med port 15M-22M/15F| 
+1967000| Intersurgical AB| 78988| Rakt kopplingsstycke 22F-22F| 
+ | Medidyne AB| 402542| Slang 15mm 183cm flexibel m låg vikt| 
+WM 29988| Nowus Healthcare| 82824| Slang 180cm, 15mm.| 
+1132339| Philips AB| 83189| Disp, 15mm, Ped Non-Htd, Passive, 10 pk| 
+1127307| Philips AB| 83180| Disp, 15mm, Ped,  Dual Limb, 10 pack| 
+ | Medidyne AB| 402528| Slang 22mm, 183cm, extra flexibel| 
+1132344| Philips AB| 83191| Disp, 22mm, Adult Non-Htd, Active, 10 pk| 
+5904000| Intersurgical AB| 82713| Slanghållare Blomman 30/22/15 mm| 
+5905000| Intersurgical AB| 82714| Slanghållare Lilla Blomman 10/15 mm| 
+1127306| Philips AB| 83179| Disp, 22mm, Adult, Dual Limb, 10 pack| 
+ | Medidyne AB| 402570| Slangset MPV 10-pack| 
+ | Medidyne AB| 402617| Disp, 22mm, Adult, Dual Limb, 10-pack| 
+ | Medidyne AB| 402532| Slangstrumpa mjuk fleece| 
+33963| ResMed Sweden AB| HC16432| Slangvärmare| 
+36811| ResMed Sweden AB| HC29320| Slangvärmare till SlimLine slang| 
+5016000| Intersurgical AB| 57441| Smoothbore 1,6m x15mm avtagbart y-stycke| 
+ | Medidyne AB| 402618| Disp, 15mm, Ped,  Dual Limb, 10-pack| 
+ | Medidyne AB| 402625| Disp, 15mm, Ped, Non-Htd, Active, 10-pack| 
+ | Medidyne AB| 402626| Disp, 22mm, Adult Non-Htd, Active, 10-pack| 
+3504000| Intersurgical AB| 66719| Utdragbar Flexslang 22F--22M/15F, 70mm-150mm| 
+1937000| Intersurgical AB| 66716| Vinklad NIV munstycke 15M| 
+14994| ResMed Sweden AB| 82845| Luftslang 2m ej autoklaverbar| 
+1090689| Philips AB| 53425| Slang med snabbfäste| 
+ | Medidyne AB| 402546| Slang med snabbfäste| 
+MR810ANU| Fisher & Paykel Healthcare AB| 51304| Befuktare ffa för noninvasiv terapi| 

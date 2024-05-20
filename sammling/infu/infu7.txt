@@ -1,0 +1,13 @@
+21-2135-25| ICU Medical Sverige AB| 63833| Platta till droppställningsfäste, beställs och används med 21-6118-24. Fästs på pumpens baksida. CADD Solis|
+21-2160-14| ICU Medical Sverige AB| 63836| Återuppladdningsbart batteripack, Litiumjonbatteri, 3,7V, till CADD Solis pump|
+21-2185-51| ICU Medical Sverige AB| 63839| Nyckel t läkm behållare|
+21-2167-25| ICU Medical Sverige AB| 63858| Midjeväska, flerpatientmodell till pump, 250/500 ml kassett eller läkemedelspåseCADD Solis och CADD Legacy|
+21-6218-24| ICU Medical Sverige AB| 64403| Förvaringsbox blå till CADD pumpar|
+21-0270-25| ICU Medical Sverige AB| 68594| Wall-mount AC Adapter|
+21-2169-24| ICU Medical Sverige AB| 63837| Ryggsäck, flerpatient till CADD Solis, CADD Legacy, CADD Prizm, rymmer 3 liter|
+21-2168-25| ICU Medical Sverige AB| 63856| Flerpatientväska till pump, 250/500 ml kassett eller läkemedelspåse. CADD Solis och CADD Legacy|
+21-2166-24| ICU Medical Sverige AB| 63857| 1-liters ryggsäck. För flerpatient till CADD Solis, CADD Legacy, CADD Prizm|
+21-7002-24| ICU Medical Sverige AB| 79493| Läkemedelskassett 100 ml med hon-luer (genomskinlig) för CADD pumpar|
+21-6118-24| ICU Medical Sverige AB| 64616| Droppställningsfäste, beställs och används tillsammans med 21-2135-25|
+21-2170-64| ICU Medical Sverige AB| 79107| POUCH, PUMP SINGLE USE, 50/100ML|
+21-2165-64| ICU Medical Sverige AB| 63852| POUCH, PUMP/BAG, 50/100ML POUCH|

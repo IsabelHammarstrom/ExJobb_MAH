@@ -11,3 +11,5 @@ HT15| Philips AB| 60536| Slang DreamStation 15mm 183cm uppvärmd|
  | Medidyne AB| 402675| Luftfuktare vattentank utan lock| 
  | Medidyne AB| 402672| 2 Inlopps-/utloppstätning| 
  | Medidyne AB| 402670| Luftfuktare vattentank med lock| 
+ | Medidyne AB| 402671| DS2 Transportväska| 
+ | Medidyne AB| 402669| Ultrafint engångsfilter, RP, 1 stk| 

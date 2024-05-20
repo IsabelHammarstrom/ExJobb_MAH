@@ -1,0 +1,12 @@
+900MR389| Fisher & Paykel Healthcare AB| 77934| Termistor till MR810|
+43042232| Fisher & Paykel Healthcare AB| 78386| Kretskort MR810 230V|
+43042236| Fisher & Paykel Healthcare AB| 78387| Monterad värmeplatta MR810|
+900MR445| Fisher & Paykel Healthcare AB| 78388| Värmesäkring MR810|
+900MR620| Fisher & Paykel Healthcare AB| 78390| Knapp MR810|
+900MR622| Fisher & Paykel Healthcare AB| 78391| Ljusrör MR810|
+900MR656| Fisher & Paykel Healthcare AB| 78392| Värmetrådsadapter inkl. kabelklämma och spänne MR810|
+900MR657| Fisher & Paykel Healthcare AB| 78393| Fingerspärrfjäder MR810|
+900MR658| Fisher & Paykel Healthcare AB| 78394| Kabelsele för värmesäkring MR810|
+43042323| Fisher & Paykel Healthcare AB| 85088| Övre hölje till MR810|
+900MR708| Fisher & Paykel Healthcare AB| 85192| Säkring 1,5A 250V till MR810|
+900MR726| Fisher & Paykel Healthcare AB| 85193| Säkring 2A 250V till befuktare|

@@ -1,2 +1,13 @@
-hej| 111| 111| 111|
-fdghfgh| dfghfgdh| dfghdfgh| dfgfdgh|
+37296| ResMed Sweden AB| 52640| Uppvärmd luftslang (ClimateLine Air)| 
+37394| ResMed Sweden AB| 60352| Knärör till AirSense| 
+37335| ResMed Sweden AB| 60353| Air 10 Side Cover Gray| 
+36810EKIT| ResMed Sweden AB| 65326| Slimline inkl Air10 Knäled| 
+37343| ResMed Sweden AB| 65945| RPS II - Air 10 DC Cable| 
+19766| ResMed Sweden AB| 73503| SD-kort lucka AirSense 10 FH/AirCurve (ljusgrå)| 
+37476| ResMed Sweden AB| 75302| Strömförsörjningsenhet 90W AirSense 10, AirCurve, Lumis S/ST/ST-A samt RPS II v2(Air 10 90W PSU)| 
+378277| ResMed Sweden AB| 82983| Klinisk bruksanvisning AirCurve 10 Vauto| 
+378878| ResMed Sweden AB| 85831| Bruksanvisning AirCurve 10 Vauto| 
+39229| ResMed Sweden AB| 86499| SD-kort Air 11, Air 10,Lumis 10-pack| 
+37471| ResMed Sweden AB| 88989| HumidAir II befuktningskammare- Air10 och Lumis| 
+37471-CO| ResMed Sweden AB| 88990| HumidAir II Climate Control KIT| 
+36856| ResMed Sweden AB| HC29326| Filter till Air 10/S9, hypoallergi 2pack| 

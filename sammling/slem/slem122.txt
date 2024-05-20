@@ -1,0 +1,8 @@
+099.0252| Medela Medical AB| 55591| Membran, (pumpdel) Clario| 
+014.0017| Medela Medical AB| 55707| Hölje med motor/membran till Clario| 
+200.1525| Medela Medical AB| 57553| Batterilucka Clario| 
+074.0008| Medela Medical AB| 59973| Ventilmembran Clario| 
+074.0009| Medela Medical AB| 59974| O-ring Clario| 
+099.0011| Medela Medical AB| 61084| Nätkabel till Clario| 
+014.0000| Medela Medical AB| 84180| Moderkort Clario| 
+014.0004| Medela Medical AB| HC16864| Nätadapter Clario| 

@@ -1,0 +1,40 @@
+22104| Apodan Nordic A/S| 401305| Lympha Press Optimal Plus Multikammarpump med Appstyrning (från mobil)| 
+22103| Apodan Nordic A/S| 78020| Lympha Press USB-kort och kabel.| 
+22031| Apodan Nordic A/S| 65699| Lympha Press Stor blindpropp till 12-kammarpumpar| 
+22005| Apodan Nordic A/S| 62514| Lympha Press Liten blindpropp till slang (ingår 4 stycken)| 
+22135| Apodan Nordic A/S| 74149| Lympha Press Armmanschett med integrerad skulderdel, stl. STANDARD| 
+22121| Apodan Nordic A/S| 75193| Lympha Press Benmanschett FL 2-75 med slangbunt och kardborreförslutning| 
+22122| Apodan Nordic A/S| 80371| Lympha Press Benmanschett FL 2-85 med slangbunt och kardborreförslutning| 
+22125| Apodan Nordic A/S| 68463| Lympha Press Benmanschett FL 3-75 med slangbunt och kardborreförslutning| 
+22126| Apodan Nordic A/S| 68464| Lympha Press Benmanschett FL 3-85, med slangbunt och kardborreförslutning| 
+22127| Apodan Nordic A/S| 68465| Lympha Press Benmanschett FL 3-95 med slangbunt  och kardborreförslutning| 
+22066| Apodan Nordic A/S| 77514| Lympha Press Byxmanschett Standard, kompressionsbyxa med kateteröppning och slangutgång vid fotändan| 
+22074| Apodan Nordic A/S| 78114| Lympha Press Byxmanschett XL med slangutgång vid fot| 
+22202| Apodan Nordic A/S| 66042| Lympha Press Comfy Armmanschett HÖGER arm och torso, en storlek| 
+22203| Apodan Nordic A/S| 65989| Lympha Press Comfy Armmanschett VÄNSTER arm och torso, en storlek| 
+22194| Apodan Nordic A/S| 64652| Lympha Press Comfy Benmanschett  4-75 med blixtlås| 
+22189| Apodan Nordic A/S| 55546| Lympha Press Comfy Benmanschett 2-85 med blixtlås| 
+22190| Apodan Nordic A/S| 64649| Lympha Press Comfy Benmanschett 2-95 med blixtlås| 
+22191| Apodan Nordic A/S| 64653| Lympha Press Comfy Benmanschett 3-65 med blixtlås| 
+22192| Apodan Nordic A/S| 64650| Lympha Press Comfy Benmanschett 3-75 med blixtlås| 
+22193| Apodan Nordic A/S| 64651| Lympha Press Comfy Benmanschett 3-85 med blixtlås| 
+22007| Apodan Nordic A/S| 46590| Lympha Press Extensionskilar till Byxmanschetter Standard och XL| 
+22035| Apodan Nordic A/S| 55739| Lympha Press Jackmanschett, kompressionsjacka med korta ärmar, ärmlängd 57 cm| 
+22033| Apodan Nordic A/S| HC10619| Lympha Press Jackmanschett, kompressionsjacka med långa ärmar, ärmlängd 72 cm| 
+22032| Apodan Nordic A/S| 55713| Lympha Press KIL till RYGG till Jackmanschett| 
+22036| Apodan Nordic A/S| 55540| Lympha Press KILAR till RYGG och ÄRMAR till Jackmanschett| 
+22181| Apodan Nordic A/S| 74950| Lympha Press LymphaPod Byxmanschett med slang på höger sida| 
+22047| Apodan Nordic A/S| 74743| Lympha Press Rektangulär kil till framsidan av Jackmanschetten, vadderad| 
+22065| Apodan Nordic A/S| 78113| Lympha Press Slangbunt till Byxmanschett med varunr. 022066| 
+22096| Apodan Nordic A/S| 66000| Lympha Press Slangbunt till Comfy Armmanschett, halvjacka, grå fästknappar| 
+22004| Apodan Nordic A/S| 60685| Lympha Press Slangbunt till UTGÅENDE Arm- och Benmanschett utan slangbunt| 
+22207| Apodan Nordic A/S| 66002| Lympha Press STORLEKSSTYCKE LARGE till Comfy Armmanschett, HÖGER arm och torso, vnr. 022202, halvjacka.| 
+22208| Apodan Nordic A/S| 66003| Lympha Press STORLEKSSTYCKE LARGE till Comfy Armmanschett, VÄNSTER arm och torso, vnr. 022203, halvjacka.| 
+22209| Apodan Nordic A/S| 52074| Lympha Press STORLEKSSTYCKE MEDIUM till Comfy Armmanschett, VÄNSTER arm och torso, vnr. 022203, halvjacka.| 
+22206| Apodan Nordic A/S| 66043| Lympha Press STORLEKSSTYCKE SMALL till Comfy Armmanschett, HÖGER arm och torso, vnr. 022202, halvjacka.| 
+22205| Apodan Nordic A/S| 66001| Lympha Press STORLEKSSTYCKE SMALL till Comfy Armmanschett, VÄNSTER arm och torso, vnr. 022203, halvjacka| 
+22204| Apodan Nordic A/S| 52075| Lympha Press STORLEKSTYCKE MEDIUM till Comfy Armmanschett, HÖGER arm och torso, vnr. 022202, halvjacka.| 
+22041| Apodan Nordic A/S| 55541| Lympha Press Strömbrytare till fot, fotpedal| 
+22042| Apodan Nordic A/S| 55542| Lympha Press Strömbrytare till hand, avstängningsknapp| 
+22048| Apodan Nordic A/S| 74795| Lympha Press Triangulär kil till Jackmanschett| 
+22059| Apodan Nordic A/S| 61566| Lympha Press Slangbunt till Byxmanschett, med produktnr 022068 och 022075, grå fästknappar, utgång vid höften| 

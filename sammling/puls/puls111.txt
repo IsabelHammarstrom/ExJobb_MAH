@@ -1,0 +1,11 @@
+36-8701| Infiniti Medical AB| 401274| sat801+left rubber boot| 
+36-8702| Infiniti Medical AB| 401275| sat801+right rubber boot| 
+36-8703| Infiniti Medical AB| 401276| sat801+front cover incl. keypad and loudspeakers| 
+36-8704| Infiniti Medical AB| 401277| sat801+back cover| 
+36-8705| Infiniti Medical AB| 401278| sat801+top cover| 
+36-8708 V.02| Infiniti Medical AB| 401279| sat801+Lithium Ion batteries| 
+36-8711| Infiniti Medical AB| 401281| sat801+ loud speakers| 
+36-8712| Infiniti Medical AB| 401282| sat801+ keypad| 
+36-8713| Infiniti Medical AB| 401283| sat801+ SD cover| 
+36-8714| Infiniti Medical AB| 401284| sat801+main PCB without batteries and TFT display| 
+36-8710| Infiniti Medical AB| 401280| Main PCB med batteri och display till Bitmos, Reservdel.| 

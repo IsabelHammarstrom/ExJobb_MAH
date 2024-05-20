@@ -1,0 +1,17 @@
+BZ0005| Timik AB| 55530| Babycontrol Sensor ( till gamla monitorn)|
+BZ0010| Timik AB| 74903| Babycontrol Sensor|
+BZ0557| Timik AB| 75206| Skruvmejsel för justering av larmgräns|
+BZ0504| Timik AB| 67064| SISS Babycontrol Plastic foil set|
+BZ0503| Timik AB| 67065| SISS Babycontrol Emv shield foil|
+EST00107| Timik AB| 67069| SISS Babycontrol Female socket|
+B00058| Timik AB| 67070| SISS Babycontrol Respiration simulator (3-pole-connection up to serial number BC 188999)|
+BZ0131| Timik AB| 67072| SISS Babycontrol Battery compartment|
+BZ0501| Timik AB| 67074| SISS Babycontrol Mainboard, lower|
+BZ0502| Timik AB| 67075| SISS Babycontrol Mainboard, upper|
+B00056| Timik AB| 67076| SISS Babycontrol Body sensor tester (for respiration sensors with serial number AS Sxxxxx (3-pole-connection, article number BZ0005)|
+BZ0150| Timik AB| 62823| SISS Babycontrol grå transportväska|
+BZ0558| Timik AB| 82415| SISS Babycontrol Top Cover with nameplate "Old"|
+BZ0508| Timik AB| 83735| SISS Babycontrol adapter cable for B00067|
+BZ0559| Timik AB| 86919| SISS Babycontrol housing complete (for monitors with serial number until BC 188999, year of production: < 2019)|
+BZ0060| Timik AB| 401269| Skyddsväska till BABYCONTROL|
+ESCH0013| Timik AB| 67077| Adjustment pin red|

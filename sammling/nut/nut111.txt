@@ -1,0 +1,6 @@
+CS3030534| Fresenius Kabi AB| 87008| Nätadapter strömkabel typ C| 
+Z210221| Fresenius Kabi AB| 62561| Membran till Amika pump| 
+Z210934| Fresenius Kabi AB| 62562| Batteri 1,8 Ah till Amika pump| 
+Z210391| Fresenius Kabi AB| 87007| Batteri 2200 mAh till Amika pump| 
+Z210922| Fresenius Kabi AB| 63811| Optical sensor kit| 
+Z210900| Fresenius Kabi AB| 63810| Pressure sensor kit| 

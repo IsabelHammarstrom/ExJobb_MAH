@@ -1,0 +1,20 @@
+B16-1597| Aspira Medical AB| 57923| Standard Mutisite Wrap 100/box| 
+B16-4080| Aspira Medical AB| 60423| Patientkabel 1,52 m till RD set sensorer| 
+B16-4081| Aspira Medical AB| 60424| RD SET MD14-12 Patienkabel 1/box 3,| 
+B16-4108| Aspira Medical AB| 63032| RD SET MD14-08, patientkabel. 2,44 meter. 1st/frp | 
+B39-7118.2| Aspira Medical AB| 64827| SAT 805 Masimo Flex Cable for MS 2011 and 2040| 
+1602| Infiniti Medical AB| 84554| Foamwraps Masimo till YI-sensor| 
+4002| Infiniti Medical AB| 84557| Enpatientsensor Masimo RD-Inf-L 3-20 kg| 
+4003| Infiniti Medical AB| 84558| Enpatientsensor Masimo RD Vuxen/Neo <3 kg eller >40 kg| 
+4046| Infiniti Medical AB| 84559| Ersättningstejp till 4002| 
+4047| Infiniti Medical AB| 84560| Ersättningstejp Masimo till RD sensor 4003| 
+4050| Infiniti Medical AB| 84561| RD-set DCI vuxen fingersensor 90 cm, vikt >30 kg, Flerpatientsensor| 
+4051| Infiniti Medical AB| 84562| RD-set DCIP barn fingersensor 90cm, vikt 10-50 kg Flerpatientsensor| 
+4053| Infiniti Medical AB| 84563| Öronsensor Masimo RD SET TC-I Vikt från 30 kg| 
+4054| Infiniti Medical AB| 84564| RD-set YI-Sensor 90 cm vikt> 1 kg| 
+521030| Aspira Medical AB| 84741| Bruksanvisning SAT805 Pulsoximeter (Rev.16 210819)| 
+B28-5010-EU| Aspira Medical AB| 84847| Sat805, laddare| 
+4001| Infiniti Medical AB| 85357| Enpatientsensor Masimo RD Pdt barn 10-50kg| 
+B39-1301| Aspira Medical AB| HC10370| Väska SAT805| 
+B16-4088| Aspira Medical AB| 60425| Adapterkabel RD-SET sensorer LNOP Patientkabel| 
+521030| Aspira Medical AB| 84741| Bruksanvisning SAT805 Pulsoximeter (Rev.16 210819)| 

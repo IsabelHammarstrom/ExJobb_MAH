@@ -1,0 +1,14 @@
+A-1100| AirSonett AB| 65242| Filter Airsonett A4|
+A-1010| AirSonett AB| 65243| Airshower Airsonett A4|
+A-1020| AirSonett AB| 65244| Neck Airsonett A4|
+A-1030| AirSonett AB| 65245| Bentneck Airsonett A4|
+A-1200| AirSonett AB| 65246| Table Airsonett A4|
+A-1250| AirSonett AB| 65247| Nätsladd Power Cord EU till Airsonett A4|
+A-1501| AirSonett AB| 84197| Airsonett-Packaging|
+A-1032| AirSonett AB| 84194| Absorbent for Bent Neck|
+A-1031| AirSonett AB| 84193| Absorbent for Neck|
+A-1500| AirSonett AB| 84196| Absorbent Kit For Base Unit|
+A-1160| AirSonett AB| 84225| Base Stand|
+A-1026| AirSonett AB| 84192| Cover for Base Unit|
+A-1066| AirSonett AB| 84195| Filter Door|
+A-1502| AirSonett AB| 84198| Front Panel Board|

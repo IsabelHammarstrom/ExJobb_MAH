@@ -1,0 +1,16 @@
+DS100A| Medtronic AB| 61351| Fingersensor flergångs vuxen till Nellcor Pulsoximeter| 
+POSEY| Medtronic AB| 61928| Wraps kardborre för sensor D-YS och OXI-A/N| 
+DOC10| Medtronic AB| 61933| Pulsoximeter mellankabel PM100N Nellcor, längd 3 m| 
+D-YS| Medtronic AB| 61934| Y-sensor flergångs till Nellcor Pulsoximeter| 
+D-YSPD| Medtronic AB| 61935| Fingersensor flergångs barn, 3 till 40 kg till Nellcor Pulsoximeter. Används med D-YS.| 
+D-YSE| Medtronic AB| 62323| Öronsensor flergångs > 30 kg till Nellcor Pulsoximeter. Används med D-YS| 
+MAX-I-I| Medtronic AB| 62534| Fingersensor en-patients små barn till Nellcor Pulsoximeter| 
+MAXAI| Medtronic AB| 62683| Fingersensor en-patients vuxen till Nellcor Pulsoximeter| 
+MAX-N-I| Medtronic AB| 62684| Fotsensor en-patients NEO < 3 kg till Nellcor Pulsoximeter| 
+MAX-P-I| Medtronic AB| 62686| Fingersensor en-patients stora barn till Nellcor Pulsoximeter| 
+FLEXMAX-P-HC| Medtronic AB| 84655| Fingersensor FLEXMAX flergångs barn > 20 kg till Nellcor Pulsoximeter| 
+FLEXMAX-HC| Medtronic AB| 84656| Fingersensor FLEXMAX flergångs vuxen till Nellcor Pulsoximeter| 
+PMAC100N-CC| Medtronic AB| 84678| Väska till pulsoximeter bordsmodell PM100N Nellcor inkl axelrem| 
+DOC4| Medtronic AB| 85356| Pulsoximeter mellankabel PM100N Nellcor, längd 1,2 m| 
+3044| NordicInfu Care AB| 76413| Fingersensor, 20+ kg, pulsoximetri| 
+3078| NordicInfu Care AB| 76415| Öronsensor 15+ kg, pulsoximetri| 

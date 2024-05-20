@@ -1,0 +1,24 @@
+SLL460411| Aspira Medical AB| 400249| Bordsstativ till EO-70 hostmaskin|
+SLL460412| Aspira Medical AB| 400250| Fotpedal till EO-70 hostmaskin|
+SLL460420| Aspira Medical AB| 400251| Patientslang, 22mm (smoothbore). 22F/22F kopplingar. Längd 1,8m (180cm)|
+SLL460420-1| Aspira Medical AB| 400252| Patientset innehållandes patientslang 22mm (SLL460420), bakteriefilter (SLL460437) & kopplingsstycke, rakt, 22M/22M (SLL460424).|
+SLL460421| Aspira Medical AB| 400253| Patientslang 22mm (smoothbore). 22F/22F. Längd 2,0m (200cm)|
+SLL460421-0| Aspira Medical AB| 400254| Patientset innehållandes patientslang 22mm, längd 2m (SLL460421), bakteriefilter (SLL460437), kopplingsstycke, rak (SLL460424), patientmask neonatal, strl 0, färgkod vit.|
+SLL460421-1| Aspira Medical AB| 400255| Patientset innehållandes patientslang 22mm, längd 2m (SLL460421), bakteriefilter (SLL460437), kopplingsstycke, rak (SLL460424), patientmask Infant (spädbarn), strl 1, färgkod rosa.|
+SLL460421-2| Aspira Medical AB| 400256| Patientset innehållandes patientslang 22mm, längd 2m (SLL460421), bakteriefilter (SLL460437), kopplingsstycke, rak (SLL460424), patientmask pediatric (barn) strl 2, färgkod gul.|
+SLL460421-3| Aspira Medical AB| 400257| Patientset innehållandes patientslang 22mm, längd 2m (SLL460421), bakteriefilter (SLL460437), kopplingsstycke, rak (SLL460424), patientmask vuxen small, strl 3, färgkod grön.|
+SLL460421-4| Aspira Medical AB| 400258| Patientset innehållandes patientslang 22mm, längd 2m (SLL460421), bakteriefilter (SLL460437), kopplingsstycke, rak (SLL460424), patientmask vuxen medium, strl 4, färgkod röd.|
+SLL460421-5| Aspira Medical AB| 400259| Patientset innehållandes patientslang 22mm, längd 2m (SLL460421), bakteriefilter (SLL460437), kopplingsstycke, rak (SLL460424), patientmask vuxen large, strl 5, färgkod blå.|
+SLL460421-6| Aspira Medical AB| 400260| Patientset innehållandes patientslang 22mm, längd 2m (SLL460421), bakteriefilter (SLL460437), kopplingsstycke, rak (SLL460424), patientmask vuxen X-large strl 6, färgkod orange.|
+SLL460425| Aspira Medical AB| 400262| Anslutning till trachealtub. Utdragbar (extandable). Längd 15cm. Roterbar 360grader. Dubbel swivel anslutning, 22M/15F patientanslutning och 22F anslutning mot enhet.|
+SLL460427| Aspira Medical AB| 400263| Munstycke, rak. 18M/22M anslutning|
+SLL460430| Aspira Medical AB| 400264| Patientmask med uppblåsbar ansiktskudde. Neonatal, strl 0, färgkod vit|
+SLL460431| Aspira Medical AB| 400265| Patientmask med uppblåsbar ansiktskudde. Infant (spädbarn), strl 1, färgkod rosa|
+SLL460432| Aspira Medical AB| 400266| Patientmask med uppblåsbar ansiktskudde. Pediatric (barn), strl 2, färgkod gul|
+SLL460433| Aspira Medical AB| 400267| Patientmask med uppblåsbar ansiktskudde. Vuxen small, strl 3, färgkod grön|
+SLL460434| Aspira Medical AB| 400268| Patientmask med uppblåsbar ansiktskudde. Vuxen medium, strl 4, färgkod röd|
+SLL460435| Aspira Medical AB| 400269| Patientmask med uppblåsbar ansiktskudde. Vuxen large, strl 5, färgkod blå|
+SLL460436| Aspira Medical AB| 400270| Patientmask med uppblåsbar ansiktskudde. Vuxen X-large, strl 6, färgkod orange|
+SLL460437| Aspira Medical AB| 400271| Bakteriefilter med 22F/15M & 22m/15F anslutning|
+SLL460413| Aspira Medical AB| 401392| Nätadapter/ laddare EO-70|
+SLL460424| Aspira Medical AB| 400261| Kopplingsstycke, rak. 22M/22M|

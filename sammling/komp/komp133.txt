@@ -1,0 +1,11 @@
+269-VX-TANK-01-1| Limedic AB| 83480| Compressed Air Tank| 
+269-VX-LCM-01-1| Limedic AB| 80093| Display Unit without cable| 
+269-VX-FAN-01-1| Limedic AB| 77861| Fläkt| 
+269-VX-RSET-01-1| Limedic AB| 77863| Kompressor service pack 230v| 
+269-VX-Ring-01-1| Limedic AB| 82159| O-Ring for Tube Connector| 
+269-VX-COVE-06-1| Limedic AB| 80092| Plastic case - lower| 
+269-VX-SWIT-01-1| Limedic AB| 77864| Power Switch (15x20mm)| 
+269-VX-SWIT-02-1| Limedic AB| 82604| Power Switch 27mm x 37mm| 
+269-VX-POWE-32-1| Limedic AB| 83284| Switch Wire| 
+269-VX-CONA-01-1| Limedic AB| 83287| Tube Connector| 
+269-VX-BUTT-01-2| Limedic AB| 80090| Rubber Housing Foot (Pair)| 

@@ -1,0 +1,12 @@
+260-VX-Tube-01-1| Limedic AB| 77860| PVC Tube 3m f. VADOplex cont.| 
+260-VXSY-07-1| Limedic AB| 77853| VADOplex Vascular Impulse pump 1.5| 
+260-VXCD-06-2| Limedic AB| 77854| VADOplex CALF Pad Premium| 
+260-VXCP-03-1| Limedic AB| 77855| VADOplex Undercast Pad| 
+269-VX-COVE-01-2| Limedic AB| 83283| Front Cover, complete| 
+269-VX-FUSE-02-1| Limedic AB| 77862| Fuse (säkring) 1A /250v| 
+269-VX-POWE-28-1| Limedic AB| 83286| Fuse Wire  red / blue| 
+269-VX-POWE-27-1| Limedic AB| 83285| Fuse Wire  yellow / white| 
+260-VXFP-05-1-L| Limedic AB| 77856| Foot pads/ Par /LARGE| 
+260-VXFP-05-1-M| Limedic AB| 77857| Foot pads/ par /MEDIUM| 
+260-VXHP-04-1-LI| Limedic AB| 77858| Hand pads (handtossa) Left (vänster)| 
+260-VXHP-04-1-RE| Limedic AB| 77859| Hand Pads (handtossa) Right (höger)| 

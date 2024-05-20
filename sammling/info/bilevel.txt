@@ -8,5 +8,7 @@ AirCurve 10 CS PaceWave
 DreamStation ASV
 DreamStation BiPAP S/T30
 BiPAP Dreamstation Auto
-Bipap A40 Pro
-ojojoj
+Bipap A40 Pro'
+PrismaVent40
+Prisma 
+Powerpack2

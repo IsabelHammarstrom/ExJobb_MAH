@@ -1,0 +1,10 @@
+464225| Abilia AB| 67093| Laddare till sensor EpiSafe/EpiMobile|
+464227| Abilia AB| 67094| Strömförsörjning till basmodul EpiSafe|
+464232| Abilia AB| 67095| Basmodul till EpiSafe 2|
+464239| Abilia AB| 76285| Kabel EpiSafe -All in One|
+464229| Abilia AB| 402046| Armband i läder till EpiSafe/EpiMobile|
+464243| Abilia AB| 401215| Sensor till EpiSafe 2 (grå)|
+464315| Abilia AB| 402039| Kabel EpiSafe - IOR|
+464330| Abilia AB| 402040| Räckviddsförlängare REPO+ II|
+464340| Abilia AB| 86458| Personsökare TREX|
+464310| Abilia AB| 86457| Universalsändare IOR|

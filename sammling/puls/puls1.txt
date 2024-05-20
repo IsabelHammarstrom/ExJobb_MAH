@@ -1,1 +1,17 @@
-ghghgh| ghgh| ghgh| ghgh| 
+B16-1597| Aspira Medical AB| 57923| Standard Mutisite Wrap 100/box| 
+B16-4080| Aspira Medical AB| 60423| Patientkabel 1,52 m till RD set sensorer| 
+B16-4081| Aspira Medical AB| 60424| RD SET MD14-12 Patienkabel 1/box 3,| 
+B16-4108| Aspira Medical AB| 63032| RD SET MD14-08, patientkabel. 2,44 meter. 1st/frp | 
+1602| Infiniti Medical AB| 84554| Foamwraps Masimo till YI-sensor| 
+36-1103| Infiniti Medical AB| 84555| Universalstativ för skensystem till Bitmos SAT 801+| 
+36-2302| Infiniti Medical AB| 84556| Bärväska till Bitmos sat 801+| 
+4002| Infiniti Medical AB| 84557| Enpatientsensor Masimo RD-Inf-L 3-20 kg| 
+4003| Infiniti Medical AB| 84558| Enpatientsensor Masimo RD Vuxen/Neo <3 kg eller >40 kg| 
+4046| Infiniti Medical AB| 84559| Ersättningstejp till 4002| 
+4047| Infiniti Medical AB| 84560| Ersättningstejp Masimo till RD sensor 4003| 
+4050| Infiniti Medical AB| 84561| RD-set DCI vuxen fingersensor 90 cm, vikt >30 kg, Flerpatientsensor| 
+4051| Infiniti Medical AB| 84562| RD-set DCIP barn fingersensor 90cm, vikt 10-50 kg Flerpatientsensor| 
+4053| Infiniti Medical AB| 84563| Öronsensor Masimo RD SET TC-I Vikt från 30 kg| 
+4054| Infiniti Medical AB| 84564| RD-set YI-Sensor 90 cm vikt> 1 kg| 
+4001| Infiniti Medical AB| 85357| Enpatientsensor Masimo RD Pdt barn 10-50kg| 
+36-5009| Infiniti Medical AB| 401242| External Power Adapter FRIWO for sat 801+| 

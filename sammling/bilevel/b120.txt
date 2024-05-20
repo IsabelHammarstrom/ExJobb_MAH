@@ -1,1 +1,4 @@
-2222| 222| 222| reserv 2| 
+WM 29355| Nowus Healthcare| 82818| Handtag prismaVENT| 
+WM 29358| Nowus Healthcare| 82819| Sidoskydd befuktare  (vitt)| 
+WM 30665| Nowus Healthcare| 82826| Blower prismaVENT| 
+WM 35118| Nowus Healthcare| 82828| PCB Mainboard prismaVENT| 

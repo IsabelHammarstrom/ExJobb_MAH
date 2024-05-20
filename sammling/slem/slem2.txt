@@ -1,0 +1,6 @@
+074.0003| Medela Medical AB| 62493| Engångssugslang med fingertoppsreglage 150 cm| 
+074.0001| Medela Medical AB| HC5356| Flaskset Clario 0,5 liter| 
+074.0007| Medela Medical AB| HC5382| Väska Clario| 
+074.0017| Medela Medical AB| HC8160| 12-voltskabel Clario| 
+074.0005| Medela Medical AB| HC11206| Batteri Clario NiMH| 
+074.0002| Medela Medical AB| HC8155| Säkerhetskammare Clario komplett| 

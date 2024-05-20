@@ -1,0 +1,9 @@
+BZ0552| Timik AB| 86169| Battery compartment cover (with circumferential seal)|
+BZ0505| Timik AB| 65109| Bumpers battery comp, 30 pcs|
+EST00400| Timik AB|	86173| Female socket 4 – pole ready for connection|
+BZ0550| Timik AB| 86168| Housing complete (housing upper and lower, control panel, name plate)|
+BZ0561| Timik AB| 86170| Housing lower part with battery contacts, transponder coil and 2 pole connection cable|
+BZ0551| Timik AB| 81191| Housing upper part (housing, control panel, name plate)|
+GBC00008| Timik AB| 86172| Name plate|
+GBC00242| Timik AB| 81192| Short instructions for lower part of housing|
+GBC00270| Timik AB| 81193| Short instructions for lower part of housing|
